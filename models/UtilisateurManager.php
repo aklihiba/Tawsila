@@ -1,10 +1,44 @@
 <?php
     require_once('Model.php');
+    require_once('Utilisateur.php');
 class UtilisateurManager extends Model{
-
-
-        public function rechercheByid($id){
-            
+    
+    public function __construct($id=0)
+    {
+        $this->getConnection();
+        if ($id==0) {
+            $this->table[]= $this->rechercheByid($id);
+        }
+        else {
+            $data = $this->getAll('utilisateur','id');
+            if ($data != 0) {
+                foreach($data as $row){
+                    $this->table[] = new Utilisateur($row);
+                }
+            }
         }
     }
+    public function all(){return $this->table;}
+    public function getuser(){
+        return $this->table[0];
+        /*incase construct with id*/
+    }
+    public function rechercheByid($id){
+        $sql = "SELECT * FROM utilisateur WHERE $id=".$id ; 
+        $data = $this->request($sql);
+        if (!is_null($data)) {
+            return new Utilisateur($data);
+        } 
+        return null;    
+    }
+
+    public function test(){
+        foreach ($this->table as $row){
+
+            echo '<h1>'.$row->nom().'</h1>';
+        }
+    }
+}
+//$v = new UtilisateurManager();
+//$v->test();
 ?>

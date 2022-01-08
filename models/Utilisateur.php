@@ -16,6 +16,26 @@
         private $_photo;
         private $_pwd;
 
+        public function __construct(array $data)
+        {
+            $this->hydrate($data);
+
+        }
+
+
+        public function hydrate(array $data)
+        {
+            foreach($data as $key => $value)
+            {
+                
+                $method = 'set'.ucfirst($key);
+                if (method_exists($this, $method))
+                {
+                    $this->$method($value);
+                }
+            }
+        }
+
         public function setId($id)
         {
             $id = (int) $id;
@@ -32,7 +52,7 @@
                 $this->_nom = $nom;
             }
         }
-        public function setPreom($prenom)
+        public function setPrenom($prenom)
         {
             if (is_string($prenom))
             {
@@ -143,16 +163,29 @@
 
 
         //modify and save
-        /*
-        public function save($type){
+        public function insererClient(){
             try {
                 $this->getConnection();
-                if ($type=="transporteur") {
-                   
-                }
-                $sql = "INSERT INTO utilisateur (nom, prenom, adresse, mail, telephone, type, wilayas_depart,
-                    wilayas_arrive, gain, note, statut, photo, pwd )
-                VALUES ('".$this->annonce()."', '".$this->emetteur()."', '".$this->mis_en_cause()."')" ;
+                
+                $sql = "INSERT INTO utilisateur (nom, prenom, adresse, mail, telephone, type, pwd )
+                VALUES ('".$this->nom()."', '".$this->prenom()."', '".$this->adresse()."', '".$this->mail()."', '".$this->telephone()."',
+                'client', '".md5($this->pwd())."')" ;
+          
+                $this->_connexion->exec($sql);
+               // echo "New record created successfully";
+              } catch(PDOException $e) {
+                echo $sql . "<br>" . $e->getMessage();
+              }
+        }
+        public function insererTransporteur(){
+            try {
+                $this->getConnection();
+
+                $sql = "INSERT INTO utilisateur (nom, prenom, adresse, mail, telephone, type, wilayas_depart, wilayas_arrive, 
+                gain, statut, pwd )
+                VALUES ('".$this->nom()."', '".$this->prenom()."', '".$this->adresse()."', '".$this->mail()."', '".$this->telephone()."',
+                'transporteur', '".$this->wialays_depart()."', '".$this->wilayas_arrive()."', '0', '
+                '".md5($this->pwd())."')" ;
           
                 $this->_connexion->exec($sql);
                 echo "New record created successfully";
@@ -160,6 +193,22 @@
                 echo $sql . "<br>" . $e->getMessage();
               }
         }
-        */
+        
     }
+    /*
+    $data= array(
+        'nom'=> 'akli',
+        'prenom'=>'hiba',
+        'adresse'=>'alger',
+        'mail'=>'hiba@akli.dz',
+        'telephone'=>'0987654312',
+        'type'=>'client',
+        'pwd'=>'1234'
+    );
+    $v = new Utilisateur($data);
+    echo $v->nom();
+    echo $v->prenom();
+    echo $v->adresse();
+    $v->insererClient();
+    */
 ?>

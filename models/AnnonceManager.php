@@ -3,17 +3,30 @@
     require_once("Model.php");
     class AnnonceManager extends Model{
 
-        public function __construct()
+        public function __construct($id=0)
         {
             $this->getConnection();
-            $data = $this->getfilteredAnnonce();
-            foreach($data as $row){
-                $this->table[] = new Annonce($row);
+            if ($id==0) {
+               $this->table[]= $this->rechercheByid($id);
             }
+            else {
+                $data = $this->getfilteredAnnonce();
+                if ($data != 0) {
+                    foreach($data as $row){
+                        $this->table[] = new Annonce($row);
+                    }
+                }
+               
+            }
+            
         }
 
-        public function annonces(){return $this->table;}
+        public function all(){return $this->table;}
 
+        public function getannonce(){
+            return $this->table[0];
+            /*incase construct with id*/
+        }
         public function getfilteredAnnonce(){
             
             //get the filters
