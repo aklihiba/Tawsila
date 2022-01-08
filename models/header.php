@@ -1,4 +1,5 @@
 <?php
+    require_once('Model.php');
     class Header extends Model{
         private $_logo;
         private $_buttons;
@@ -9,9 +10,11 @@
         public function __construct(string $type="anonyme")
         {
             $this->getConnection();
-            $sql = "SELECT * FROM header WHERE type = ".$type; //type: anonyme, user, admin
+            $sql = "SELECT * FROM header WHERE type='".$type."'"; //type: anonyme, user, admin
             $data = $this->request($sql);
+            
             if(!is_null($data)){
+               
                 $this->hydrate($data);
             }
         }
@@ -51,4 +54,7 @@
         public function buttonClass(){return $this->_buttonsClass;}
         public function menuClass(){return $this->_menuClass;}
     }
+  
+    
 ?>
+

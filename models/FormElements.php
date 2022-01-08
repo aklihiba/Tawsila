@@ -1,4 +1,5 @@
 <?php
+    require_once('PageElements.php');
     class FormElements extends PageElements
     {
         private $_name;

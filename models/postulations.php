@@ -1,5 +1,6 @@
 <?php
     require_once('AnnonceTransporteur.php');
+    require_once("Model.php");
     class Postulations extends Model{
 
         public function __construct(string $id, string $type="annonce")
@@ -10,11 +11,11 @@
             $sql = "SELECT * FROM postulations ";
             $this->getConnection();
             if($type=="annonce"){
-                $sql = $sql."WHERE anonnce = ".$id;
+                $sql = $sql."WHERE anonnce=".$id;
             }
             else{
                 //transporteur
-                $sql = $sql."WHERE transporteur = ".$id;
+                $sql = $sql."WHERE transporteur=".$id;
             }
 
             $data = $this->requestAll($sql);

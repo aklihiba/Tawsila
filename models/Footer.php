@@ -1,4 +1,6 @@
 <?php
+require_once('Model.php');
+
 class Footer extends Model {
     
     public function __construct(array $data)

@@ -1,4 +1,5 @@
 <?php
+require_once('Model.php');
 class Couleurs extends Model {
     
     public function __construct()

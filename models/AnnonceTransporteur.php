@@ -13,7 +13,7 @@ class AnnonceTransporteur{
 
         foreach($data as $key => $value){
             if($key=="annonce"){
-                $manager = new AnnonceMAnager();
+                $manager = new AnnonceManager();
                 $this->_annonce = $manager->rechercheByid($value);
             }
             if ($key=="transporteur") {

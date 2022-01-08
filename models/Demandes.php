@@ -1,4 +1,6 @@
 <?php
+    require_once('Model.php');
+
     require_once('AnnonceTransporteur.php');
     class Demandes extends Model{
 
@@ -10,11 +12,11 @@
             $sql = "SELECT * FROM demandes ";
             $this->getConnection();
             if($type=="annonce"){
-                $sql = $sql."WHERE anonnce = ".$id;
+                $sql = $sql."WHERE anonnce=".$id;
             }
             else{
                 //transporteur
-                $sql = $sql."WHERE transporteur = ".$id;
+                $sql = $sql."WHERE transporteur=".$id;
             }
 
             $data = $this->requestAll($sql);

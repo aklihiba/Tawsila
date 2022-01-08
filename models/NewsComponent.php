@@ -1,11 +1,9 @@
-<?php
-class StatElements {
-    private $_id;
-    private $_title;
-    private $_titleClass;
+<?php 
+    class NewsComponent {
+        private $_id;
+    private $_type;
     private $_content;
-    private $_contentType;   
-    private $_contentClass;
+    private $_class;
 
     public function __construct(array $data)
         {
@@ -35,19 +33,11 @@ class StatElements {
             }
         }
 
-        public function setTitle($title)
+        public function setType($type)
         {
-            if (is_string($title))
+            if (is_string($type))
             {
-                $this->_title = $title;
-            }
-        }
-
-        public function setTitleClass($class)
-        {
-            if (is_string($class))
-            {
-                $this->_titleClass = $class;
+                $this->_type = $type;
             }
         }
 
@@ -59,28 +49,19 @@ class StatElements {
             }
         }
 
-        public function setContentType($type)
-        {
-            if(is_string($type))
-            {
-                $this->_contentType = $type; 
-            }
-        }
-
-        public function setContentClass($class)
+        public function setClass($class)
         {
             if(is_string($class))
             {
-                $this->_contentClass = $class;
+                $this->_class = $class;
             }
         }
 
         public function id(){return $this->_id;}
-        public function title(){return $this->_title;}
-        public function titleClass(){return $this->_titleClass;}
         public function content(){return $this->_content;}
-        public function contentType(){return $this->_contentType;}
-        public function contentClass(){return $this->_contentClass;}
-}
+        public function type(){return $this->_type;}
+        public function class(){return $this->_class;}
+
+    }
 
 ?>

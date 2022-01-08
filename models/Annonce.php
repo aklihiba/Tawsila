@@ -4,6 +4,7 @@
     {
         private $_id;
         private $_titre;
+        private $_date;
         private $_photo;
         private $_wilaya_depart;
         private $_wilaya_arrive;
@@ -75,6 +76,18 @@
             }
             
         }
+        public function setDate($date)
+        {
+            if(!is_null($date))
+            {
+                if (is_string($date))
+                {
+                    $this->_date = $date;
+                }
+            }
+            
+        }
+    
 
         public function setWilaya_depart($wilaya)
         {
@@ -254,6 +267,9 @@
         public function photo()
         {
             return $this->_photo ;
+        }
+        public function date(){
+            return $this->_date; 
         }
         public function Wilaya_depart()
         {

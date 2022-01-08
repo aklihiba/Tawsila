@@ -1,6 +1,6 @@
 <?php
     require_once("Administrateur.php");
-
+    require_once("Model.php");
     class AdministrateurManager extends Model{
         
         public function __construct()
