@@ -19,10 +19,13 @@
     <hr>
 <?php 
 $g->span();
-   for ($j=0; $j <count($annonces) ; $j++) { 
+if($annonces != null){
+    for ($j=0; $j <count($annonces) ; $j++) { 
       if($j==4){echo'<hr>';}
         $g->annoncebox($annonces[$j]);
    }
+}
+   
    $g->spanend();
    echo '<hr>';
     $g->link("Présentation", $all[$i-1]->class(), $all[$i-1]->content());

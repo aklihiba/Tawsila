@@ -1,14 +1,14 @@
 <?php
     require_once ("Model.php");
 
-    class Wilaya extends Model {
+    class Transport extends Model {
 
         public function __construct()
         {
             $this->getConnection();
-            $table = $this->getAll("wilaya","Code");
+            $table = $this->getAll("moyen_transport","moyen");
             foreach($table as $row){
-               $this->table[]=$row['Nom']; 
+               $this->table[]=$row['moyen']; 
             }
         }
         public function all(){

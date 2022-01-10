@@ -80,7 +80,7 @@
                 $this->divend();$this->div();    
                 $this->input("mail", "mail","email","input");
                 $this->divend();$this->div();   
-                $this->input("pwd", "pwd","mot de passe","mdpinput");
+                $this->password("pwd", "pwd","mot de passe","mdpinput");
                 $this->divend();$this->div();   
                 $this->link("Inscription", "smalllink","vous n'avez pas de compte inscriver-vous");
                 $this->divend();$this->div();   
@@ -90,7 +90,7 @@
             $this->centerend();
             $this->divend();
         }
-        
+
         public function diapo(array $diapo){
             $this->divclass("diaporama");
             foreach($diapo as $img){

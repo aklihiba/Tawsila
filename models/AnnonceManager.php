@@ -5,6 +5,7 @@
 
         public function __construct($id=0)
         {
+            
             $this->getConnection();
             if ($id!=0) {
                $this->table[]= $this->rechercheByid($id);
@@ -89,7 +90,7 @@
         //recherche par id
         public function rechercheByid($id){
             
-            $sql = "SELECT * FROM annonce WHERE $id=".$id." AND archive=false " ; 
+            $sql = "SELECT * FROM annonce WHERE id=".$id." AND archive=false " ; 
             $data = $this->request($sql);
             if (!is_null($data)) {
                 return new Annonce($data);
@@ -99,8 +100,8 @@
             
         //recherche par arrive
         public function rechercheWilayaArrive(string $arrive){
-            
-            $sql = "SELECT * FROM annonce WHERE wilaya_arrive=".$arrive." AND archive=false " ; 
+            $this->table = null;
+            $sql = "SELECT * FROM annonce WHERE wilaya_arrive='".$arrive."' AND archive=false " ; 
             $data = $this->requestAll($sql);
             foreach($data as $row){
                 $this->table[] = new Annonce($row);
@@ -108,8 +109,8 @@
         }
         //recherche par depart
         public function rechercheWilayaDepart(string $depart){
-            
-            $sql = "SELECT * FROM annonce WHERE wilaya_depart=".$depart." AND archive=false " ; 
+            $this->table = null;
+            $sql = "SELECT * FROM annonce WHERE wilaya_depart='".$depart."' AND archive=false " ; 
             $data = $this->requestAll($sql);
             foreach($data as $row){
                 $this->table[] = new Annonce($row);
@@ -117,11 +118,14 @@
         }
         //recherche par depart et arrive
         public function rechercheWilaya(string $depart, string $arrive){
-            $sql = "SELECT * FROM annonce WHERE wilaya_depart=".$depart." AND wilaya_arrive=".$arrive." AND archive=false " ; 
+            $this->table = null;
+            $sql = "SELECT * FROM annonce WHERE wilaya_depart='".$depart."' AND wilaya_arrive='".$arrive."' AND archive=false " ; 
             $data = $this->requestAll($sql);
             foreach($data as $row){
                 $this->table[] = new Annonce($row);
+               
             }
+            
         }
         // modifier annonce 
         //supprimer aka archiver
