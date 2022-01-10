@@ -3,6 +3,7 @@
     require_once(ROOT.'models/Footer.php');
     require_once(ROOT.'models/Diaporama.php');
     require_once(ROOT.'models/Couleur.php');
+    
 abstract class Controller {
    
     public function __construct(){
@@ -30,13 +31,14 @@ abstract class Controller {
         }
         $footer = new footer();
         $couleur = new Couleurs();
-       
+        
         //diapo for the accueil page
         if($this instanceof Accueil){
             $diapo = new Diaporama();
         }
         
         require_once(ROOT.'views/ViewGenerator.php');
+        $g = new ViewGenerator(); 
         require_once(ROOT.'views/'.strtolower(get_class($this)).'/'.$file.'.php');
         $content = ob_get_clean();
         

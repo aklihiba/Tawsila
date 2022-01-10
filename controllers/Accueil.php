@@ -8,6 +8,23 @@
     }
 
     public function index(){
+
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            // login :
+            if(isset($_POST['login'])){
+               session_start();
+               //check mail and pwd
+               //connect and save user in session
+               $_SESSION['user_type']='user';
+              
+           }
+           //deconnexion
+           if(isset($_POST['deconnexion'])){
+               $_SESSION['user_type']=null;
+            }    
+       } 
+     
+
         $acc = new AccueilPage();
         $all= $acc->getElements();
         //enlever le bouton publier pour les utilisateur non connectes 
@@ -26,18 +43,16 @@
                 $a->restrict();
             }
           }
-        //if method POST : 
-        //recherche :
-        // publier:
-        // login : 
-        // inscription:
+      
 
         $this->render('index',compact('all','annonces'));
     }
-
-    public function read($id){
+    
+    
+    public function Annonce($id){
       
     }
+
      
  }
 ?>
