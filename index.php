@@ -1,6 +1,6 @@
 <?php
     define('ROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
-    define('PRE', '/PROJET');
+    define('PRE', '/projet');
 
     require_once(ROOT.'models/Model.php');
     require_once(ROOT.'controllers/Controller.php');

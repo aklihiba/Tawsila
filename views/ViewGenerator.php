@@ -1,10 +1,6 @@
 <?php
     class ViewGenerator {
-        private $c ;
-        public function __construct($colors)
-        {
-            $this->c = $colors;
-        }
+        
         public function div(){
             echo '<div>';
         }
@@ -14,15 +10,17 @@
         public function divclass($class){
             echo '<div class="'.$class.'">';
         }
+
         public function span(){
             echo '<span>';
         }
-        public function spancalss($class){
+        public function spanclass($class){
             echo '<span class="'.$class.'">';
         }
         public function spanend(){
             echo '</span>';
         }
+
         public function center(){
             echo '<center>';
         }
@@ -30,8 +28,8 @@
             echo '</center>';
         }
 
-        public function cadre(){
-          echo '<body style="border-color:'.$this->c->bordercolor().' ; border-style:groove; margin: 0.5%; padding:0.5%">';
+        public function cadre($color){
+          echo '<body style="border-color:'.$color.' ; border-style:groove; margin: 0.5%; padding:0.5%">';
         }
         public function bodyend(){
             echo '</body>';
@@ -80,7 +78,26 @@
             $this->divend();
         }
         
-        
+        public function link($link, $class,$text){
+            echo '<a href="'.PRE.'/'.$link.'" class="'.$class.'">'.$text.'</a>';
+        }
+        public function input($id,$name,$hint, $class){
+            echo ' <input type="text" id="'.$id.'" name="'.$name.'" placeholder="'.$hint.'" class="'.$class.'">';
+        }
+        public function submit($content, $name, $class){
+            echo '<input class="'.$class.'" name="'.$name.'" type="submit" value="'.$content.'" >';
+        }
+
+        public function annoncebox($a){
+           $this->spanclass('annoncebox');
+                $this->imageh($a->photo(),80);
+                $this->div();
+                    echo '<h3>'.$a->titre().'</h3>';
+                    echo '<h4>wilaya: '.$a->wilaya_depart().'->'.$a->wilaya_arrive().'</h4>';
+                    //TODO: un peu de description and lire la suite!
+                $this->divend();
+           $this->spanend();
+        }
         
     }
 ?>

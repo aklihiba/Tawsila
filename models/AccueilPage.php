@@ -1,5 +1,5 @@
 <?php
-    require_once("PageElements.php");
+    require_once("FormElements.php");
     require_once("Utilisateur.php");
     require_once("Model.php");
     class AccueilPage extends Model{
@@ -9,7 +9,7 @@
             //get all elements except the list of les annonces
             $table = $this->getAll("accueil_page","id");
             foreach($table as $row){
-                $this->table[] = new PageElements($row);
+                $this->table[] = new FormElements($row);
             }
            
         }

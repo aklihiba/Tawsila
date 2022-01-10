@@ -6,7 +6,7 @@
         public function __construct($id=0)
         {
             $this->getConnection();
-            if ($id==0) {
+            if ($id!=0) {
                $this->table[]= $this->rechercheByid($id);
             }
             else {

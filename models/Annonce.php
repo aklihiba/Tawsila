@@ -104,18 +104,16 @@
 
         public function setWilaya_depart($wilaya)
         {
-           $wilaya = (int) $wilaya ;
-           if ($wilaya>0){
+           
                $this->_wilaya_depart = $wilaya;
-           }
+           
         }
 
         public function setwilaya_arrive($wilaya)
         {
-            $wilaya = (int) $wilaya ;
-            if ($wilaya>0){
+           
                 $this->_wilaya_arrive = $wilaya;
-            }
+           
         }
 
         public function setDepart($depart)

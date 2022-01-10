@@ -3,6 +3,7 @@
     public function __construct(){
         $this->loadModel('AccueilPage');
         $this->loadModel('AnnonceManager');
+    
        
     }
 
@@ -11,9 +12,9 @@
         $all= $acc->getElements();
         //enlever le bouton publier pour les utilisateur non connectes 
         if(!isset($_SESSION['user_type'])){
-          foreach($all as $e){
-              if($e->content()=='Publier'){
-                  unset($e);
+          for($i=0; $i<count($all); $i++){
+              if($all[$i]->content()=='Publier'){
+                 $all[$i]=null;
               }
           }
         }
@@ -25,8 +26,13 @@
                 $a->restrict();
             }
           }
+        //if method POST : 
+        //recherche :
+        // publier:
+        // login : 
+        // inscription:
 
-        $this->render('index');
+        $this->render('index',compact('all','annonces'));
     }
 
     public function read($id){
