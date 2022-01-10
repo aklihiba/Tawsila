@@ -1,27 +1,36 @@
 <?php
  class Accueil extends Controller {
     public function __construct(){
-        $this->loadModel('AnnonceModel');
-        $this->loadModel('TagModel');
+        $this->loadModel('AccueilPage');
+        $this->loadModel('AnnonceManager');
+       
     }
 
-    public function index(int $page = 1){
-        $all = $this->ArticleModel->getAll("created DESC");
-        $articles = [];
-        for($i = ($page * 8 - 8); $i < ($page * 8); $i++){
-            if(!isset($all[$i])){
-                break;
-            }
-            $articles[$i] = $all[$i];
+    public function index(){
+        $acc = new AccueilPage();
+        $all= $acc->getElements();
+        //enlever le bouton publier pour les utilisateur non connectes 
+        if(!isset($_SESSION['user_type'])){
+          foreach($all as $e){
+              if($e->content()=='Publier'){
+                  unset($e);
+              }
+          }
         }
-        $pages = ceil(count($all) / 8);
-        $this->render('index', compact('articles', 'pages', 'page'));
+        $manager = new AnnonceManager();
+        $annonces = $manager->all();
+        //filtrer les  infos des annonces a afficher dans le cas non connectes
+        if(!isset($_SESSION['user_type'])){
+            foreach($annonces as $a){
+                $a->restrict();
+            }
+          }
+
+        $this->render('index');
     }
 
     public function read($id){
-        $tags = $this->TagModel->getAll();
-        $article = $this->ArticleModel->findById($id);
-        $this->render('article', compact('article', 'tags'));
+      
     }
      
  }

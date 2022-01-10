@@ -51,7 +51,7 @@
         public function logo(){return $this->_logo;}
         public function buttons(){return $this->_buttons;}
         public function menu(){return $this->_menu;}
-        public function buttonClass(){return $this->_buttonsClass;}
+        public function buttonsClass(){return $this->_buttonsClass;}
         public function menuClass(){return $this->_menuClass;}
     }
   

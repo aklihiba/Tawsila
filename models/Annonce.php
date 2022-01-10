@@ -33,7 +33,20 @@
 
         }
 
-
+        public function restrict(){
+            //pour le mode non connecter
+                        
+            unset($this->_etat);
+            unset($this->_note); 
+            unset($this->_prix); 
+            unset($this->_client); 
+            unset($this->_transiteur);
+            unset($this->_postulations); 
+            unset($this->_demandes);
+            unset($this->_vues);
+            unset($this->_archive);
+                    
+        }
         public function hydrate(array $data)
         {
             foreach($data as $key => $value)

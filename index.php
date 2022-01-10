@@ -1,10 +1,11 @@
 <?php
     define('ROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
-    define('PRE', '/projet');
+    define('PRE', '/PROJET');
 
     require_once(ROOT.'models/Model.php');
     require_once(ROOT.'controllers/Controller.php');
-    $params = explode('/', $_GET['p']);
+    
+    $params = explode('/', $_GET['url']);
 
     if($params[0] != ""){
         $controller = ucfirst($params[0]);

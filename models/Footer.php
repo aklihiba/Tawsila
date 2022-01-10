@@ -3,7 +3,7 @@ require_once('Model.php');
 
 class Footer extends Model {
     
-    public function __construct(array $data)
+    public function __construct()
     {
         $this->getConnection();
         $sql = "SELECT * FROM footer" ;
@@ -14,8 +14,12 @@ class Footer extends Model {
             echo $e->getMessage();
         }
         $this->table = $query->fetch(PDO::FETCH_ASSOC); // logo, menu, class
+        $this->table['menu'] = explode(' ', $this->table['menu']);
     }
-
+    public function logo(){return $this->table['logo'];}
+    public function class(){return $this->table['class'];}
+    public function menu(){return $this->table['menu'];}
 }
-
+//$v = new Footer();
+//echo $v->table['menu'][2];
 ?>
