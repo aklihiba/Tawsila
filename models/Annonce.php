@@ -28,7 +28,7 @@
         private $_archive;
         private $_publier; // false once saved and true till the administrator validates it
 
-        public function __construct(array $data)
+        public function __construct( $data)
         {
             $this->hydrate($data);
 
@@ -66,14 +66,28 @@
 
         public function save(){
             //nouvelle insertion lots de la creation 
-            $this->getConnection();
-            $sql = "INSERT INTO annonce "
+           
+            $sql = "INSERT INTO annonce (titre, photo, date, wilaya_depart,
+                wilaya_arrive, transport, type, poidsMin, poidsMax, volumeMin,
+                volumeMax, description, etat, prix, client) VALUES (
+                    '".$this->titre()."', '".$this->photo()."', '".$this->date()."', '".$this->Wilaya_depart()."', 
+                    '".$this->Wilaya_arrive()."', '".$this->transport()."', '".$this->type()."', '".$this->poidsMin()."', 
+                    '".$this->poidsMax()."', '".$this->volumeMin()."', '".$this->volumeMax()."',  '".$this->description()."',
+                    '".$this->etat()."', '".$this->prix()."', '".$this->client()."')" ;
+           
+            
+            //$sql = "INSERT INTO annonce (titre, photo, date, wilaya_depart, wilaya_arrive, transport, type, poidsMin, poidsMax, volumeMin, volumeMax, description, etat, prix, client) VALUES ('livraison colis', 'petite_boite.jpg', '2022-01-12', 'Relizane', 'Mila', 'voiture, moto', 'colis', '0', '0.1', '0', '0.1',  'c`est une boite a bijoux qui doit etre livrer cette semaine, j`accepte de travailler avec des transporteurs non certifié. ', 'en attente de validation', '1200', '1')" ;
+             return $this->insert_getlastid($sql); 
+                   
         }
         public function update(){
             //modifying it
         }
         public function archiver(){
             //archive it
+        }
+        public function publish(){
+
         }
         //setters
         public function setId($id)

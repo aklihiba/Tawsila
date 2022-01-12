@@ -2,7 +2,7 @@
 require_once('Model.php');
 require_once('UtilisateurManager.php');
 require_once('AnnonceManager.php');
-require_once('AnnonceTransporteur');
+require_once('AnnonceTransporteur.php');
 
 class Suggestions extends Model{
     public function __construct(string $id, string $type="annonce")
@@ -22,18 +22,21 @@ class Suggestions extends Model{
         }
         else{
             //creating new suggestions for an annonce\
-            $suggestions = array();
+           
             $annonce = new AnnonceManager($id);
             $annonce = $annonce->getannonce();
 
             $depart = $annonce->wilaya_depart();
             $arrive = $annonce->wilaya_arrive();
 
-            $users = new UtilisateurManager();
-            $users = $users->all();
+            $m = new UtilisateurManager('none');
+             $m->activetransporteur();
+             $users = $m->all();
 
+            
             foreach($users as $u){
-                if(in_array($depart,$u->wilaya_depart()) && in_array($arrive,$u->wilaya_arrive())){
+                
+                if(in_array($depart,$u->wilayas_depart()) && in_array($arrive,$u->wilayas_arrive())){
                     /*$suggestions[] = new AnnonceTransporteur( 
                         array(
                             'annonce'=>$annonce,
@@ -41,6 +44,7 @@ class Suggestions extends Model{
                         )
                     );
                     */
+
                     $this->save($annonce->id(), $u->id());
                 }
             }
@@ -54,8 +58,8 @@ class Suggestions extends Model{
     }
 
     public function save($annonce, $transporteur){
-        $rqst = "INSERT INTO suggestion (annonce, transporteur) VALUES (".$annonce.", ".$transporteur.")" ;
-        $this->request($rqst);
+        $rqst = "INSERT INTO suggestion (annonce, transporteur) VALUES ('".$annonce."', '".$transporteur."')" ;
+        $this->insert_getlastid($rqst);
         
     }
 }

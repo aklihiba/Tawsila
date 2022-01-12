@@ -1,4 +1,7 @@
 <?php
+      require_once('models/Annonce.php');
+      require_once('models/Utilisateur.php');
+      require_once('models/Suggestions.php');
  class Accueil extends Controller {
     public function __construct(){
         session_start();
@@ -8,7 +11,6 @@
      
         $this->loadModel('AccueilPage');
         $this->loadModel('AnnonceManager');
-        $this->loadModel('Annonce');
         $this->loadModel('UtilisateurManager');
         $this->loadModel('Transport');
         $this->loadModel("Volumes");
@@ -16,6 +18,7 @@
         $this->loadModel('Wilaya');
         $this->loadModel('TypeAnnonce');
         $this->loadModel('PublierPage');
+        
        
     }
 
@@ -115,6 +118,7 @@
         if($_SESSION['connexion']=='user'){
         //method POST:
         if($_SERVER["REQUEST_METHOD"] == "POST"){
+          
             $annonce = new Annonce(array());
             if(isset($_POST['titre'])){
                 $annonce->setTitre($_POST['titre']);
@@ -182,15 +186,18 @@
                 $annonce->setDescription("");
             }
             $annonce->setEtat("en attente de validation");
-            $annonce->setClient($_SESSION['user']->id());
+           
+            $user = $_SESSION['user'];
+            $annonce->setClient($user->id());
 
             $annonce->calculPrix();   
 
-            $annonce->save();
+            $id = $annonce->save();
+            
             //creer les suggestions
-
+            $sug = new Suggestions($id," ");
         
-          // header("Location:".PRE."/accueil");            
+           //header("Location:".PRE."/accueil");            
         }
 
         $user = $_SESSION['user'];

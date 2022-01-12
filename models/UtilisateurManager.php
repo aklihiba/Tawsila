@@ -6,23 +6,27 @@ class UtilisateurManager extends Model{
     public function __construct($id=0)
     {
         $this->getConnection();
-        if ($id!=0) {
-            $this->table[]= $this->rechercheByid($id);
-        }
-        elseif($id=='none'){
-            $this->table = null;
-        } else{
-            $data = $this->getAll('utilisateur','id');
-            if ($data != 0) {
+        if ((int)$id==0) {
+           $data = $this->getAll('utilisateur','id');
+            
+            if ($data != null) {
+              
                 foreach($data as $row){
                     $this->table[] = new Utilisateur($row);
                 }
+            }
+       
+        } else{
+            if($id=='none'){
+                $this->table = null;
+            }else{
+             $this->table[]= $this->rechercheByid($id);
             }
         }
     }
 
     public function all(){return $this->table;}
-    
+
     public function getuser(){
         return $this->table[0];
         /*incase construct with id*/
@@ -51,6 +55,16 @@ class UtilisateurManager extends Model{
         } 
         
         return null; 
+    }
+    public function activetransporteur(){
+        $sql = "SELECT * FROM utilisateur WHERE type='transporteur' AND statut!='en attente'" ; 
+        $data = $this->requestAll($sql);
+        if ($data != null) {
+              
+            foreach($data as $row){
+                $this->table[] = new Utilisateur($row);
+            }
+        }
     }
 }
 //$v = new UtilisateurManager();

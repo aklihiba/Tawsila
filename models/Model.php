@@ -18,6 +18,7 @@ abstract class Model
             $dsn = "mysql:dbname=".$this->db_name."; host=".$this->host.";";
             $this->_connexion = new PDO($dsn, $this->username, $this->password);
             $this->_connexion->exec('set names utf8');
+            $this->_connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }catch(PDOException $e){
             echo 'Erreur de connexion : '.$e->getMessage();
         }
@@ -32,7 +33,20 @@ abstract class Model
         }
         return $query->fetch(PDO::FETCH_ASSOC);
     }
-   
+    public function insert_getlastid(string $sql){
+       //$query = $this->_connexion->prepare($sql);
+        try{
+            $this->getConnection();
+          
+            $this->_connexion->exec($sql);
+            echo 'well executed <br>';
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
+        $id =  $this->_connexion->lastInsertId();
+        echo $id;
+        return $id;
+    }
     public function requestAll(string $sql){
         $query = $this->_connexion->prepare($sql);
         try{
