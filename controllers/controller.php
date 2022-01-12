@@ -7,6 +7,7 @@
 abstract class Controller {
    
     public function __construct(){
+        
         $this->loadModel('StringModel');
        
     }
@@ -22,18 +23,12 @@ abstract class Controller {
 
         ob_start();
         //header and footer for the layout
-        if(isset($_SESSION['user_type'])){
-            $header = new header('user');    
-     
-        }
-        else{
-            $header = new header('anonyme');      
-        }
+        $header = new Header($_SESSION['connexion']);
         $footer = new footer();
         $couleur = new Couleurs();
         
         //diapo for the accueil page
-        if($this instanceof Accueil){
+        if($this instanceof Accueil && $file=="index"){
             $diapo = new Diaporama();
         }
         

@@ -43,7 +43,7 @@
         }
 
         public function button($name, $class, $onclick){
-          echo '<button class="'.$class.'" onclick="'.$onclick.'">'.$name.'</button>' ;
+          echo '<button type="button" class="'.$class.'" onclick="'.$onclick.'">'.$name.'</button>' ;
         }
         
         public function menu(array $contenu, $class){
@@ -111,7 +111,15 @@
             echo ' <input type="password" id="'.$id.'" name="'.$name.'" placeholder="'.$hint.'" class="'.$class.'">';
         }
         public function submit($content, $name, $class){
-            echo '<input class="'.$class.'" name="'.$name.'" type="submit" value="'.$content.'" >';
+           echo '<input class="'.$class.'" name="'.$name.'" type="submit" value="'.$content.'" >';
+
+        }
+        public function biginput($id,$name,$hint, $class){
+            echo ' <textarea id="'.$id.'" name="'.$name.'" placeholder="'.$hint.'" class="'.$class.'"></textarea>';
+        }
+        public function fileselect($name, $content, $class){
+           echo ' <label for="'.$name.'" class="'.$class.'">'.$content.'</label>';
+           echo ' <input type="file" id="'.$name.'" name="'.$name.'" class="'.$class.'" title=" " >';
         }
 
         public function annoncebox($a){
@@ -124,6 +132,55 @@
                     //TODO: un peu de description and lire la suite!
                 $this->divend();
            $this->spanend();
+        }
+
+        public function dropdowncheckbox(array $values, $name, $content, $class){
+            //checkbox for multiselection
+            $this->divclass($class);
+            $this->button($content,$class."btn","");
+            $this->divclass($class."-content");
+            for ($i=0; $i <count($values) ; $i++) { 
+                echo '<input type="checkbox" id="'.$name.'" name="'.$name.'[]" value="'.$values[$i].'">';
+                echo'<label for="'.$name.'"> '.$values[$i].'</label><br>';
+
+            }
+            $this->divend();
+            $this->divend();
+
+
+        }
+        public function dropdownradio(array $values, $name, $content, $class){
+            //radio for one element selection
+            $this->divclass($class);
+            
+            $this->button($content,$class."btn","");
+            $this->divclass($class."-content");
+         
+            for ($i=0; $i <count($values) ; $i++) { 
+                echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'">';
+                echo'<label for="'.$name.$i.'"> '.$values[$i].'</label><br>';
+
+            }
+           
+            $this->divend();
+            $this->divend();
+
+        }
+        public function fourchette(array $values, $name, $content, $class){
+            $this->divclass($class);
+            
+            $this->button($content,$class."btn","");
+            $this->divclass($class."-content");
+           
+            for ($i=0; $i <count($values)-1 ; $i++) { 
+                echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'-'.$values[$i+1].'">';
+                echo'<label for="'.$name.$i.'"> entre '.$values[$i].' et '.$values[$i+1].'</label><br>';
+            }
+            echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'">';
+            echo'<label for="'.$name.$i.'"> '.$values[$i].' ou plus.'.'</label><br>';
+            
+            $this->divend();
+            $this->divend();
         }
         
     }

@@ -14,15 +14,26 @@
             if($type=="annonce"){
                 $sql = $sql."WHERE anonnce=".$id;
             }
-            else{
+            elseif($type=="transporteur"){
                 //transporteur
                 $sql = $sql."WHERE transporteur=".$id;
+            }
+            else{
+                 //creating new demande
+                 $this->save($id, (int)$type);
             }
 
             $data = $this->requestAll($sql);
             foreach($data as $row){
                 $this->table[] = new AnnonceTransporteur($row);
             }
+        }
+
+        
+        public function save($annonce, $transporteur){
+            $rqst = "INSERT INTO demandes (annonce, transporteur) VALUES (".$annonce.", ".$transporteur.")" ;
+            $this->request($rqst);
+            
         }
     }
 ?>

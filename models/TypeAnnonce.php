@@ -6,7 +6,7 @@
         public function __construct()
         {
             $this->getConnection();
-            $table = $this->getAll("mannonce_type","type");
+            $table = $this->getAll("annonce_type","type");
             foreach($table as $row){
                $this->table[]=$row['type']; 
             }

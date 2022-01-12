@@ -20,7 +20,9 @@ class UtilisateurManager extends Model{
             }
         }
     }
+
     public function all(){return $this->table;}
+    
     public function getuser(){
         return $this->table[0];
         /*incase construct with id*/

@@ -1,6 +1,6 @@
 <?php
-
-    class Annonce 
+    require_once('Model.php');
+    class Annonce extends Model
     {
         private $_id;
         private $_titre;
@@ -26,6 +26,7 @@
         private $_demandes;// same as postulation: booleen
         private $_vues;
         private $_archive;
+        private $_publier; // false once saved and true till the administrator validates it
 
         public function __construct(array $data)
         {
@@ -33,20 +34,7 @@
 
         }
 
-        public function restrict(){
-            //pour le mode non connecter
-                        
-            unset($this->_etat);
-            unset($this->_note); 
-            unset($this->_prix); 
-            unset($this->_client); 
-            unset($this->_transiteur);
-            unset($this->_postulations); 
-            unset($this->_demandes);
-            unset($this->_vues);
-            unset($this->_archive);
-                    
-        }
+        
         public function hydrate(array $data)
         {
             foreach($data as $key => $value)
@@ -59,7 +47,34 @@
                 }
             }
         }
+        
+        public function restrict(){
+            //pour le mode non connecter
+                        
+            unset($this->_etat);
+            unset($this->_note); 
+            unset($this->_prix); 
+            unset($this->_client); 
+            unset($this->_transiteur);
+            unset($this->_postulations); 
+            unset($this->_demandes);
+            unset($this->_vues);
+            unset($this->_archive);
+            unset($this->_publier);
+                    
+        }
 
+        public function save(){
+            //nouvelle insertion lots de la creation 
+            $this->getConnection();
+            $sql = "INSERT INTO annonce "
+        }
+        public function update(){
+            //modifying it
+        }
+        public function archiver(){
+            //archive it
+        }
         //setters
         public function setId($id)
         {
@@ -109,7 +124,7 @@
            
         }
 
-        public function setwilaya_arrive($wilaya)
+        public function setWilaya_arrive($wilaya)
         {
            
                 $this->_wilaya_arrive = $wilaya;
@@ -263,7 +278,10 @@
             $this->_vues = $this->vues+1 ;
         }
         public function setArchive($archive){
-            $this->_archive = $archive;
+            $this->_archive = (bool) $archive;
+        }
+        public function setPublier($publier){
+            $this->_publier = (bool) $publier;
         }
 
         //getters
@@ -316,7 +334,7 @@
         }
         public function poidsMin()
         {
-            return $this->_poidsMax ;
+            return $this->_poidsMin ;
         }
         public function volumeMax()
         {
@@ -360,6 +378,9 @@
         public function archive(){
             return $this->_archive;
         }
+        public function publier(){
+            return $this->_publier;
+        }
 
         public function calculPrix(){
             //cette fonction est provisoir le temps que j'utilise maps et je calcule la distance du trajet
@@ -370,6 +391,7 @@
             }
             
         }
+
 
     }
 

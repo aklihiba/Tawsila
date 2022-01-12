@@ -8,6 +8,7 @@
      
         $this->loadModel('AccueilPage');
         $this->loadModel('AnnonceManager');
+        $this->loadModel('Annonce');
         $this->loadModel('UtilisateurManager');
         $this->loadModel('Transport');
         $this->loadModel("Volumes");
@@ -50,7 +51,7 @@
             //publier
             if(isset($_POST['publier'])){
                 
-                $this->Publier();
+                header("Location:".PRE."/accueil/publier");
             }  
             //recherche
             if(isset($_POST['recherche'])){
@@ -96,6 +97,7 @@
     
     public function Annonce($id){
        $manager = new AnnonceManager($id);
+        //TODO incriment the vues
 
        if($manager->all() != null){
             $annonce = $manager->all()[0];
@@ -110,8 +112,86 @@
     }
 
     public function Publier(){
+        if($_SESSION['connexion']=='user'){
         //method POST:
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $annonce = new Annonce(array());
+            if(isset($_POST['titre'])){
+                $annonce->setTitre($_POST['titre']);
+            }
+            else{
+                $annonce->setTitre("");
+            }
+            $annonce->setDate(date("Y-m-d"));
+            if(isset($_POST['photo'])){
+                $annonce->setTitre($_POST['photo']);
+            }
+            else{
+                $annonce->setPhoto("");
+            }
+            if(isset($_POST['depart'])){
+                $annonce->setWilaya_depart($_POST['depart']);
+            }
+            else{
+                $annonce->setWilaya_depart("");
+            }
+            if(isset($_POST['arrive'])){
+                $annonce->setWilaya_arrive($_POST['arrive']);
+            }
+            else{
+                $annonce->setWilaya_arrive("");
+            }
+            if(isset($_POST['transport'])){
+                $trans="";
+                foreach($_POST['transport'] as $t){
+                    $trans = $trans.", ".$t ; 
+                }
+                $annonce->setTransport($trans);
+            }
+            else{
+                $annonce->setTransport("");
+            }
+            if(isset($_POST['type'])){
+                $annonce->setType($_POST['type']);
+            }
+            else{
+                $annonce->setType("");
+            }
+            if(isset($_POST['poids'])){
+                $p = explode("-",$_POST['poids']);
+                $annonce->setPoidsMin($p[0]);
+                $annonce->setPoidsMax($p[1]);
+            }
+            else{
+                $annonce->setPoidsMax(0);
+                $annonce->setPoidsMin(0);
+            }
+            if(isset($_POST['volume'])){
+                $p = explode("-",$_POST['volume']);
+                $annonce->setVolumeMin($p[0]);
+                $annonce->setVolumeMax($p[1]);
+            }
+            else{
+                $annonce->setVolumeMax(0);
+                $annonce->setVolumeMin(0);
+            }
+            if(isset($_POST['description'])){
+                $annonce->setDescription($_POST['description']);
+            }
+            else{
+                $annonce->setDescription("");
+            }
+            $annonce->setEtat("en attente de validation");
+            $annonce->setClient($_SESSION['user']->id());
 
+            $annonce->calculPrix();   
+
+            $annonce->save();
+            //creer les suggestions
+
+        
+          // header("Location:".PRE."/accueil");            
+        }
 
         $user = $_SESSION['user'];
         //fourchette poids
@@ -130,10 +210,19 @@
         $transports = new Transport();
         $transports = $transports->all();
 
+        //type de l'annonce
+        $type = new TypeAnnonce();
+        $type = $type->all();
+        
         //publierpage
         $all = new PublierPage();
         $all = $all->getElements();
-        $this->render('publier', compact('user','poids','volumes','wilayas','transports','all'));
+
+        $this->render('publier', compact('poids','volumes','wilayas','transports','type', 'all'));
+        }
+        else{
+            echo 'vous devez etre connecter pour publier';
+        }
     }
 
      

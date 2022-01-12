@@ -76,13 +76,13 @@
         public function setWilayas_depart($wilaya)
         {
            
-               $this->_wilayas_depart = explode(" ",$wilaya);
+               $this->_wilayas_depart = explode(", ",$wilaya);
            
         }
 
         public function setwilayas_arrive($wilaya)
         {
-                $this->_wilayas_arrive = explode(" ",$wilaya);
+                $this->_wilayas_arrive = explode(", ",$wilaya);
             
         }
 
@@ -153,7 +153,7 @@
         public function mail(){return $this->_mail ;}
         public function telephone(){return $this->_telephone ;}
         public function type(){return $this->_type ;}
-        public function wialays_depart(){return $this->_wilayas_depart ;}
+        public function wilayas_depart(){return $this->_wilayas_depart ;}
         public function wilayas_arrive(){return $this->_wilayas_arrive ;}
         public function gain(){return $this->_gain ;}
         public function note(){return $this->_note ;}
@@ -184,7 +184,7 @@
                 $sql = "INSERT INTO utilisateur (nom, prenom, adresse, mail, telephone, type, wilayas_depart, wilayas_arrive, 
                 gain, statut, pwd )
                 VALUES ('".$this->nom()."', '".$this->prenom()."', '".$this->adresse()."', '".$this->mail()."', '".$this->telephone()."',
-                'transporteur', '".$this->wialays_depart()."', '".$this->wilayas_arrive()."', '0', '
+                'transporteur', '".$this->wilayas_depart()."', '".$this->wilayas_arrive()."', '0', '
                 '".md5($this->pwd())."')" ;
           
                 $this->_connexion->exec($sql);
