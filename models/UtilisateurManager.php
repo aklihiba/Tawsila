@@ -57,13 +57,21 @@ class UtilisateurManager extends Model{
         return null; 
     }
     public function activetransporteur(){
-        $sql = "SELECT * FROM utilisateur WHERE type='transporteur' AND statut!='en attente'" ; 
+        //$sql = 'SELECT * FROM utilisateur WHERE type="transporteur" AND statut!="en attente"' ; 
+        $sql = 'SELECT * FROM utilisateur';
         $data = $this->requestAll($sql);
+        $this->table = null;
+        
         if ($data != null) {
-              
+           
             foreach($data as $row){
-                $this->table[] = new Utilisateur($row);
+                if($row['type']=='transporteur' && $row['statut']!='en attente'){
+                    $this->table[] = new Utilisateur($row);
+                }
             }
+        }else{
+          
+            $this->table = null;
         }
     }
 }

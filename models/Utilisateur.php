@@ -77,6 +77,7 @@
         {
            
                $this->_wilayas_depart = explode(", ",$wilaya);
+               
            
         }
 

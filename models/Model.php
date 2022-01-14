@@ -23,7 +23,7 @@ abstract class Model
             echo 'Erreur de connexion : '.$e->getMessage();
         }
     }
-
+    
     public function request(string $sql){
         $query = $this->_connexion->prepare($sql);
         try{
@@ -33,20 +33,22 @@ abstract class Model
         }
         return $query->fetch(PDO::FETCH_ASSOC);
     }
+
     public function insert_getlastid(string $sql){
        //$query = $this->_connexion->prepare($sql);
         try{
             $this->getConnection();
           
             $this->_connexion->exec($sql);
-            echo 'well executed <br>';
+        
         }catch(PDOException $e){
             echo $e->getMessage();
         }
         $id =  $this->_connexion->lastInsertId();
-        echo $id;
+      
         return $id;
     }
+
     public function requestAll(string $sql){
         $query = $this->_connexion->prepare($sql);
         try{

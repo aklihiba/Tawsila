@@ -176,8 +176,8 @@
                 echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'-'.$values[$i+1].'">';
                 echo'<label for="'.$name.$i.'"> entre '.$values[$i].' et '.$values[$i+1].'</label><br>';
             }
-            echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'">';
-            echo'<label for="'.$name.$i.'"> '.$values[$i].' ou plus.'.'</label><br>';
+          //  echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'-'.'1000'.'">';
+          //  echo'<label for="'.$name.$i.'"> '.$values[$i].' ou plus.'.'</label><br>';
             
             $this->divend();
             $this->divend();

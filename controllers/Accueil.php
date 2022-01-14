@@ -122,13 +122,15 @@
             $annonce = new Annonce(array());
             if(isset($_POST['titre'])){
                 $annonce->setTitre($_POST['titre']);
+              
             }
             else{
                 $annonce->setTitre("");
             }
+            
             $annonce->setDate(date("Y-m-d"));
             if(isset($_POST['photo'])){
-                $annonce->setTitre($_POST['photo']);
+                $annonce->setPhoto($_POST['photo']);
             }
             else{
                 $annonce->setPhoto("");
@@ -163,8 +165,9 @@
             }
             if(isset($_POST['poids'])){
                 $p = explode("-",$_POST['poids']);
-                $annonce->setPoidsMin($p[0]);
-                $annonce->setPoidsMax($p[1]);
+                
+                $annonce->setPoidsMin((float)$p[0]);
+                $annonce->setPoidsMax((float)$p[1]);
             }
             else{
                 $annonce->setPoidsMax(0);
@@ -172,8 +175,9 @@
             }
             if(isset($_POST['volume'])){
                 $p = explode("-",$_POST['volume']);
-                $annonce->setVolumeMin($p[0]);
-                $annonce->setVolumeMax($p[1]);
+                
+                $annonce->setVolumeMin((float)$p[0]);
+                $annonce->setVolumeMax((float)$p[1]);
             }
             else{
                 $annonce->setVolumeMax(0);

@@ -194,7 +194,7 @@
 
         public function setVolumeMin($volume)
         {
-            $this->_volumeMax = (float)$volume ;
+            $this->_volumeMin = (float)$volume ;
         }
 
         public function setDescription($desc)
