@@ -12,7 +12,7 @@
             $sql = "SELECT * FROM demandes ";
             $this->getConnection();
             if($type=="annonce"){
-                $sql = $sql."WHERE anonnce=".$id;
+                $sql = $sql."WHERE annonce=".$id;
             }
             elseif($type=="transporteur"){
                 //transporteur

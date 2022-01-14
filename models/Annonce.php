@@ -58,7 +58,7 @@
             unset($this->_transiteur);
             unset($this->_postulations); 
             unset($this->_demandes);
-            unset($this->_vues);
+           // unset($this->_vues);
             unset($this->_archive);
             unset($this->_publier);
                     
@@ -289,7 +289,11 @@
         }
 
         public function incVues(){
-            $this->_vues = $this->vues+1 ;
+            $this->getConnection();
+            $this->setVues($this->vues() +1) ;
+           $sql = " UPDATE annonce SET vues=".$this->vues()." WHERE id=".$this->id();
+           $this->query($sql);
+          
         }
         public function setArchive($archive){
             $this->_archive = (bool) $archive;
@@ -382,7 +386,7 @@
         {
             return $this->_postulations ;
         }
-        public function demamdes()
+        public function demandes()
         {
             return $this->_demandes;
         }

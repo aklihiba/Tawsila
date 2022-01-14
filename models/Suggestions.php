@@ -14,7 +14,7 @@ class Suggestions extends Model{
         $this->getConnection();
         if($type=="annonce"){
             //recuperer from the db all the suggestions for this annonces
-            $sql = $sql."WHERE anonnce=".$id;
+            $sql = $sql."WHERE annonce=".$id;
             $data = $this->requestAll($sql);
             foreach($data as $row){
                 $this->table[] = new AnnonceTransporteur($row);

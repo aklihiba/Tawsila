@@ -71,5 +71,13 @@ abstract class Model
         $sql = "SELECT * FROM ".$table." WHERE id=".$id;
         return $this->request($sql);
     }
+
+    public function query($sql){
+        if ($this->_connexion->query($sql) === TRUE) {
+           // echo "Record updated successfully";
+          } else {
+           // echo "Error updating record ";
+          }
+    }
 }
 ?>
