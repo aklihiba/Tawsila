@@ -61,6 +61,10 @@ class Suggestions extends Model{
         $this->insert_getlastid($rqst);
         
     }
+
+    public function all(){
+        return $this->table;
+    }
 }
 
 ?>

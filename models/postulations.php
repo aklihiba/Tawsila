@@ -12,7 +12,7 @@
             $sql = "SELECT * FROM postulations ";
             $this->getConnection();
             if($type=="annonce"){
-                $sql = $sql."WHERE anonnce=".$id;
+                $sql = $sql."WHERE annonce=".$id;
             }
             elseif($type=='transporteur'){
                 //transporteur
@@ -20,6 +20,7 @@
             }
             else{
                 //creating new postulation
+                //id=annonce type=transporteur
                 $this->save($id, (int)$type);
             }
 
@@ -28,11 +29,17 @@
                 $this->table[] = new AnnonceTransporteur($row);
             }
         }
-
+        public function all(){
+            return $this->table ;
+        }
         public function save($annonce, $transporteur){
             $rqst = "INSERT INTO postulations (annonce, transporteur) VALUES (".$annonce.", ".$transporteur.")" ;
-            $this->request($rqst);
+            $this->query($rqst);
             
+        }
+        public function annuler($annonce, $transporteur){
+            $rqst = "DELETE FROM postulations WHERE annonce=".$annonce." AND transporteur=".$transporteur ;
+            $this->exec($rqst);
         }
     }
 ?>

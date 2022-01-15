@@ -125,11 +125,11 @@
         public function annoncebox($a){
            $this->spanclass('annoncebox');
                 $this->imageh($a->photo(),80);
-                $this->div();
+               $this->div();
                     echo '<h3>'.$a->titre().'</h3>';
                     echo '<h4>wilaya: '.$a->wilaya_depart().'->'.$a->wilaya_arrive().'</h4>';
                     $this->link("Accueil/annonce/".$a->id(),"smalllink","lire la suite");
-                    //TODO: un peu de description and lire la suite!
+                  
                 $this->divend();
            $this->spanend();
         }
@@ -181,6 +181,33 @@
             
             $this->divend();
             $this->divend();
+        }
+
+        public function titre($size, $content, $class){
+            echo '<h'.$size.' class="'.$class.'">'.$content.'</h'.$size.'>';
+        }
+        public function paragraphe($content, $class){
+            echo '<p class="'.$class.'">'.$content.'</p>';
+        }
+        
+        public function userbox($user, $action){
+            $this->spanclass('userbox');
+                $this->div();
+                    $this->imageh($user->photo(),80);
+                    $this->titre(5,$user->statut(),"titre");
+                $this->divend();    
+                $this->div();
+                    $this->titre(4, $user->nom().' '.$user->prenom(), "titre");
+                    $this->paragraphe('wilayas depart: '.$user->depart(), "paragraphe");
+                    $this->paragraphe('wilayas arrivé: '.$user->arrive(), "paragraphe");
+                    $this->paragraphe('note: '.$user->note().'/5',"paragraphe");
+            $this->divend();
+            $this->div();
+            if($action != ''){
+                $this->submit($action, $action.$user->id(), 'smallbutton');
+            }
+            $this->divend();    
+           $this->spanend();
         }
         
     }

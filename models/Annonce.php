@@ -82,12 +82,85 @@
         }
         public function update(){
             //modifying it
+            $this->getConnection();
+
+            $sql = " UPDATE annonce SET 
+            titre='".$this->titre()."',
+            photo='".$this->photo()."',
+            wilaya_depart='".$this->Wilaya_depart()."',
+            wilaya_arrive='".$this->Wilaya_arrive()."',
+            transport='".$this->transport()."',
+            type='".$this->type()."',
+            poidsMin='".$this->poidsMin()."',
+            poidsMax='".$this->poidsMax()."',
+            volumeMin='".$this->volumeMin()."',
+            volumeMax='".$this->volumeMax()."',
+            description='".$this->description()."',
+            WHERE id=".$this->id();
+
+            $this->query($sql);
+        }
+        public function demander(){
+           
+            if(! $this->demandes()){
+                 $this->setDemandes(true);
+                $this->getConnection();
+                $sql = " UPDATE annonce SET demandes=true WHERE id=".$this->id();
+                $this->query($sql);
+            }
+        }
+        public function annulerdemander(){
+            
+            if( $this->demandes()){
+                $this->setDemandes(false);
+                $this->getConnection();
+                $sql = " UPDATE annonce SET demandes=false WHERE id=".$this->id();
+                $this->query($sql);
+            }
+        }
+        public function postuler(){
+           
+            if(! $this->postulations()){
+                 $this->setPostulations(true);
+                $this->getConnection();
+                $sql = " UPDATE annonce SET postulations=true WHERE id=".$this->id();
+                $this->query($sql);
+            }
+        }
+        public function annulerpostuler(){
+          
+            if( $this->postulations()){
+                  $this->setPostulations(false);
+                $this->getConnection();
+                $sql = " UPDATE annonce SET postulations=false WHERE id=".$this->id();
+                $this->query($sql);
+            }
         }
         public function archiver(){
-            //archive it
+            //archive it : when the admin annule or the client supprime
+            $this->getConnection();
+            $this->setArchive(true);
+            $sql = " UPDATE annonce SET archive=true WHERE id=".$this->id();
+            $this->query($sql);
         }
         public function publish(){
-
+            //validation de l'administrateur
+            $this->setPublier(true);
+            $this->getConnection();
+            $sql = " UPDATE annonce SET publier=true, etat='en attente de transiteur' WHERE id=".$this->id();
+            $this->query($sql);
+        }
+        public function transiter($transiteur){
+            $this->setTransiteur($transiteur);
+            $this->getConnection();
+            $sql = " UPDATE annonce SET transiteur=".$transiteur.", etat='transitée' WHERE id=".$this->id();
+            $this->query($sql);
+        }
+        public function noter($note){
+            $this->setNote($note);
+            $this->getConnection();
+            $sql = " UPDATE annonce SET note=".$note." WHERE id=".$this->id();
+            $this->query($sql);
         }
         //setters
         public function setId($id)
@@ -258,7 +331,7 @@
             }
         }
 
-        public function setPostulation($post)
+        public function setPostulations($post)
         {
             if(!is_null($post))
             {

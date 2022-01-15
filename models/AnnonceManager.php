@@ -97,7 +97,7 @@
         //recherche par id
         public function rechercheByid($id){
             
-            $sql = "SELECT * FROM annonce WHERE id=".$id." AND archive=false AND publier=true " ; 
+            $sql = "SELECT * FROM annonce WHERE id=".$id ; 
             $data = $this->request($sql);
             if (!is_null($data)) {
                 return new Annonce($data);

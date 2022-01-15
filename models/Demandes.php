@@ -20,6 +20,7 @@
             }
             else{
                  //creating new demande
+                 //id= annonce, type= transporteur
                  $this->save($id, (int)$type);
             }
 
@@ -29,11 +30,17 @@
             }
         }
 
-        
+        public function all(){
+            return $this->table;
+        }
         public function save($annonce, $transporteur){
             $rqst = "INSERT INTO demandes (annonce, transporteur) VALUES (".$annonce.", ".$transporteur.")" ;
-            $this->request($rqst);
+            $this->query($rqst);
             
+        }
+        public function annuler($annonce, $transporteur){
+            $rqst = "DELETE FROM demandes WHERE annonce=".$annonce." AND transporteur=".$transporteur ;
+            $this->exec($rqst);
         }
     }
 ?>

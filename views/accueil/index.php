@@ -18,15 +18,21 @@
 </form>
     <hr>
 <?php 
-$g->span();
+//$g->span();
 if($annonces != null){
+    $g->span();
     for ($j=0; $j <count($annonces) ; $j++) { 
-      if($j==4){echo'<hr>';}
+      if($j==4){
+        $g->spanend();
+        echo'<hr>';  
+        $g->span();
+    }
         $g->annoncebox($annonces[$j]);
    }
+   $g->spanend();
 }
    
-   $g->spanend();
+ //  $g->spanend();
    echo '<hr>';
     $g->link("Présentation", $all[$i-1]->class(), $all[$i-1]->content());
 ?>

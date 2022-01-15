@@ -162,6 +162,30 @@
         public function photo(){return $this->_photo ;}
         public function pwd(){return $this->_pwd ;}
 
+        public function depart(){
+            $s = '';
+            $w = $this->wilayas_depart();
+            for ($i=0; $i <count($w) ; $i++) { 
+               if($i==0){ $s = $w[$i];}
+               else{
+
+                $s =  $s.', '.$w[$i] ;
+               }
+            }
+            return $s;
+        }
+        public function arrive(){
+            $s = '';
+            $w = $this->wilayas_arrive();
+            for ($i=0; $i <count($w) ; $i++) { 
+               if($i==0){ $s = $w[$i];}
+               else{
+
+                $s =  $s.', '.$w[$i] ;
+               }
+            }
+            return $s;
+        }
 
         //modify and save
         public function insererClient(){

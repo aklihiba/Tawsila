@@ -4,6 +4,7 @@
       require_once('models/Suggestions.php');
       require_once('models/Demandes.php');
       require_once('models/Postulations.php');
+      require_once('models/Signalement.php');
 
  class Accueil extends Controller {
     public function __construct(){
@@ -102,36 +103,176 @@
     
     
     public function Annonce($id){
-       // post method and actions :
-        
+       
        //getting the data to send it to the view. 
        $manager = new AnnonceManager($id);
 
        if($manager->all() != null){
+            //test admin
+            //$_SESSION['user_type']='admin';
 
             $annonce = $manager->all()[0];
-            $suggestions = new Suggestions($annonce->id(),'annonce'); 
-            if($annonce->transiteur()!== null){
-                $u = new UtilisateurManager($annonce->transiteur());
-                $transiteur = $u->getuser();
+          
+            $user = $_SESSION['user'];
+            $s = new Suggestions($annonce->id(),'annonce'); 
+            $suggestions = $s->all();
+            
+            
+             // post method and actions :
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                //administrateur :
+                if($_SESSION['user_type']=='admin'){
+                    // valider
+                    if(isset($_POST['valider'])){
+                       
+                        $annonce->publish();
+                    }
+                    //annuler
+                    if(isset($_POST['annuler'])){
+                        $annonce->archiver();
+                        //TODO : revenir a la page des annonces de l'admin
+                    }
+                }elseif($user->id()==$annonce->client()){
+                    // le proprietaire de l'annonce:
+                    if(isset($_POST['modifer'])){
+                        //modifer
+                        header("Location:".PRE."/accueil/modifier/".$annonce->id());
+                    }
+                    if(isset($_POST['supprimer'])){
+                        //supprimer (archiver)
+                        $annonce->archiver();
+                        header('Location: '.PRE.'/accueil');
+                    }
+                    if(isset($_POST['noter']))  {
+                        //noter
+                    }          
+                    if(isset($_POST['signaler'.$annonce->transiteur()])){
+                        //signaler (le transiteur)
+                        
+                        $d = array(
+                            'annonce'=> $annonce->id(),
+                            'emetteur'=> $annonce->client(),
+                            'mis_en_cause'=>$annonce->transiteur()
+                            );
+                        
+                        $sign = new Signalement($d);
+                        $sign->save();
+
+                    }
+                    if($annonce->demandes()>0){
+                        
+                        //annuler.id une demande
+                        $s = new Demandes($annonce->id(),'annonce');
+                        $demandes = $s->all();
+
+                        foreach($demandes as $d){
+                            if(isset($_POST['annuler'.$d->transporteur()->id()])){
+                                $s->annuler($annonce->id(), $d->transporteur()->id());
+                                
+                                if($annonce->demandes()==1){
+                                     
+                                    $annonce->annulerdemander();
+                                }
+                                $this->Annonce($annonce->id());
+                            }
+                        }
+                        
+                        
+                    } 
+                    if($annonce->postulations()>0){
+                        //accepter.id une postulations
+                        $s = new Postulations($annonce->id(),'annonce');
+                        $post = $s->all();
+                        foreach($post as $d){
+                            if(isset($_POST['accepter'.$d->transporteur()->id()])){
+                            new Demandes($annonce->id(), $d->transporteur()->id());
+                            $annonce->demander();
+                            }
+                        }
+                    }
+
+                    if($suggestions != null){ 
+                        //demander.id (suggestions)
+                        foreach($suggestions as $d){
+                            if(isset($_POST['demander'.$d->transporteur()->id()])){
+                                new Demandes($annonce->id(), $d->transporteur()->id());
+                                $annonce->demander();
+                            }
+                        }
+                    }
+                }
+                elseif($_SESSION['user_type']=='transporteur'){
+                    // un transporteur
+                    if(isset($_POST['postuler'])){
+                        //postuler
+                        new Postulations($annonce->id(), $user->id());
+                        $annonce->postuler();
+                        
+                    }
+                if(isset($_POST['annuler'])){
+                    //annuler
+                    $p = new Postulations($annonce->id(),'annonce');
+                    $p->annuler($annonce->id(), $user->id());
+                    $ppp = $p->all();
+                    if(count($ppp)==1 ){
+                            $annonce->annulerpostuler();
+                    }
+                }
+                if(isset($_POST['confirmer'])){
+                        //confirmer: il devient le transiteur
+                        $annonce->transiter($user->id());
+                        $annonce->setTransiteur($user->id());
+
+                } 
+                if(isset($_POST['signaler'])){
+                        //signaler
+                    
+                            $d = array(
+                            'annonce'=> $annonce->id(),
+                            'emetteur'=> $user->id(),
+                            'mis_en_cause'=>$annonce->client()
+                            );
+                        
+                        $sign = new Signalement($d);
+                        $sign->save();
+
+                }
+                }
+            
             }
+
             $restrict = false;
             $sugg_act = '';
             $dem_act = '';
             $post_act = '';
             $trans_act = '';
+            if($annonce->transiteur()!== null){
+                $u = new UtilisateurManager($annonce->transiteur());
+                $transiteur = $u->getuser();
+            }
             if($_SESSION['connexion']!='anonyme'){
                 $user = $_SESSION['user'];
                 if($user->id()==$annonce->client()){
                     //le proprietaire de l'annonce
                     $sugg_act = 'demander' ;
-                    $trans_act = 'signaler' ;
+                    $d = array(
+                        'annonce'=> $annonce->id(),
+                        'emetteur'=> $annonce->client(),
+                        'mis_en_cause'=>$annonce->transiteur()
+                        );
+                    $sign = new Signalement($d);
+                    if(! $sign->recherche()){
+                        $trans_act = 'signaler' ;
+                    }
+                    
                     if($annonce->demandes()>0){
-                        $demandes = new Demandes($annonce->id(),'annonce');
+                        $s = new Demandes($annonce->id(),'annonce');
+                        $demandes = $s->all();
                         $dem_act = 'annuler';
                     }
                     if($annonce->postulations()>0){
-                        $postulations = new Postulations($annonce->id(),'annonce');
+                        $s = new Postulations($annonce->id(),'annonce');
+                        $postulations = $s->all();
                         $post_act = 'accepter';
                     }
                     $actions = array('modifier', 'supprimer');
@@ -144,7 +285,16 @@
                             $actions = array();
                             if($annonce->transiteur()!== null){
                                 if($user->id()==$annonce->transiteur()){
-                                    $actions[]= 'signaler';
+                                    $d = array(
+                                        'annonce'=> $annonce->id(),
+                                        'emetteur'=>$user->id() ,
+                                        'mis_en_cause'=>$annonce->client()
+                                        );
+                                    $sign = new Signalement($d);
+                                    if(! $sign->recherche()){
+                                         $actions[]= 'signaler';
+                                    }
+                                
                                 }
                             }else{
                                 $post = new AnnonceTransporteur(array(
@@ -152,10 +302,24 @@
                                     'transporteur'=> $user->id()
                                 ));
                                 $p= new Postulations($annonce->id(),'annonce');
-                                $postulations = $p->all(); 
-                                if($postulations != null){
-                                   if(in_array($post, $postulations)){
-                                        $actions[] = 'confirmer';
+                                $pos = $p->all(); 
+                                if($pos != null){
+                                   if(in_array($post, $pos)){
+                                       //il a deja postuler
+                                       $d = new demandes($annonce->id(),'annonce');
+                                       $dem = $d->all();
+                                       if($dem != null){
+                                           if(in_array($post, $dem)){
+                                             //le client a accepter sa postulation: une post et une demande
+                                               $actions[] = 'confirmer';
+                                           }else{
+                                           //il a postuler mais le client n'as pas accepter
+                                            $actions[] = 'annuler';
+                                       }
+                                       }else{
+                                        $actions[] = 'annuler';
+                                       }
+                                        
                                    }else{
                                        $actions[] = 'postuler';
                                    }
@@ -171,14 +335,20 @@
                             break;
                         case 'admin':
                             if($annonce->demandes()>0){
-                                $demandes = new Demandes($annonce->id(),'annonce');
+                                $s = new Demandes($annonce->id(),'annonce');
+                                $demandes = $s->all();
                                
                             }
                             if($annonce->postulations()>0){
-                                $postulations = new Postulations($annonce->id(),'annonce');
+                                $s = new Postulations($annonce->id(),'annonce');
+                                $postulations = $s->all();
                               
                             }
-                            $actions = array('valider','annuller');
+                            $actions= array();
+                            if(! $annonce->publier()){
+                                $actions = array('valider','annuler');
+                            }
+                            
                             break;
                         default:
                         echo 'something is wrong within your user type';    
@@ -188,10 +358,11 @@
                 $restrict = true;
                 $annonce->restrict();
             }
-            
-            
-            $annonce->incVues();
-
+            if($annonce->transiteur()!= null){
+                $sugg_act='';
+                $post_act='';
+            }
+             $annonce->incVues();
             $this->render('annonce',compact('annonce','suggestions','transiteur','demandes','postulations','actions','restrict','sugg_act','dem_act','post_act','trans_act'));
     }else{
         echo 'wrong id';

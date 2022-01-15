@@ -73,11 +73,31 @@ abstract class Model
     }
 
     public function query($sql){
-        if ($this->_connexion->query($sql) === TRUE) {
-           // echo "Record updated successfully";
-          } else {
-           // echo "Error updating record ";
+        try{
+            // Prepare statement
+            $stmt =  $this->_connexion->prepare($sql);
+
+            // execute the query
+            $stmt->execute();
+
+        }
+        catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
           }
+          
+    }
+
+
+    public function exec($sql){
+        try{
+            $this->_connexion->exec($sql);
+            
+        }
+        catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+          }
+          
+         
     }
 }
 ?>

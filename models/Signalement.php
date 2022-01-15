@@ -63,10 +63,21 @@
                 VALUES ('".$this->annonce()."', '".$this->emetteur()."', '".$this->mis_en_cause()."')" ;
           
                 $this->_connexion->exec($sql);
-                echo "New record created successfully";
+              //  echo "New record created successfully";
               } catch(PDOException $e) {
                 echo $sql . "<br>" . $e->getMessage();
               }
+        }
+
+        public function recherche(){
+            $sql = 'SELECT * FROM signalement WHERE annonce='.$this->annonce().' AND emetteur='.$this->emetteur().' AND mis_en_cause='.$this->mis_en_cause();
+            $this->getConnection();
+             $d = $this->request($sql);
+             if($d != null){
+                 return true;
+             }else{
+                 return false;
+             }
         }
        
     }
