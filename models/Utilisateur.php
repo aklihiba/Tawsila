@@ -213,10 +213,21 @@
                 '".md5($this->pwd())."')" ;
           
                 $this->_connexion->exec($sql);
-                echo "New record created successfully";
+              //  echo "New record created successfully";
               } catch(PDOException $e) {
                 echo $sql . "<br>" . $e->getMessage();
               }
+        }
+
+        public function noter($note){
+            if($this->note() == 0 ){
+                $this->setNote($note);
+            }else{
+                $this->setNote(($this->note()+$note)/2);
+            }
+            $this->getConnection();
+            $sql = " UPDATE utilisateur SET note=".$this->note()." WHERE id=".$this->id();
+            $this->query($sql);
         }
         
     }

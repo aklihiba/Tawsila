@@ -143,8 +143,13 @@
                         $annonce->archiver();
                         header('Location: '.PRE.'/accueil');
                     }
-                    if(isset($_POST['noter']))  {
+                    if(isset($_POST['note']))  {
                         //noter
+                        $annonce->noter($_POST['note']);
+                        //noter le transiteur
+                        $m = new UtilisateurManager('none');
+                        $trans = $m->rechercheByid($annonce->transiteur());
+                        $trans->noter((float)$_POST['note']);
                     }          
                     if(isset($_POST['signaler'.$annonce->transiteur()])){
                         //signaler (le transiteur)

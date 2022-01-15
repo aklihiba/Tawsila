@@ -1,6 +1,22 @@
+<script>
+    function noter(){
+        let note = document.getElementById('note');
+        if(note.style.display== "none"){
+            note.style.display = 'block';
+        }else{
+            if(note.value == ""){
+                note.style.display = "none";
+            }else{
+                document.getElementById('annonce').submit();
+                note.style.display = "none";
+            }
+        } 
+    }
+</script>
+
 <?php
 if($_SESSION['connexion'] != 'anonyme'){
-    echo '<form action="'.PRE.'/accueil/annonce/'.$annonce->id().'" method="post">';
+    echo '<form id="annonce" action="'.PRE.'/accueil/annonce/'.$annonce->id().'" method="post">';
 }
 //first the restricted info :
 $g->divclass('annonce_restrict_info');
@@ -12,13 +28,21 @@ $g->divclass('annonce_restrict_info');
         $g->paragraphe('poids entre '.$annonce->poidsMin().'kg et '.$annonce->poidsMax().'kg','paragraphe');
         $g->paragraphe('volume entre '.$annonce->volumeMin().'m3 et '.$annonce->volumeMax().'m3','paragraphe');
         $g->paragraphe('nombre de vues: '.$annonce->vues(),'paragraphe');
+        if($annonce->note()!= 0 ){
+            $g->paragraphe('la note: '.$annonce->note(),'paragraphe');            
+        }
     $g->divend();
     if($_SESSION['connexion'] != 'anonyme'){
         $g->divclass('annonce_extra_info');
             $g->titre(1, $annonce->prix().' DA','titre1');
             $g->paragraphe($annonce->etat(),'biglink');
             foreach($actions as $a){
+                if($a=='noter'){
+                    $g->input('note','note', 'note', 'input');
+                    $g->button($a, 'mediumbutton', 'noter()');
+                }else
                 $g->submit($a, $a, 'mediumbutton');
+                
             }
         $g->divend();
     }
