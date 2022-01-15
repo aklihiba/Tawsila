@@ -220,6 +220,13 @@
             $this->divend();    
            $this->spanend();
         }
+
+        public function select($name , $content , $class){
+            $this->divclass($class);
+            echo '<input class="'.$class.'" type="checkbox" id="'.$name.'" name="'.$name.'">';
+            echo'<label class="'.$class.'" for="'.$name.'"> '.$content.'</label><br>';
+            $this->divend();
+        }
         
     }
 ?>

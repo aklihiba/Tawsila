@@ -375,9 +375,9 @@
             
              $annonce->incVues();
             $this->render('annonce',compact('annonce','suggestions','transiteur','demandes','postulations','actions','restrict','sugg_act','dem_act','post_act','trans_act'));
-    }else{
+        }else{
         echo 'wrong id';
-    }
+        }
     }
 
     public function Publier(){
@@ -467,7 +467,7 @@
             //creer les suggestions
             $sug = new Suggestions($id," ");
         
-           //header("Location:".PRE."/accueil");            
+           header("Location:".PRE."/accueil");            
         }
 
         $user = $_SESSION['user'];

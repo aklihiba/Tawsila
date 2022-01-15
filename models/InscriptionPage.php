@@ -9,7 +9,7 @@
             //get all elements except the list of les annonces
             $table = $this->getAll("inscription_page","id");
             foreach($table as $row){
-                $this->table[$row['id']] = new FormElements($row);
+                $this->table[] = new FormElements($row);
             }
            
         }
