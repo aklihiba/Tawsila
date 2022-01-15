@@ -65,6 +65,11 @@ class Suggestions extends Model{
     public function all(){
         return $this->table;
     }
+
+    public function annuler($annonce, $transporteur){
+        $rqst = "DELETE FROM suggestion WHERE annonce=".$annonce." AND transporteur=".$transporteur ;
+        $this->exec($rqst);
+    }
 }
 
 ?>

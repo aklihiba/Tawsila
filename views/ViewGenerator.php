@@ -122,6 +122,17 @@
            echo ' <input type="file" id="'.$name.'" name="'.$name.'" class="'.$class.'" title=" " >';
         }
 
+        public function inputvalue($id,$name,$value, $class){
+            echo ' <input type="text" id="'.$id.'" name="'.$name.'" value="'.$value.'" class="'.$class.'">';
+        }
+        public function biginputvalue($id,$name,$value, $class){
+            echo ' <textarea id="'.$id.'" name="'.$name.'" class="'.$class.'">'.$value.'</textarea>';
+        }
+        public function fileselectvalue($name, $content, $value, $class){
+           echo ' <label for="'.$name.'" class="'.$class.'">'.$content.'</label>';
+           echo ' <input type="file" id="'.$name.'" name="'.$name.'" class="'.$class.'" value ="'.$value.'" title="'.$value.'" >';
+        }        
+
         public function annoncebox($a){
            $this->spanclass('annoncebox');
                 $this->imageh($a->photo(),80);

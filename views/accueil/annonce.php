@@ -24,6 +24,7 @@ $g->divclass('annonce_restrict_info');
     $g->div();
         $g->titre(1, $annonce->titre(),'titre1');
         $g->titre(2, $annonce->wilaya_depart().'->'.$annonce->wilaya_arrive(),'titre2');
+        $g->paragraphe('type d`annonce: '.$annonce->type(),'paragraphe');
         $g->paragraphe('moyens de transport: '.$annonce->transport(),'paragraphe');
         $g->paragraphe('poids entre '.$annonce->poidsMin().'kg et '.$annonce->poidsMax().'kg','paragraphe');
         $g->paragraphe('volume entre '.$annonce->volumeMin().'m3 et '.$annonce->volumeMax().'m3','paragraphe');

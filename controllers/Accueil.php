@@ -112,8 +112,10 @@
             //$_SESSION['user_type']='admin';
 
             $annonce = $manager->all()[0];
-          
-            $user = $_SESSION['user'];
+            if($_SESSION['connexion']!='anonyme'){
+                 $user = $_SESSION['user'];
+            }
+           
             $s = new Suggestions($annonce->id(),'annonce'); 
             $suggestions = $s->all();
             
@@ -134,7 +136,7 @@
                     }
                 }elseif($user->id()==$annonce->client()){
                     // le proprietaire de l'annonce:
-                    if(isset($_POST['modifer'])){
+                    if(isset($_POST['modifier'])){
                         //modifer
                         header("Location:".PRE."/accueil/modifier/".$annonce->id());
                     }
@@ -260,6 +262,7 @@
                 if($user->id()==$annonce->client()){
                     //le proprietaire de l'annonce
                     $sugg_act = 'demander' ;
+                    if($annonce->transiteur()!== null){
                     $d = array(
                         'annonce'=> $annonce->id(),
                         'emetteur'=> $annonce->client(),
@@ -269,7 +272,7 @@
                     if(! $sign->recherche()){
                         $trans_act = 'signaler' ;
                     }
-                    
+                }
                     if($annonce->demandes()>0){
                         $s = new Demandes($annonce->id(),'annonce');
                         $demandes = $s->all();
@@ -359,14 +362,16 @@
                         echo 'something is wrong within your user type';    
                     }
                 }
+
+                if($annonce->transiteur()!= null){
+                    $sugg_act='';
+                    $post_act='';
+                }
             }else{
                 $restrict = true;
                 $annonce->restrict();
             }
-            if($annonce->transiteur()!= null){
-                $sugg_act='';
-                $post_act='';
-            }
+            
              $annonce->incVues();
             $this->render('annonce',compact('annonce','suggestions','transiteur','demandes','postulations','actions','restrict','sugg_act','dem_act','post_act','trans_act'));
     }else{
@@ -496,6 +501,118 @@
         }
     }
 
+    public function modifier($id){
+
+        $manager = new AnnonceManager($id);
+        $annonce = $manager->getannonce();
+        $reset_sugg = false;
+        if($_SESSION['connexion']=='user'){
+        //method POST:
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+          
+
+            if(isset($_POST['titre'])){
+                $annonce->setTitre($_POST['titre']);
+              
+            }
+          
+            if(isset($_POST['photo'])){
+                $annonce->setPhoto($_POST['photo']);
+            }
+            
+            if(isset($_POST['depart'])){
+                $reset_sugg = true;
+                $annonce->setWilaya_depart($_POST['depart']);
+            }
+            
+            if(isset($_POST['arrive'])){
+                $reset_sugg = true;
+                $annonce->setWilaya_arrive($_POST['arrive']);
+            }
+            
+            if(isset($_POST['transport'])){
+                $trans="";
+                foreach($_POST['transport'] as $t){
+                    $trans = $trans.", ".$t ; 
+                }
+                $annonce->setTransport($trans);
+            }
+            
+            if(isset($_POST['type'])){
+                $annonce->setType($_POST['type']);
+            }
+            
+            if(isset($_POST['poids'])){
+                $p = explode("-",$_POST['poids']);
+                
+                $annonce->setPoidsMin((float)$p[0]);
+                $annonce->setPoidsMax((float)$p[1]);
+            }
+            
+            if(isset($_POST['volume'])){
+                $p = explode("-",$_POST['volume']);
+                
+                $annonce->setVolumeMin((float)$p[0]);
+                $annonce->setVolumeMax((float)$p[1]);
+            }
+            
+            if(isset($_POST['description'])){
+                $annonce->setDescription($_POST['description']);
+            }
+            
+    
+            $annonce->calculPrix();   
+
+             $annonce->update();
+            
+            //creer les suggestions
+            if($reset_sugg){
+                //delete the other suggestions
+                $suggest = new Suggestions($annonce->id(),'annonce');
+                $suggestions = $suggest->all();
+                if($suggestions != null){
+                    foreach($suggestions as $s){
+                        $suggest->annuler($s->annonce()->id(), $s->transporteur()->id());
+                    }
+                }
+                //create new suggestions
+                $sug = new Suggestions($id," ");
+                
+            }
+            
+            //
+        
+           //header("Location:".PRE."/accueil");            
+        }
+       
+        $user = $_SESSION['user'];
+        //fourchette poids
+        $poids = new Poids();
+        $poids = $poids->all();
+       
+        //fourchette volume
+        $volumes = new Volumes();
+        $volumes = $volumes->all();
+
+        //liste wilaya
+        $wilayas = new Wilaya();
+        $wilayas = $wilayas->all();
+
+        //moyen de transport
+        $transports = new Transport();
+        $transports = $transports->all();
+
+        //type de l'annonce
+        $type = new TypeAnnonce();
+        $type = $type->all();
+        
+
+        $this->render('modifier', compact('annonce','poids','volumes','wilayas','transports','type'));
+        }
+        else{
+            echo 'vous devez etre connecter pour modifier';
+        }
+    }
      
  }
 ?>

@@ -52,7 +52,7 @@
             //pour le mode non connecter
                         
             unset($this->_etat);
-            unset($this->_note); 
+           // unset($this->_note); 
             unset($this->_prix); 
             unset($this->_client); 
             unset($this->_transiteur);
@@ -95,7 +95,7 @@
             poidsMax='".$this->poidsMax()."',
             volumeMin='".$this->volumeMin()."',
             volumeMax='".$this->volumeMax()."',
-            description='".$this->description()."',
+            description='".$this->description()."'
             WHERE id=".$this->id();
 
             $this->query($sql);
