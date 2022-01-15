@@ -79,6 +79,16 @@
                  return false;
              }
         }
+        public function rechercheemetteur(){
+            $sql = 'SELECT * FROM signalement WHERE emetteur='.$this->emetteur();
+            $this->getConnection();
+             $d = $this->requestAll($sql);
+             if($d != null){
+                 return $d;
+             }else{
+                 return null;
+             }
+        }
        
     }
   //  $v = new Signalement(array("annonce"=>1,"emetteur"=>2,"mis_en_cause"=>1));

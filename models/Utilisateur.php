@@ -16,6 +16,7 @@
         private $_demande_certification;
         private $_photo;
         private $_pwd;
+        private $_admin_msg;
 
         public function __construct(array $data)
         {
@@ -164,6 +165,11 @@
                 $this->_pwd = $pwd;
             }
         }
+        public function setAdmin_msg($msg){
+            $this->_admin_msg = $msg;
+        }
+
+        public function admin_msg(){return $this->_admin_msg;}
         public function id(){return $this->_id ;}
         public function nom(){return $this->_nom ;}
         public function prenom(){return $this->_prenom ;}
@@ -289,7 +295,12 @@
             $sql = " UPDATE utilisateur SET statut='".$this->statut()."' WHERE id=".$this->id();
             $this->query($sql);
         }
-        
+        public function sendmsg($msg){
+            $this->setAdmin_msg($msg);
+            $this->getConnection();
+            $sql = " UPDATE utilisateur SET admin_msg='".$this->admin_msg()."' WHERE id=".$this->id();
+            $this->query($sql);
+        }
     }
     /*
     $data= array(

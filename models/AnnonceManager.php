@@ -134,10 +134,42 @@
             }
             
         }
-        // modifier annonce 
-        //supprimer aka archiver
-        //insertion d'un annonce
-
+        public function rechercheClientNotArchived($client){
+            $this->table = null;
+            $sql = "SELECT * FROM annonce WHERE client=".$client." AND archive=false " ; 
+            $data = $this->requestAll($sql);
+            foreach($data as $row){
+                $this->table[] = new Annonce($row);
+               
+            }
+        }
+        public function rechercheClient($client){
+            $this->table = null;
+            $sql = "SELECT * FROM annonce WHERE client=".$client ; 
+            $data = $this->requestAll($sql);
+            foreach($data as $row){
+                $this->table[] = new Annonce($row);
+               
+            }
+        }
+        public function rechercheTransiteur($transiteur){
+            $this->table = null;
+            $sql = "SELECT * FROM annonce WHERE transiteur=".$transiteur ; 
+            $data = $this->requestAll($sql);
+            foreach($data as $row){
+                $this->table[] = new Annonce($row);
+               
+            }
+        }
+        public function rechercheTransiteurNotArchived($transiteur){
+            $this->table = null;
+            $sql = "SELECT * FROM annonce WHERE transiteur=".$transiteur." AND archive=false" ; 
+            $data = $this->requestAll($sql);
+            foreach($data as $row){
+                $this->table[] = new Annonce($row);
+               
+            }
+        }
         public function test(){
             foreach ($this->table as $row){
 

@@ -49,6 +49,9 @@
         public function menu(array $contenu, $class){
            $this->divclass($class);
             foreach($contenu as $element){
+                if($element=='Profil'){
+                    echo '<a href="'.PRE.'/'.$element.'/index/'.$_SESSION['user']->id().'">'.$element.'</a>';
+                }else
                 echo '<a href="'.PRE.'/'.$element.'">'.$element.'</a>';
                 // Accueil Presentation News...
             }
@@ -217,6 +220,7 @@
             if($action != ''){
                 $this->submit($action, $action.$user->id(), 'smallbutton');
             }
+            $this->link('profil/index/'.$user->id(),'smalllink','profil');
             $this->divend();    
            $this->spanend();
         }

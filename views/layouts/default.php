@@ -63,6 +63,11 @@
           
             fireClickEvent(a);
         }
+        $(document).ready(function(){ 
+        $('.footer').css('background','<?= $couleur->primarycolor() ?>');
+        $('.footer>*').css('margin','1%')
+        $('.footer').css('padding','1%')
+        });
        
     </script>
 
