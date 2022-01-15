@@ -229,6 +229,7 @@
                         //confirmer: il devient le transiteur
                         $annonce->transiter($user->id());
                         $annonce->setTransiteur($user->id());
+                        $user->transiter($annonce->prix());
 
                 } 
                 if(isset($_POST['signaler'])){

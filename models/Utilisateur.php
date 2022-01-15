@@ -229,6 +229,12 @@
             $sql = " UPDATE utilisateur SET note=".$this->note()." WHERE id=".$this->id();
             $this->query($sql);
         }
+        public function transiter($gain){
+            $this->setGain($this->gain()+$gain);
+            $this->getConnection();
+            $sql = " UPDATE utilisateur SET gain=".$this->gain()." WHERE id=".$this->id();
+            $this->query($sql);
+        }
         
     }
     /*
