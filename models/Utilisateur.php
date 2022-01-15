@@ -13,6 +13,7 @@
         private $_gain;
         private $_note;
         private $_statut;
+        private $_demande_certification;
         private $_photo;
         private $_pwd;
 
@@ -75,16 +76,28 @@
 
         public function setWilayas_depart($wilaya)
         {
-           
+           if(is_array($wilaya)){
+            $this->_wilayas_depart = $wilaya;
+           }else{
                $this->_wilayas_depart = explode(", ",$wilaya);
-               
+           }   
            
         }
-
-        public function setwilayas_arrive($wilaya)
+        public function setDepart($string){
+            //use when saving to the db
+            $this->_wilayas_depart = $string;
+        }
+        public function setArrive($string){
+            //use when saving to the db
+            $this->_wilayas_arrive= $string;
+        }
+        public function setWilayas_arrive($wilaya)
         {
+            if(is_array($wilaya)){
+                $this->_wilayas_arrive= $wilaya;
+               }else{
                 $this->_wilayas_arrive = explode(", ",$wilaya);
-            
+               }
         }
 
         public function setMail($mail)
@@ -140,6 +153,10 @@
             }
         }
 
+        public function setDemande_certification($c)
+        {
+           $this->_demande_certification = (bool) $c ;
+        }
         public function setPwd($pwd)
         {
             if (is_string($pwd))
@@ -160,6 +177,7 @@
         public function note(){return $this->_note ;}
         public function statut(){return $this->_statut ;}
         public function photo(){return $this->_photo ;}
+        public function demande_certification(){return $this->_demande_certification;}
         public function pwd(){return $this->_pwd ;}
 
         public function depart(){
@@ -207,9 +225,9 @@
                 $this->getConnection();
 
                 $sql = "INSERT INTO utilisateur (nom, prenom, adresse, mail, telephone, type, wilayas_depart, wilayas_arrive, 
-                gain, statut, pwd )
+                gain, statut, demande_certification, pwd )
                 VALUES ('".$this->nom()."', '".$this->prenom()."', '".$this->adresse()."', '".$this->mail()."', '".$this->telephone()."',
-                'transporteur', '".$this->wilayas_depart()."', '".$this->wilayas_arrive()."', '0', '
+                'transporteur', '".$this->depart()."', '".$this->arrive()."', '0', 'en attente', ".$this->demande_certification().",
                 '".md5($this->pwd())."')" ;
           
                 $this->_connexion->exec($sql);
@@ -217,6 +235,16 @@
               } catch(PDOException $e) {
                 echo $sql . "<br>" . $e->getMessage();
               }
+        }
+        public function existedeja(){
+            $this->getConnection();
+            $sql = "SELECT * FROM utilisateur WHERE mail='".$this->mail()."'";
+            $data = $this->request($sql);
+            if ($data != null) {
+                return true;
+            } 
+        
+            return false; 
         }
 
         public function noter($note){
@@ -229,10 +257,36 @@
             $sql = " UPDATE utilisateur SET note=".$this->note()." WHERE id=".$this->id();
             $this->query($sql);
         }
+
         public function transiter($gain){
             $this->setGain($this->gain()+$gain);
             $this->getConnection();
             $sql = " UPDATE utilisateur SET gain=".$this->gain()." WHERE id=".$this->id();
+            $this->query($sql);
+        }
+
+        public function valider(){
+            $this->setStatut('validé');
+            $this->getConnection();
+            $sql = " UPDATE utilisateur SET statut='".$this->statut()."' WHERE id=".$this->id();
+            $this->query($sql);
+        }
+        public function refuser(){
+            $this->setStatut('refusé');
+            $this->getConnection();
+            $sql = " UPDATE utilisateur SET statut='".$this->statut()."' WHERE id=".$this->id();
+            $this->query($sql);
+        }
+        public function certifier(){
+            $this->setStatut('certifié');
+            $this->getConnection();
+            $sql = " UPDATE utilisateur SET statut='".$this->statut()."' WHERE id=".$this->id();
+            $this->query($sql);
+        }
+        public function banir(){
+            $this->setStatut('banie');
+            $this->getConnection();
+            $sql = " UPDATE utilisateur SET statut='".$this->statut()."' WHERE id=".$this->id();
             $this->query($sql);
         }
         

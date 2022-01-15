@@ -47,7 +47,7 @@ class UtilisateurManager extends Model{
         }
     }
     public function connect($mail, $pwd){
-        $sql = "SELECT * FROM utilisateur WHERE mail='".$mail."' AND pwd='".$pwd."'" ; 
+        $sql = "SELECT * FROM utilisateur WHERE mail='".$mail."' AND pwd='".$pwd."' AND statut!='banie'" ; 
         $data = $this->request($sql);
         if ($data != null) {
 

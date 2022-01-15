@@ -33,6 +33,7 @@
                 $g->select($e->name(), $e->content(), $e->class());
             break;
         case 'button':
+            $g->paragraphe($erreur, 'erreur');
             $g->submit($e->content(), $e->name(), $e->class());  
             break;
         default:
