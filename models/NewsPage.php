@@ -19,7 +19,7 @@
             }
         }
 
-        public function getElements(){
+        public function all(){
             return $this->table;
         }
         public function test(){
@@ -29,6 +29,6 @@
             }
         }
     }
-    $v = new NewsPage(3);
-    $v->test();
+   //$v = new NewsPage(3);
+   // $v->test();
 ?>

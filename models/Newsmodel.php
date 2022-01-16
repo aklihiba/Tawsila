@@ -1,10 +1,9 @@
 <?php
-    class News {
+    class Newsmodel {
         private $_id;
         private $_titre;
         private $_photo ; 
         private $_description ; 
-
         public function __construct(array $data)
         {
             $this->hydrate($data);

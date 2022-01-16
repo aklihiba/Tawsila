@@ -245,6 +245,19 @@
             $this->divend();    
             $this->divend();
         }
+
+        public function newsbox($n){
+            $this->divclass('newsbox');
+                $this->div();
+                    $this->imageh($n->photo(),'200');
+                $this->divend();
+                $this->div();
+                    $this->titre(2,$n->titre(),'titre2');
+                    $this->paragraphe($n->description(),'paragraphe');
+                    $this->link('News/view/'.$n->id(),'smalllink','lire la suite');
+                $this->divend();
+            $this->divend();
+        }
         
     }
 ?>
