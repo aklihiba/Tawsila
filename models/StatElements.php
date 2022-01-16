@@ -1,4 +1,7 @@
 <?php
+    require_once('UtilisateurManager.php');
+    require_once('AnnonceManager.php');
+    
 class StatElements {
     private $_id;
     private $_title;
@@ -10,6 +13,8 @@ class StatElements {
     public function __construct(array $data)
         {
             $this->hydrate($data);
+            //getting the data from other tables depending on the title
+
 
         }
 

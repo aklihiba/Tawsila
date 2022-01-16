@@ -74,6 +74,29 @@ class UtilisateurManager extends Model{
             $this->table = null;
         }
     }
+    //statistique
+
+    public function nombreclient(){
+        $sql = "SELECT * FROM utilisateur WHERE type='client'" ; 
+        $data = $this->request($sql);
+        if ($data != null) {
+
+            return count($data);
+        } 
+        
+        return 0; 
+    }
+
+    public function nombretransporteur(){
+        $sql = "SELECT id FROM utilisateur WHERE type='transporteur'" ; 
+        $data = $this->request($sql);
+        if ($data != null) {
+
+            return count($data);
+        } 
+        
+        return 0; 
+    }
 }
 //$v = new UtilisateurManager();
 //$v->test();

@@ -176,7 +176,44 @@
                 echo '<h1>'.$row->titre().'</h1>';
             }
         }
+
+        //statistique
+        public function nombreannonce(){
+            $sql = "SELECT id FROM annonce" ; 
+            $data = $this->request($sql);
+            if ($data != null) {
+
+                return count($data);
+            }   
+            return 0; 
+            }
+        
+            public function topannonce(){
+                $sql = "SELECT *, max(vues) FROM annonce" ; 
+                $data = $this->request($sql);
+                if ($data != null) {
+                    unset($data['max(id)']);
+                    return new Annonce($data);
+                }   
+                return 0; 
+            }
+            
+            /*
+        public function toptransporteurid(){
+            $sql = "SELECT transiteur FROM annonce" ; 
+            $data = $this->request($sql);
+            if ($data != null) {
+                $occurence = array_count_values($data['transiteur']);
+                $maxocc = max($occurence);
+                echo key($maxocc,$data);
+            }   
+            return 0; 
+        }  
+        */  
     }
  //$v = new AnnonceMAnager();
- //$v->test();
+ //$a =$v->toptransporteurid();
+//echo $a;
+
+ 
 ?>
