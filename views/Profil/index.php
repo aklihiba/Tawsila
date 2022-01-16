@@ -45,6 +45,12 @@ $g->divclass('profil_info');
     $g->button('modifier','bigbutton','modifier('.$id.')');
     $g->divend();
 $g->divend();
+
+if(($profil->admin_msg()!==null)&&(($userid == $id)||($_SESSION['connexion']=='admin'))){
+    $g->divclass('adminmsg');
+        $g->paragraphe($profil->admin_msg(),'paragraphe');
+    $g->divend();
+}
 if(isset($annonces)){
     if($annonces != null){
         $g->titre(2,"les annonces publiées",'titre2');
