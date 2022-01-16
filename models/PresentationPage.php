@@ -13,7 +13,7 @@
             }
            
         }
-        public function getElements(){
+        public function all(){
             return $this->table;
         }
 

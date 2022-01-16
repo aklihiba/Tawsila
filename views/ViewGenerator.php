@@ -233,6 +233,18 @@
             echo'<label class="'.$class.'" for="'.$name.'"> '.$content.'</label><br>';
             $this->divend();
         }
+
+        public function adminbox($a){
+            $this->divclass('adminbox');
+            $this->div();
+                $this->imageh($a->photo(),150);
+            $this->divend();
+            $this->div();
+                $this->titre(1,$a->nom().' '.$a->prenom(),'titre1');
+                $this->titre(2,$a->age().' ans','titre2');
+            $this->divend();    
+            $this->divend();
+        }
         
     }
 ?>

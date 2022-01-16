@@ -4,6 +4,7 @@ class Administrateur{
     private $_nom;
     private $_prenom;
     private $_age;
+    private $_photo;
 
     public function __construct(array $data)
         {
@@ -58,10 +59,17 @@ class Administrateur{
             }
         }
         
+        public function setPhoto($photo){
+            if(is_string($photo))
+            {
+                $this->_photo = $photo; 
+            }
+        }
         public function id(){return $this->_id;}
         public function prenom(){return $this->_prenom;}
         public function nom(){return $this->_nom;}
         public function age(){return $this->_age;}
+        public function photo(){return $this->_photo;}
 }
 
 ?>
