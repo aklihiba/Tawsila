@@ -220,7 +220,9 @@
             if($action != ''){
                 $this->submit($action, $action.$user->id(), 'smallbutton');
             }
-            $this->link('profil/index/'.$user->id(),'smalllink','profil');
+            if($_SESSION['connexion']!='anonyme'){
+                $this->link('profil/index/'.$user->id(),'smalllink','profil');
+            }
             $this->divend();    
            $this->spanend();
         }

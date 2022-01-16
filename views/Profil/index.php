@@ -34,15 +34,16 @@ $g->divclass('profil_info');
             $g->paragraphe('wilayas d`arrivé: '.$profil->arrive(),'paragraphe');
         }
     $g->divend();
-
+ $g->div();
     if( ($profil->statut()=='certifié') &&($id == $userid)){
-        $g->div();
+       
             $g->titre(1,$profil->gain().' DA','titre1');
             $g->titre(2,($profil->gain()*15/100).' reviens a Tawsila','biglink');
-            $g->button('modifier','bigbutton','modifier('.$id.')');
-        $g->divend();
+     
   
     }
+    $g->button('modifier','bigbutton','modifier('.$id.')');
+    $g->divend();
 $g->divend();
 if(isset($annonces)){
     if($annonces != null){

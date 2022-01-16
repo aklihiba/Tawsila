@@ -21,7 +21,7 @@
     $g->divend();
 
     $g->div();
-    $g->fileselectvalue('photo','photo',$annonce->photo(),'biginput');
+    $g->fileselectvalue('photo','photo',$annonce->photo(),'input fileinput');
     $g->divend();
 
     $g->div();

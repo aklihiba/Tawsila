@@ -38,7 +38,7 @@
                if($_POST['mail']!="" && $_POST['pwd']!=""){
                    $user = $usrm->connect($_POST['mail'], md5($_POST['pwd']));
                    if($user != null){
-                        echo $user->id();
+                        
                         $_SESSION['user']= $user;
                         $_SESSION['user_type']= $user->type();
                         $_SESSION['connexion']='user';                       

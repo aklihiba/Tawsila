@@ -13,6 +13,7 @@ class Profil extends Controller{
             $this->loadModel('AnnonceManager');
             $this->loadModel('UtilisateurManager');
             $this->loadModel('AnnonceManager');
+            $this->loadModel('Wilaya');
     }
 
     public function index($id){
@@ -73,6 +74,70 @@ class Profil extends Controller{
     }
 
     public function modifier($id){
+        $erreur="";
+        $user =$_SESSION['user'];
+        if($_SERVER['REQUEST_METHOD']=="POST"){
+            if(! empty($_POST['nom'])){
+                $user->setNom($_POST['nom']);
+            }else{
+                $erreur = $erreur.'vous devez avoir un nom<br>';
+            }
+            if(! empty($_POST['prenom'])){
+                $user->setPrenom($_POST['prenom']);
+            }else{
+                $erreur = $erreur.'vous devez avoir un prenom<br>';
+            }
+            if(isset($_POST['photo'])){
+                $user->setPhoto($_POST['photo']);
+            }
+            if(! empty($_POST['telephone'])){
+                $user->setTelephone($_POST['telephone']);
+            }else{
+                $erreur = $erreur.'vous devez avoir un numero de telephone<br>';
+            }
+            if(! empty($_POST['adresse'])){
+                $user->setAdresse($_POST['adresse']);
+            }else{
+                $erreur = $erreur.'vous devez avoir une adresse<br>';
+            }
+            if((! empty($_POST['mdp']))&& (! empty($_POST['mdp']))){
+                if($_POST['mdp']==$_POST['mdp2']){
+                    $user->setPwd($_POST['mdp']);
+                }else{
+                    $erreur = $erreur.'le mot de passe doit etre identique<br>';
+                }
+            }
+            if($user->type()=='transporteur'){
+                if(isset($_POST['depart'])){
+                    $reset_sugg = true;
+                    $user->setWilayas_depart($_POST['depart']);
+                }
+                
+                if(isset($_POST['arrive'])){
+                    $reset_sugg = true;
+                    $user->setWilayas_arrive($_POST['arrive']);
+                }   
+
+                $user->updateTransporteur();
+                header('Location:'.PRE."/Profil/".$user->id());
+            }else{
+                $user->updateClient();
+                header('Location:'.PRE."/Profil/".$user->id());
+
+            }
+            
+
+            
+        }
+       
+        if($user->id()==$id){
+            $wilayas = new Wilaya();
+            $wilayas = $wilayas->all();
+
+            $this->render('modifier', compact('user','wilayas','erreur'));
+        }else{
+            echo 'vous n`avez pas l`acces a cette page';
+        }
 
     }
 }
