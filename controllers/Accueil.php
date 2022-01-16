@@ -154,12 +154,14 @@
                     }          
                     if(isset($_POST['signaler'.$annonce->transiteur()])){
                         //signaler (le transiteur)
-                        
-                        $d = array(
-                            'annonce'=> $annonce->id(),
-                            'emetteur'=> $annonce->client(),
-                            'mis_en_cause'=>$annonce->transiteur()
-                            );
+                        if(! empty($_POST['signalementdesc'])){
+                            $d = array(
+                                'annonce'=> $annonce->id(),
+                                'emetteur'=> $annonce->client(),
+                                'mis_en_cause'=>$annonce->transiteur(),
+                                'description'=>$_POST['signalementdesc']
+                                );
+                        }
                         
                         $sign = new Signalement($d);
                         $sign->save();
@@ -231,13 +233,14 @@
                         $user->transiter($annonce->prix());
 
                 } 
-                if(isset($_POST['signaler'])){
+                if(! empty($_POST['signalementdesc'])){
                         //signaler
                     
                             $d = array(
                             'annonce'=> $annonce->id(),
                             'emetteur'=> $user->id(),
-                            'mis_en_cause'=>$annonce->client()
+                            'mis_en_cause'=>$annonce->client(),
+                            'description'=>$_POST['signalementdesc']
                             );
                         
                         $sign = new Signalement($d);
@@ -293,6 +296,12 @@
                             $actions = array();
                             if($annonce->transiteur()!== null){
                                 if($user->id()==$annonce->transiteur()){
+                                        $d = array(
+                                            'annonce'=> $annonce->id(),
+                                            'emetteur'=>$user->id() ,
+                                            'mis_en_cause'=>$annonce->client(),
+                                            );
+                                   
                                     $d = array(
                                         'annonce'=> $annonce->id(),
                                         'emetteur'=>$user->id() ,

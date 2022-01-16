@@ -4,6 +4,7 @@
         private $_annonce;
         private $_emetteur;
         private $_misencause;
+        private $_description;
 
         public function __construct($data)
         {
@@ -50,17 +51,27 @@
                 $this->_misencause = $id;
             }
         }
+        
+        public function setDescription($desc)
+        {
+            if (is_string($desc))
+            {
+                $this->_description = $desc;
+            }
+        }
 
         public function annonce(){return $this->_annonce;}
         public function emetteur(){return $this->_emetteur;}
         public function mis_en_cause(){return $this->_misencause;}
-        
+        public function description(){return $this->_description ;}
+
+
         public function save(){
             
             try {
                 $this->getConnection();
-                $sql = "INSERT INTO signalement (annonce, emetteur, mis_en_cause)
-                VALUES ('".$this->annonce()."', '".$this->emetteur()."', '".$this->mis_en_cause()."')" ;
+                $sql = "INSERT INTO signalement (annonce, emetteur, mis_en_cause, description)
+                VALUES ('".$this->annonce()."', '".$this->emetteur()."', '".$this->mis_en_cause()."', '".$this->description()."')" ;
           
                 $this->_connexion->exec($sql);
               //  echo "New record created successfully";

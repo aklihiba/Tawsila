@@ -218,7 +218,11 @@
             $this->divend();
             $this->div();
             if($action != ''){
+                if($action=='signaler'){
+                    $this->signalementbox();
+                }else
                 $this->submit($action, $action.$user->id(), 'smallbutton');
+
             }
             if($_SESSION['connexion']!='anonyme'){
                 $this->link('profil/index/'.$user->id(),'smalllink','profil');
@@ -232,6 +236,11 @@
             echo '<input class="'.$class.'" type="checkbox" id="'.$name.'" name="'.$name.'">';
             echo'<label class="'.$class.'" for="'.$name.'"> '.$content.'</label><br>';
             $this->divend();
+        }
+
+        public function signalementbox(){
+            $this->input('signalementdesc','signalementdesc', 'votre probleme', 'input');
+            $this->button('signaler', 'mediumbutton', 'signaler()');
         }
 
         public function adminbox($a){
