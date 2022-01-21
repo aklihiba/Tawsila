@@ -58,6 +58,16 @@
             $this->divend();
         }
 
+        public function adminmenu(array $contenu, $class){
+            $this->divclass($class);
+             foreach($contenu as $element){
+                 
+                 echo '<a href="'.PRE.'/Gestion'.$element.'">'.$element.'</a>';
+                 // Accueil Presentation News...
+             }
+             $this->divend();
+         }
+
     //footer
         public function footer(array $menu, $logo, $class){
             $this->center();

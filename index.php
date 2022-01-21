@@ -4,6 +4,7 @@
 
     require_once(ROOT.'models/Model.php');
     require_once(ROOT.'controllers/Controller.php');
+    require_once(ROOT.'controllers/ControllerAdmin.php');
     
     $params = explode('/', $_GET['url']);
 

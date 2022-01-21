@@ -36,13 +36,25 @@
             // login :
             if(isset($_POST['login'])){
                if($_POST['mail']!="" && $_POST['pwd']!=""){
-                   $user = $usrm->connect($_POST['mail'], md5($_POST['pwd']));
-                   if($user != null){
-                        
-                        $_SESSION['user']= $user;
-                        $_SESSION['user_type']= $user->type();
-                        $_SESSION['connexion']='user';                       
-                   }
+                   if($_POST['mail']=="admin" && $_POST['pwd']=="admin"){
+                    $user = $usrm->connect($_POST['mail'], md5($_POST['pwd']));
+                        if($user != null){
+                                
+                                $_SESSION['user']= $user;
+                                $_SESSION['user_type']= $user->type();
+                                $_SESSION['connexion']='admin'; 
+                                header("Location:".PRE."/admin");                  
+                        }
+                   
+                   }else{
+                        $user = $usrm->connect($_POST['mail'], md5($_POST['pwd']));
+                        if($user != null){
+                                
+                                $_SESSION['user']= $user;
+                                $_SESSION['user_type']= $user->type();
+                                $_SESSION['connexion']='user';                       
+                        }
+                    }
                  
                }
                
@@ -86,7 +98,7 @@
         $acc = new AccueilPage();
         $all= $acc->getElements();
         //enlever le bouton publier pour les utilisateur non connectes 
-        if($_SESSION['connexion']=='anonyme'){
+        if($_SESSION['connexion']!='user' ){
            
           for($i=0; $i<count($all); $i++){
               if($all[$i]->content()=='Publier'){
@@ -111,7 +123,7 @@
             //$_SESSION['user_type']='admin';
 
             $annonce = $manager->all()[0];
-            if($_SESSION['connexion']!='anonyme'){
+            if($_SESSION['connexion']=='user'){
                  $user = $_SESSION['user'];
             }
            
@@ -260,8 +272,10 @@
                 $u = new UtilisateurManager($annonce->transiteur());
                 $transiteur = $u->getuser();
             }
-            if($_SESSION['connexion']!='anonyme'){
-                $user = $_SESSION['user'];
+            if($_SESSION['connexion']!='anonyme'){ //includes admin and user
+                
+                 $user = $_SESSION['user'];
+                   
                 if($user->id()==$annonce->client()){
                     //le proprietaire de l'annonce
                     $sugg_act = 'demander' ;
@@ -377,6 +391,7 @@
                     $post_act='';
                 }
             }else{
+                
                 $restrict = true;
                 $annonce->restrict();
             }

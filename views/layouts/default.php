@@ -34,44 +34,7 @@
   transition: all 0.3s ease;
 }
     </style>
-    <script>
-        
-        function fireClickEvent(element) {
-    var evt = new window.MouseEvent('click', {
-        view: window,
-        bubbles: true,
-        cancelable: true
-    });
-
-    element.dispatchEvent(evt);
-    }
-        function Connexion(){
-            document.getElementById("login").style.display = "block";
-        }
-        function Déconnexion(){
-            var a = document.createElement('a');
-            a.href = "/projet/accueil/deconnexion";
-          
-            fireClickEvent(a);
-        }
-        function closelogin(){
-            document.getElementById("login").style.display = "none";
-        }
-        function Inscription(){
-            var a = document.createElement('a');
-            a.href = "/projet/Inscription";
-          
-            fireClickEvent(a);
-        }
-        $(document).ready(function(){ 
-        $('.footer').css('background','<?= $couleur->primarycolor() ?>');
-        $('.footer>*').css('margin','1%')
-        $('.footer').css('padding','1%')
-        });
-       
-    </script>
-
-
+    
 <?php
    
 

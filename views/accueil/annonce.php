@@ -1,35 +1,3 @@
-<script>
-    $(document).ready(function(){
-        $("#note, #signalementdesc").hide();
-    });
-    
-    function noter(){
-        let note = document.getElementById('note');
-        if(note.style.display== "none"){
-            note.style.display = 'block';
-        }else{
-            if(note.value == ""){
-                note.style.display = "none";
-            }else{
-                document.getElementById('annonce').submit();
-                note.style.display = "none";
-            }
-        } 
-    }
-    function signaler(){
-        let description = document.getElementById('signalementdesc');
-        if(description.style.display== "none"){
-            description.style.display = 'block';
-        }else{
-            if(description.value == ""){
-                description.style.display = "none";
-            }else{
-                document.getElementById('annonce').submit();
-                description.style.display = "none";
-            }
-        } 
-    }
-</script>
 
 <?php
 if($_SESSION['connexion'] != 'anonyme'){

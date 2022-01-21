@@ -1,13 +1,4 @@
-<script>
-    $(document).ready(function(){
-            $(".admins_list").css('display','flex');
-            $(".admins_list").css('justify-content','space-around');
-            $(".adminbox>*").css('display','inline-block');
-            $(".adminbox>*").css('margin', '5px');
-           $(".adminbox").css('padding','1%');
-           $(".adminbox").css('border','1px solid <?= $couleur->bordercolor()?>');
-        });    
-</script>
+
 
 <?php
 

@@ -1,18 +1,3 @@
-<script>
-    function modifier(id){
-            var a = document.createElement('a');
-            a.href = "/projet/profil/modifier/"+id;
-          
-            fireClickEvent(a);
-        }
-
-        $(document).ready(function(){
-            $(".profil_info").css('display','flex');
-            $(".profil_info").css('justify-content','space-around');
-            $(".profil_info>div").css('margin','5%');
-
-        });    
-</script>
 
 <?php
 
@@ -42,7 +27,9 @@ $g->divclass('profil_info');
      
   
     }
-    $g->button('modifier','bigbutton','modifier('.$id.')');
+    if($id==$userid){
+        $g->button('modifier','bigbutton','modifier('.$id.')');
+    }
     $g->divend();
 $g->divend();
 
@@ -72,10 +59,10 @@ if(isset($transitions)){
     $g->divend();
     }   
 }
-if($id==$userid){
+if($id==$userid || $_SESSION['connexion']=='admin'){
     if(isset($postulations)){
         if($postulations != null){
-            $g->titre(2,"vos postulations",'titre2');
+            $g->titre(2,"les postulations",'titre2');
         $g->divclass('postulations_list');
             foreach($postulations as $a){
                 $g->annoncebox($a->annonce());
