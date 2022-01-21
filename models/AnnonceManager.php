@@ -180,7 +180,7 @@
         //statistique
         public function nombreannonce(){
             $sql = "SELECT id FROM annonce" ; 
-            $data = $this->request($sql);
+            $data = $this->requestAll($sql);
             if ($data != null) {
 
                 return count($data);
@@ -189,31 +189,33 @@
             }
         
             public function topannonce(){
-                $sql = "SELECT *, max(vues) FROM annonce" ; 
+                $sql = "SELECT id, max(vues) FROM annonce" ; 
                 $data = $this->request($sql);
                 if ($data != null) {
                     unset($data['max(id)']);
-                    return new Annonce($data);
+                    return $data['id'];
                 }   
                 return 0; 
             }
             
-            /*
-        public function toptransporteurid(){
-            $sql = "SELECT transiteur FROM annonce" ; 
-            $data = $this->request($sql);
-            if ($data != null) {
+            
+        public function toptransporteur(){
+           // $sql = "SELECT  FROM annonce" ; 
+           // $data = $this->request($sql);
+           /* if ($data != null) {
                 $occurence = array_count_values($data['transiteur']);
                 $maxocc = max($occurence);
                 echo key($maxocc,$data);
             }   
             return 0; 
+            */
+            return 2;
         }  
-        */  
+         
     }
- //$v = new AnnonceMAnager();
- //$a =$v->toptransporteurid();
-//echo $a;
+// $v = new AnnonceMAnager();
+// $a =$v->topannonce();
+//echo $a->photo();
 
  
 ?>

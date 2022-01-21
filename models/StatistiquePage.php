@@ -7,25 +7,41 @@
 
         public function __construct()
         {
+            $a = new AnnonceManager();
+            $u = new UtilisateurManager();
             $this->getConnection();
             $data = $this->getAll("statistique_page","id");
+            
             foreach($data as $row){
-                if ($row['contentType']=='annonce') {
-                    $manager = new AnnonceManager(); 
-                    $this->table[] = $manager->rechercheByid($row['content']);
-                }
-                elseif($row['contentType']=='utilisateur') {
-                    $manager = new UtilisateurManager(); 
-                    $this->table[] = $manager->rechercheByid($row['content']);
-                }
-                else {
-                     $this->table[] = new StatElements($row);
-                }
+            
+                $this->table[] = new StatElements($row);
+                
+            }
+
+            for ($i=0; $i < count($this->table); $i++) { 
                
+                switch($this->table[$i]->title()){
+                    case 'Nombre de clients':
+                        $this->table[$i]->setContent($u->nombreclient());
+                       
+                        break;
+                    case 'Nombre de transporteurs':
+                        $this->table[$i]->setContent($u->nombretransporteur()) ;
+                        break;
+                    case "Nombre d'annonces":
+                        $this->table[$i]->setContent( $a->nombreannonce());
+                        break;
+                    case 'Top annonce':
+                        $this->table[$i]->setContent($a->topannonce()) ;
+                        break;
+                    case 'Top transporteur':
+                        $this->table[$i]->setContent($a->toptransporteur()) ;      
+                        break;       
+                }
             }
            
         }
-        public function getElements(){
+        public function all(){
             return $this->table;
         }
         public function test(){

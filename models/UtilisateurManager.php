@@ -77,8 +77,8 @@ class UtilisateurManager extends Model{
     //statistique
 
     public function nombreclient(){
-        $sql = "SELECT * FROM utilisateur WHERE type='client'" ; 
-        $data = $this->request($sql);
+        $sql = "SELECT id FROM utilisateur WHERE type= 'client' " ; 
+        $data = $this->requestAll($sql);
         if ($data != null) {
 
             return count($data);
@@ -89,7 +89,7 @@ class UtilisateurManager extends Model{
 
     public function nombretransporteur(){
         $sql = "SELECT id FROM utilisateur WHERE type='transporteur'" ; 
-        $data = $this->request($sql);
+        $data = $this->requestAll($sql);
         if ($data != null) {
 
             return count($data);
@@ -99,5 +99,7 @@ class UtilisateurManager extends Model{
     }
 }
 //$v = new UtilisateurManager();
+//echo $v->nombreclient();
+//echo $v->nombretransporteur();
 //$v->test();
 ?>
