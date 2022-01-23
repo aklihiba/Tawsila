@@ -278,6 +278,33 @@
             $this->divend();
         }
         
+        /***************admin */
+        public function clientrow($c){
+            echo "<tr>
+                    <td> <input  type='checkbox'  name='selected[]' value=".$c->id()."> </td>
+                    <td> <a href='".PRE."/Profil/index/".$c->id()."'>".$c->nom()." ".$c->prenom()."</a></td>
+                    <td>".$c->adresse()."</td>
+                    <td>".$c->mail()."</td>
+                    <td>".$c->telephone()."</td>
+                    <td>".$c->statut()."</td>
+                   
+                </tr>
+            ";
+        }
+        public function transporteurrow($c){
+            echo "<tr>
+                    <td> <input  type='checkbox'  name='selected[]' value=".$c->id()."> </td>
+                    <td> <a href='".PRE."/Profil/index/".$c->id()."'>".$c->nom()." ".$c->prenom()."</a></td>
+                    <td>".$c->adresse()."</td>
+                    <td>".$c->mail()."</td>
+                    <td>".$c->telephone()."</td>
+                    <td>".$c->statut()."</td>
+                    <td>".$c->depart()."</td>
+                    <td>".$c->arrive()."</td>
+                   
+                </tr>
+            ";
+        }
     }
 ?>
 

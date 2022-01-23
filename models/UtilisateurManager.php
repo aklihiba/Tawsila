@@ -40,6 +40,38 @@ class UtilisateurManager extends Model{
         return null;    
     }
 
+    public function getClients(){
+        $this->table= null;
+        $this->getConnection();
+        $sql = "SELECT * FROM utilisateur WHERE type='client'";
+
+        $data = $this->requestAll($sql);
+            
+        if ($data != null) {
+              
+            foreach($data as $row){
+                $this->table[] = new Utilisateur($row);
+            }
+        }
+        return $this->table;
+    }
+
+    public function getTransporteurs(){
+        $this->table= null;
+        $this->getConnection();
+        $sql = "SELECT * FROM utilisateur WHERE type='transporteur'";
+
+        $data = $this->requestAll($sql);
+          
+        if ($data != null) {
+              
+            foreach($data as $row){
+                $this->table[] = new Utilisateur($row);
+            }
+        }
+        return $this->table;
+    }
+
     public function test(){
         foreach ($this->table as $row){
 
