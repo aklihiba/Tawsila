@@ -337,6 +337,18 @@
              echo "   </tr>
             ";
         }
+
+        public function signalementrow($s){
+            echo "<tr>
+            <td> <a href='".PRE."/Profil/index/".$s->emetteur()->id()."'>".$s->emetteur()->id()." ".$s->emetteur()->nom()." ".$s->emetteur()->prenom()."</a></td>
+            <td> <a href='".PRE."/Accueil/Annonce/".$s->annonce()->id()."'>".$s->annonce()->id()." ".$s->annonce()->titre()."</a></td>
+            <td> <a href='".PRE."/Profil/index/".$s->mis_en_cause()->id()."'>".$s->mis_en_cause()->id()." ".$s->mis_en_cause()->nom()." ".$s->mis_en_cause()->prenom()."</a></td>
+            <td> <a href='".PRE."/GestionSignalements/signalement/".$s->annonce()->id()."-".$s->emetteur()->id()."-".$s->mis_en_cause()->id()."'>description</a></td>
+           
+           
+        </tr>
+    ";
+        }
     }
 ?>
 

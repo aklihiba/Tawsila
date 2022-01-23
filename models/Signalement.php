@@ -27,29 +27,23 @@
 
         public function setAnnonce($id)
         {
-            $id = (int) $id;
-            if ($id > 0)
-            {
+           
                 $this->_annonce = $id;
-            }
+            
         }
 
         public function setEmetteur($id)
         {
-            $id = (int) $id;
-            if ($id > 0)
-            {
+           
                 $this->_emetteur = $id;
-            }
+            
         }
 
         public function setMis_en_cause($id)
         {
-            $id = (int) $id;
-            if ($id > 0)
-            {
+           
                 $this->_misencause = $id;
-            }
+            
         }
         
         public function setDescription($desc)
@@ -90,6 +84,7 @@
                  return false;
              }
         }
+       
         public function rechercheemetteur(){
             $sql = 'SELECT * FROM signalement WHERE emetteur='.$this->emetteur();
             $this->getConnection();
