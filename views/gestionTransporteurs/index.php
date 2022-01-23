@@ -1,5 +1,5 @@
 
-<form action="<?= PRE ?>/GestionTransporteurs" method="POST">
+<form id="formtransporteur" action="<?= PRE ?>/GestionTransporteurs" method="POST">
 <div id="toolbar">
  <?php 
  $g->submit('banir', 'banir','mediumbutton');

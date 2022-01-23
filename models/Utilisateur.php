@@ -307,12 +307,14 @@
             $sql = " UPDATE utilisateur SET statut='".$this->statut()."' WHERE id=".$this->id();
             $this->query($sql);
         }
+        
         public function refuser(){
             $this->setStatut('refusé');
             $this->getConnection();
             $sql = " UPDATE utilisateur SET statut='".$this->statut()."' WHERE id=".$this->id();
             $this->query($sql);
         }
+        
         public function certifier(){
             $this->setStatut('certifié');
             $this->getConnection();

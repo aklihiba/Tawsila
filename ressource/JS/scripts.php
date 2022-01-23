@@ -99,5 +99,40 @@
             $(".adminbox>*").css('margin', '5px');
            $(".adminbox").css('padding','1%');
            $(".adminbox").css('border','1px solid <?= $couleur->bordercolor()?>');
-        });    
+        }); 
+        
+      /**************admin gestion transporteur */
+      $(document).ready(function(){
+        $("#message_rejet, #message_valid").hide();
+        
+    });
+    
+    function valider(){
+        let note = document.getElementById('message_valid');
+        if(note.style.display== "none"){
+            note.style.display = 'block';
+        }else{
+            if(note.value == ""){
+                note.style.display = "none";
+            }else{
+               
+                document.getElementById('formtransporteur').submit();
+                note.style.display = "none";
+            }
+        } 
+    }
+    function refuser(){
+        let description = document.getElementById('message_rejet');
+        if(description.style.display== "none"){
+            description.style.display = 'block';
+        }else{
+            if(description.value == ""){
+                description.style.display = "none";
+            }else{
+                document.getElementById('formtransporteur').submit();
+                description.style.display = "none";
+            }
+        } 
+    }
+
     </script>
