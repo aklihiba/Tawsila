@@ -301,8 +301,40 @@
                     <td>".$c->statut()."</td>
                     <td>".$c->depart()."</td>
                     <td>".$c->arrive()."</td>
+                    <td>".$c->gain()."</td>
+                    <td>".$c->note()."/5</td>
                    
                 </tr>
+            ";
+        }
+        public function annoncerow($c){
+            echo "<tr>
+                    <td> <input  type='checkbox'  name='selected[]' value=".$c->id()."> </td>
+                    <td> <a href='".PRE."/Accueil/Annonce/".$c->id()."'>".$c->titre()."</a></td>
+                    <td>".$c->date()."</td>
+                    <td> <a href='".PRE."/Profil/index/".$c->client()->id()."'>".$c->client()->nom()." ".$c->client()->prenom()."</a></td>";
+            if($c->transiteur()=='-'){
+                echo "<td>-</td>";
+            }else{
+                echo "<td> <a href='".PRE."/Profil/index/".$c->transiteur()->id()."'>".$c->transiteur()->nom()." ".$c->transiteur()->prenom()."</a></td>";
+            }    
+            echo "    
+                    <td>".$c->etat()."</td>
+                    <td>".$c->wilaya_depart()."</td>
+                    <td>".$c->wilaya_arrive()."</td>
+                    <td>".$c->transport()."</td>
+                    <td>".$c->poidsMin()." - ".$c->poidsMax()."</td>
+                    <td>".$c->volumeMin()." - ".$c->volumeMax()."</td>
+                    <td>".$c->type()."</td>
+                    <td>".$c->prix()."</td>
+                    <td>".$c->vues()."</td>
+                    ";
+            if($c->archive()){
+                echo "<td>oui</td>";
+            }   else{
+                echo "<td>non</td>";
+            }     
+             echo "   </tr>
             ";
         }
     }

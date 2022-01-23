@@ -143,6 +143,12 @@
             $sql = " UPDATE annonce SET archive=true WHERE id=".$this->id();
             $this->query($sql);
         }
+        public function annulerpublication(){
+            $this->getConnection();
+            $sql = " UPDATE annonce SET etat='annulée' WHERE id=".$this->id();
+            $this->query($sql);
+            $this->archiver();
+        }
         public function publish(){
             //validation de l'administrateur
             $this->setPublier(true);
@@ -313,22 +319,19 @@
 
         public function setClient($client)
         {
-            $client = (int) $client;
-            if ($client > 0)
-            {
+            
                 $this->_client = $client;
-            }
+            
         }
         public function setTransiteur($trans)
         {
-            if(!is_null($trans))
-            {
-                $trans = (int) $trans;
-                if ($trans > 0)
-                {
-                    $this->_transiteur = $trans;
-                }
-            }
+              if($trans != null){
+                   $this->_transiteur = $trans;
+              }else{
+                  $this->_transiteur='-';
+              }
+                   
+            
         }
 
         public function setPostulations($post)

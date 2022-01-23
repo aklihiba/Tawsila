@@ -28,6 +28,19 @@
             return $this->table[0];
             /*incase construct with id*/
         }
+        public function getallannonces(){
+            $this->table = null;
+            $this->getConnection();
+            $sql = "SELECT * FROM annonce" ; 
+            $data = $this->requestAll($sql);
+            if (!is_null($data)) {
+                foreach($data as $row){
+                    $this->table[] = new Annonce($row);
+                }
+                
+            } 
+            return $this->table;
+        }
         public function getfilteredAnnonce(){
             
             //get the filters
