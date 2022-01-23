@@ -1,9 +1,10 @@
 <?php
-    class Newsmodel {
+    class Newsmodel extends Model{
         private $_id;
         private $_titre;
         private $_photo ; 
         private $_description ; 
+        private $_vues;
         public function __construct(array $data)
         {
             $this->hydrate($data);
@@ -55,10 +56,30 @@
                 $this->_description = $description;
             }
         }
+        public function setVues($vues)
+        {
+            if(!is_null($vues))
+            {
+                $vues = (int) $vues;
+                $this->_vues = $vues;
+               
+            }
+        }
+
+        public function incVues(){
+            $this->getConnection();
+            $this->setVues($this->vues() +1) ;
+           $sql = " UPDATE news SET vues=".$this->vues()." WHERE id=".$this->id();
+           $this->query($sql);
+          
+        }
 
         public function id(){return $this->_id;}
         public function photo(){return $this->_photo;}
         public function titre(){return $this->_titre;}
         public function description(){return $this->_description;}
+        public function vues(){
+            return $this->_vues;
+        }
     }
 ?>

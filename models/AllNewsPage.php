@@ -4,18 +4,30 @@
 
     class AllNewsPage extends Model {
 
-        public function __construct()
+        public function __construct($id=0)
         {
-            $this->getConnection();
-            //get all elements except the list of les annonces
-            $table = $this->getAll("news","id");
-            foreach($table as $row){
-                $this->table[$row['id']] = new Newsmodel($row);
+            if($id==0){
+                $this->getConnection();
+                //get all elements except the list of les annonces
+                $table = $this->getAll("news","id");
+                foreach($table as $row){
+                    $this->table[$row['id']] = new Newsmodel($row);
+                }
+            }else{
+                $this->getConnection();
+                $sql = "SELECT * FROM news WHERE id=".$id ; 
+                $data = $this->request($sql);
+                if (!is_null($data)) {
+                    $this->table[]= new Newsmodel($data);
+                } 
             }
            
         }
         public function all(){
             return $this->table;
+        }
+        public function getnews(){
+            return $this->table[0];
         }
         public function test(){
             foreach ($this->table as $row){

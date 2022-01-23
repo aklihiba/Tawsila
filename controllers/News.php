@@ -23,8 +23,12 @@
         public function view($id){
             $all = new NewsPage($id);
             $all = $all->all();
+            $new = new AllNewsPage($id);
+            $new = $new->getnews();
+            $new->incVues();
+            $nbvues = $new->vues();
            
-            $this->render('view',compact('all'));
+            $this->render('view',compact('all','nbvues'));
         }
     
     }

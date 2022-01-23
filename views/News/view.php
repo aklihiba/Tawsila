@@ -21,6 +21,8 @@
            
         }
         $g->divend();
+
     }
+    $g->paragraphe('nombre de vues: '.$nbvues,'paragraphe');
 
 ?>
