@@ -23,7 +23,12 @@ abstract class Controller {
 
         ob_start();
         //header and footer for the layout
-        $header = new Header($_SESSION['connexion']);
+        if($_SESSION['connexion']=='user'){
+             $header = new Header('user');
+        }else{
+            $header = new Header('anonyme');
+        }
+       
         $footer = new footer();
         $couleur = new Couleurs();
         
@@ -31,7 +36,7 @@ abstract class Controller {
         if($this instanceof Accueil && $file=="index"){
             $diapo = new Diaporama();
         }
-        
+        require_once(ROOT.'ressource/JS/scripts.php');
         require_once(ROOT.'views/ViewGenerator.php');
         $g = new ViewGenerator(); 
         require_once(ROOT.'views/'.strtolower(get_class($this)).'/'.$file.'.php');
