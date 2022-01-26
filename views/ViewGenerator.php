@@ -313,7 +313,7 @@
                     <td> <a href='".PRE."/Accueil/Annonce/".$c->id()."'>".$c->titre()."</a></td>
                     <td>".$c->date()."</td>
                     <td> <a href='".PRE."/Profil/index/".$c->client()->id()."'>".$c->client()->nom()." ".$c->client()->prenom()."</a></td>";
-            if($c->transiteur()=='-'){
+            if($c->transiteur()==null){
                 echo "<td>-</td>";
             }else{
                 echo "<td> <a href='".PRE."/Profil/index/".$c->transiteur()->id()."'>".$c->transiteur()->nom()." ".$c->transiteur()->prenom()."</a></td>";

@@ -25,7 +25,11 @@
         
        
     }
-
+    public function deconnexion(){
+        session_unset();
+        $_SESSION['connexion']='anonyme';
+        header('Location:'.PRE);
+    }
     public function index(){
        
         $manager = new AnnonceManager();
@@ -49,7 +53,7 @@
                    }else{
                         $user = $usrm->connect($_POST['mail'], md5($_POST['pwd']));
                         if($user != null){
-                                
+                              
                                 $_SESSION['user']= $user;
                                 $_SESSION['user_type']= $user->type();
                                 $_SESSION['connexion']='user';                       
@@ -119,10 +123,9 @@
        $manager = new AnnonceManager($id);
 
        if($manager->all() != null){
-            //test admin
-            //$_SESSION['user_type']='admin';
-
+            
             $annonce = $manager->all()[0];
+
             if($_SESSION['connexion']=='user'){
                  $user = $_SESSION['user'];
             }
@@ -143,7 +146,7 @@
                     //annuler
                     if(isset($_POST['annuler'])){
                         $annonce->archiver();
-                        //TODO : revenir a la page des annonces de l'admin
+                        header('Location:'.PRE.'/GestionAnnonces');
                     }
                 }elseif($user->id()==$annonce->client()){
                     // le proprietaire de l'annonce:
@@ -606,7 +609,7 @@
             
             //
         
-           //header("Location:".PRE."/accueil");            
+           header("Location:".PRE."/accueil/annonce/".$id);            
         }
        
         $user = $_SESSION['user'];

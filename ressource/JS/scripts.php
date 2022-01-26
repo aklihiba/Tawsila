@@ -1,20 +1,21 @@
 <script>
         
         function fireClickEvent(element) {
-    var evt = new window.MouseEvent('click', {
-        view: window,
-        bubbles: true,
-        cancelable: true
-    });
+        var evt = new window.MouseEvent('click', {
+            view: window,
+            bubbles: true,
+            cancelable: true
+        });
 
-    element.dispatchEvent(evt);
+        element.dispatchEvent(evt);
     }
         function Connexion(){
             document.getElementById("login").style.display = "block";
         }
+
         function Déconnexion(){
             var a = document.createElement('a');
-            a.href = "/projet/accueil/deconnexion";
+            a.href = "/projet/Accueil/deconnexion";
           
             fireClickEvent(a);
         }
@@ -80,16 +81,6 @@
     }
 
 
-    /**************inscription page */
-    $(document).ready(function(){
-        $(".dropdown, [name='certification'], [for='certification']").hide();
-        
-        $("[name='transporteur']").change(
-            function(){
-                $(".dropdown, [name='certification'], [for='certification']").toggle();
-            }
-        );
-    });
 
     /***********contact page */
     $(document).ready(function(){

@@ -83,7 +83,7 @@
         public function update(){
             //modifying it
             $this->getConnection();
-
+            $this->calculPrix();
             $sql = " UPDATE annonce SET 
             titre='".$this->titre()."',
             photo='".$this->photo()."',
@@ -95,7 +95,8 @@
             poidsMax='".$this->poidsMax()."',
             volumeMin='".$this->volumeMin()."',
             volumeMax='".$this->volumeMax()."',
-            description='".$this->description()."'
+            description='".$this->description()."',
+            prix=".$this->prix()."
             WHERE id=".$this->id();
 
             $this->query($sql);
@@ -325,11 +326,9 @@
         }
         public function setTransiteur($trans)
         {
-              if($trans != null){
+              
                    $this->_transiteur = $trans;
-              }else{
-                  $this->_transiteur='-';
-              }
+             
                    
             
         }
@@ -477,13 +476,16 @@
         }
 
         public function calculPrix(){
-            //cette fonction est provisoir le temps que j'utilise maps et je calcule la distance du trajet
-            if($this->_wilaya_arrive == $this->_wilaya_depart){
-                $this->setPrix(500);
-            }else {
-                $this->setPrix(1200);
-            }
-            
+            $this->getConnection();
+           $sql = "SELECT * FROM prix WHERE wilaya1='".$this->Wilaya_depart()."' AND wilaya2='".$this->Wilaya_arrive()."'";
+           $data = $this->requestAll($sql);
+           if($data != null){
+               $d = $data[0];
+             
+               $this->setPrix($d['prix']);
+           }else
+                $this->setPrix('1000');
+           
         }
 
 

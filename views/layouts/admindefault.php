@@ -26,7 +26,7 @@
     $g->imageh($header->logo(),50);
     //buttons
     $g->span();
-    $g->submit("Déconnexion","deconnexion",$header->buttonsClass());
+    $g->button("Déconnexion",$header->buttonsClass(),"Déconnexion()");
     $g->spanend();
     $g->adminmenu($header->menu(),$header->menuClass());
 

@@ -1,4 +1,15 @@
-
+<script>
+   
+    $(document).ready(function(){
+        $(".dropdown, [name='certification'], [for='certification']").hide();
+        
+        $("[name='transporteur']").change(
+            function(){
+                $(".dropdown, [name='certification'], [for='certification']").toggle();
+            }
+        );
+    });
+</script>
 <form action="<?= PRE ?>/inscription/index" method='post'>
 
 <?php

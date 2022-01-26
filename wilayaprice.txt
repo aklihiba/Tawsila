@@ -1,0 +1,2304 @@
+Adrar,Adrar,500
+Adrar,Chlef,1400
+Adrar,Laghouat,2400
+Adrar,Oum El Bouaghi,1400
+Adrar,Batna,1000
+Adrar,Béjaïa,1200
+Adrar,Biskra,2200
+Adrar,Béchar,2000
+Adrar,Blida,2200
+Adrar,Bouira,1700
+Adrar,Tamanrasset,1600
+Adrar,Tébessa,1400
+Adrar,Tlemcen,1600
+Adrar,Tiaret,1300
+Adrar,Tizi Ouzou,2100
+Adrar,Alger,1000
+Adrar,Djelfa,1900
+Adrar,Jijel,2000
+Adrar,Sétif,1900
+Adrar,Saïda,1900
+Adrar,Skikda,1200
+Adrar,Sidi Bel Abbès,1300
+Adrar,Annaba,2200
+Adrar,Guelma,2200
+Adrar,Constantine,1700
+Adrar,Médéa,2100
+Adrar,Mostaganem,1600
+Adrar,M'Sila,1500
+Adrar,Mascara,1000
+Adrar,Ouargla,2200
+Adrar,Oran,1300
+Adrar,El Bayadh,1400
+Adrar,Illizi,1700
+Adrar,Bordj Bou Arreridj,1800
+Adrar,Boumerdès,2100
+Adrar,El Tarf,1800
+Adrar,Tindouf,2200
+Adrar,Tissemsilt,1100
+Adrar,El Oued,2200
+Adrar,Khenchela,1700
+Adrar,Souk Ahras,1300
+Adrar,Tipaza,2100
+Adrar,Mila,2300
+Adrar,Aïn Defla,1000
+Adrar,Naâma,1900
+Adrar,Aïn Témouchent,2000
+Adrar,Ghardaïa,1800
+Adrar,Relizane,1300
+Chlef,Adrar,1900
+Chlef,Chlef,500
+Chlef,Laghouat,2200
+Chlef,Oum El Bouaghi,2000
+Chlef,Batna,1500
+Chlef,Béjaïa,2300
+Chlef,Biskra,1500
+Chlef,Béchar,1700
+Chlef,Blida,2400
+Chlef,Bouira,1700
+Chlef,Tamanrasset,2300
+Chlef,Tébessa,2200
+Chlef,Tlemcen,2100
+Chlef,Tiaret,1700
+Chlef,Tizi Ouzou,1300
+Chlef,Alger,1600
+Chlef,Djelfa,2000
+Chlef,Jijel,1900
+Chlef,Sétif,1100
+Chlef,Saïda,2000
+Chlef,Skikda,2400
+Chlef,Sidi Bel Abbès,1000
+Chlef,Annaba,1900
+Chlef,Guelma,1800
+Chlef,Constantine,2300
+Chlef,Médéa,1500
+Chlef,Mostaganem,2200
+Chlef,M'Sila,2400
+Chlef,Mascara,2000
+Chlef,Ouargla,1500
+Chlef,Oran,2100
+Chlef,El Bayadh,2100
+Chlef,Illizi,1200
+Chlef,Bordj Bou Arreridj,2000
+Chlef,Boumerdès,1700
+Chlef,El Tarf,1300
+Chlef,Tindouf,1000
+Chlef,Tissemsilt,1800
+Chlef,El Oued,1000
+Chlef,Khenchela,1400
+Chlef,Souk Ahras,1100
+Chlef,Tipaza,2000
+Chlef,Mila,1600
+Chlef,Aïn Defla,1400
+Chlef,Naâma,2000
+Chlef,Aïn Témouchent,1600
+Chlef,Ghardaïa,1500
+Chlef,Relizane,2400
+Laghouat,Adrar,1100
+Laghouat,Chlef,1500
+Laghouat,Laghouat,500
+Laghouat,Oum El Bouaghi,1400
+Laghouat,Batna,1400
+Laghouat,Béjaïa,1900
+Laghouat,Biskra,1700
+Laghouat,Béchar,2100
+Laghouat,Blida,1300
+Laghouat,Bouira,2100
+Laghouat,Tamanrasset,2200
+Laghouat,Tébessa,2000
+Laghouat,Tlemcen,1900
+Laghouat,Tiaret,2300
+Laghouat,Tizi Ouzou,1300
+Laghouat,Alger,1700
+Laghouat,Djelfa,1000
+Laghouat,Jijel,2200
+Laghouat,Sétif,1700
+Laghouat,Saïda,1400
+Laghouat,Skikda,2100
+Laghouat,Sidi Bel Abbès,1100
+Laghouat,Annaba,2000
+Laghouat,Guelma,1700
+Laghouat,Constantine,2000
+Laghouat,Médéa,1800
+Laghouat,Mostaganem,1400
+Laghouat,M'Sila,1900
+Laghouat,Mascara,1500
+Laghouat,Ouargla,2200
+Laghouat,Oran,2300
+Laghouat,El Bayadh,1300
+Laghouat,Illizi,1800
+Laghouat,Bordj Bou Arreridj,1700
+Laghouat,Boumerdès,2100
+Laghouat,El Tarf,1200
+Laghouat,Tindouf,2200
+Laghouat,Tissemsilt,2100
+Laghouat,El Oued,2100
+Laghouat,Khenchela,1900
+Laghouat,Souk Ahras,1200
+Laghouat,Tipaza,2200
+Laghouat,Mila,1100
+Laghouat,Aïn Defla,1200
+Laghouat,Naâma,1500
+Laghouat,Aïn Témouchent,1300
+Laghouat,Ghardaïa,2200
+Laghouat,Relizane,1000
+Oum El Bouaghi,Adrar,2300
+Oum El Bouaghi,Chlef,1300
+Oum El Bouaghi,Laghouat,1900
+Oum El Bouaghi,Oum El Bouaghi,500
+Oum El Bouaghi,Batna,2400
+Oum El Bouaghi,Béjaïa,1500
+Oum El Bouaghi,Biskra,1700
+Oum El Bouaghi,Béchar,1400
+Oum El Bouaghi,Blida,2000
+Oum El Bouaghi,Bouira,1100
+Oum El Bouaghi,Tamanrasset,1300
+Oum El Bouaghi,Tébessa,2100
+Oum El Bouaghi,Tlemcen,1700
+Oum El Bouaghi,Tiaret,1000
+Oum El Bouaghi,Tizi Ouzou,1500
+Oum El Bouaghi,Alger,1300
+Oum El Bouaghi,Djelfa,1500
+Oum El Bouaghi,Jijel,2100
+Oum El Bouaghi,Sétif,2400
+Oum El Bouaghi,Saïda,1500
+Oum El Bouaghi,Skikda,1500
+Oum El Bouaghi,Sidi Bel Abbès,2000
+Oum El Bouaghi,Annaba,1100
+Oum El Bouaghi,Guelma,2400
+Oum El Bouaghi,Constantine,1800
+Oum El Bouaghi,Médéa,1700
+Oum El Bouaghi,Mostaganem,1300
+Oum El Bouaghi,M'Sila,1700
+Oum El Bouaghi,Mascara,2400
+Oum El Bouaghi,Ouargla,2000
+Oum El Bouaghi,Oran,1200
+Oum El Bouaghi,El Bayadh,1500
+Oum El Bouaghi,Illizi,1300
+Oum El Bouaghi,Bordj Bou Arreridj,1200
+Oum El Bouaghi,Boumerdès,2000
+Oum El Bouaghi,El Tarf,2200
+Oum El Bouaghi,Tindouf,1300
+Oum El Bouaghi,Tissemsilt,1500
+Oum El Bouaghi,El Oued,2000
+Oum El Bouaghi,Khenchela,1300
+Oum El Bouaghi,Souk Ahras,2100
+Oum El Bouaghi,Tipaza,1200
+Oum El Bouaghi,Mila,1800
+Oum El Bouaghi,Aïn Defla,1000
+Oum El Bouaghi,Naâma,1200
+Oum El Bouaghi,Aïn Témouchent,1600
+Oum El Bouaghi,Ghardaïa,1900
+Oum El Bouaghi,Relizane,2300
+Batna,Adrar,1000
+Batna,Chlef,2100
+Batna,Laghouat,1500
+Batna,Oum El Bouaghi,2000
+Batna,Batna,500
+Batna,Béjaïa,2200
+Batna,Biskra,1200
+Batna,Béchar,2200
+Batna,Blida,1100
+Batna,Bouira,2100
+Batna,Tamanrasset,1100
+Batna,Tébessa,1800
+Batna,Tlemcen,1500
+Batna,Tiaret,1000
+Batna,Tizi Ouzou,2200
+Batna,Alger,1100
+Batna,Djelfa,2400
+Batna,Jijel,1700
+Batna,Sétif,1300
+Batna,Saïda,1200
+Batna,Skikda,1000
+Batna,Sidi Bel Abbès,2000
+Batna,Annaba,2300
+Batna,Guelma,1200
+Batna,Constantine,1700
+Batna,Médéa,1600
+Batna,Mostaganem,1000
+Batna,M'Sila,1600
+Batna,Mascara,2100
+Batna,Ouargla,1800
+Batna,Oran,1200
+Batna,El Bayadh,1700
+Batna,Illizi,1600
+Batna,Bordj Bou Arreridj,1400
+Batna,Boumerdès,1400
+Batna,El Tarf,1200
+Batna,Tindouf,1300
+Batna,Tissemsilt,1100
+Batna,El Oued,2400
+Batna,Khenchela,2400
+Batna,Souk Ahras,1700
+Batna,Tipaza,1900
+Batna,Mila,1000
+Batna,Aïn Defla,1900
+Batna,Naâma,1800
+Batna,Aïn Témouchent,2000
+Batna,Ghardaïa,1800
+Batna,Relizane,2400
+Béjaïa,Adrar,1100
+Béjaïa,Chlef,1700
+Béjaïa,Laghouat,2300
+Béjaïa,Oum El Bouaghi,1700
+Béjaïa,Batna,1000
+Béjaïa,Béjaïa,500
+Béjaïa,Biskra,2300
+Béjaïa,Béchar,1200
+Béjaïa,Blida,1500
+Béjaïa,Bouira,1500
+Béjaïa,Tamanrasset,1100
+Béjaïa,Tébessa,2300
+Béjaïa,Tlemcen,2300
+Béjaïa,Tiaret,1500
+Béjaïa,Tizi Ouzou,1800
+Béjaïa,Alger,1800
+Béjaïa,Djelfa,1100
+Béjaïa,Jijel,1500
+Béjaïa,Sétif,1400
+Béjaïa,Saïda,1800
+Béjaïa,Skikda,2300
+Béjaïa,Sidi Bel Abbès,1100
+Béjaïa,Annaba,1000
+Béjaïa,Guelma,1100
+Béjaïa,Constantine,1300
+Béjaïa,Médéa,1700
+Béjaïa,Mostaganem,1400
+Béjaïa,M'Sila,1000
+Béjaïa,Mascara,2000
+Béjaïa,Ouargla,1000
+Béjaïa,Oran,1500
+Béjaïa,El Bayadh,1500
+Béjaïa,Illizi,1000
+Béjaïa,Bordj Bou Arreridj,1900
+Béjaïa,Boumerdès,1200
+Béjaïa,El Tarf,2200
+Béjaïa,Tindouf,1400
+Béjaïa,Tissemsilt,1600
+Béjaïa,El Oued,1800
+Béjaïa,Khenchela,1900
+Béjaïa,Souk Ahras,2200
+Béjaïa,Tipaza,2100
+Béjaïa,Mila,1300
+Béjaïa,Aïn Defla,1100
+Béjaïa,Naâma,1300
+Béjaïa,Aïn Témouchent,1600
+Béjaïa,Ghardaïa,2400
+Béjaïa,Relizane,2400
+Biskra,Adrar,1000
+Biskra,Chlef,1700
+Biskra,Laghouat,2400
+Biskra,Oum El Bouaghi,2000
+Biskra,Batna,1300
+Biskra,Béjaïa,1700
+Biskra,Biskra,500
+Biskra,Béchar,1700
+Biskra,Blida,1600
+Biskra,Bouira,2100
+Biskra,Tamanrasset,2200
+Biskra,Tébessa,2100
+Biskra,Tlemcen,1400
+Biskra,Tiaret,2000
+Biskra,Tizi Ouzou,1800
+Biskra,Alger,1700
+Biskra,Djelfa,1300
+Biskra,Jijel,1700
+Biskra,Sétif,1000
+Biskra,Saïda,1900
+Biskra,Skikda,1800
+Biskra,Sidi Bel Abbès,2400
+Biskra,Annaba,1400
+Biskra,Guelma,2000
+Biskra,Constantine,2400
+Biskra,Médéa,1000
+Biskra,Mostaganem,1000
+Biskra,M'Sila,1000
+Biskra,Mascara,2000
+Biskra,Ouargla,2300
+Biskra,Oran,1600
+Biskra,El Bayadh,2400
+Biskra,Illizi,1500
+Biskra,Bordj Bou Arreridj,1300
+Biskra,Boumerdès,1400
+Biskra,El Tarf,2400
+Biskra,Tindouf,2000
+Biskra,Tissemsilt,2400
+Biskra,El Oued,2300
+Biskra,Khenchela,2000
+Biskra,Souk Ahras,2400
+Biskra,Tipaza,1300
+Biskra,Mila,1400
+Biskra,Aïn Defla,2000
+Biskra,Naâma,2200
+Biskra,Aïn Témouchent,1600
+Biskra,Ghardaïa,1000
+Biskra,Relizane,2100
+Béchar,Adrar,1700
+Béchar,Chlef,1000
+Béchar,Laghouat,2000
+Béchar,Oum El Bouaghi,1400
+Béchar,Batna,2000
+Béchar,Béjaïa,1900
+Béchar,Biskra,1300
+Béchar,Béchar,500
+Béchar,Blida,1300
+Béchar,Bouira,2200
+Béchar,Tamanrasset,2000
+Béchar,Tébessa,2200
+Béchar,Tlemcen,1100
+Béchar,Tiaret,2000
+Béchar,Tizi Ouzou,1200
+Béchar,Alger,1000
+Béchar,Djelfa,2200
+Béchar,Jijel,2200
+Béchar,Sétif,2300
+Béchar,Saïda,1700
+Béchar,Skikda,1600
+Béchar,Sidi Bel Abbès,1000
+Béchar,Annaba,1400
+Béchar,Guelma,1600
+Béchar,Constantine,1600
+Béchar,Médéa,2400
+Béchar,Mostaganem,1500
+Béchar,M'Sila,2400
+Béchar,Mascara,2000
+Béchar,Ouargla,1400
+Béchar,Oran,2200
+Béchar,El Bayadh,2400
+Béchar,Illizi,2300
+Béchar,Bordj Bou Arreridj,1300
+Béchar,Boumerdès,1700
+Béchar,El Tarf,1700
+Béchar,Tindouf,1500
+Béchar,Tissemsilt,1600
+Béchar,El Oued,1500
+Béchar,Khenchela,1300
+Béchar,Souk Ahras,1900
+Béchar,Tipaza,1100
+Béchar,Mila,1600
+Béchar,Aïn Defla,1900
+Béchar,Naâma,2000
+Béchar,Aïn Témouchent,1100
+Béchar,Ghardaïa,1100
+Béchar,Relizane,1100
+Blida,Adrar,2000
+Blida,Chlef,2400
+Blida,Laghouat,1500
+Blida,Oum El Bouaghi,2000
+Blida,Batna,1200
+Blida,Béjaïa,1900
+Blida,Biskra,2300
+Blida,Béchar,2100
+Blida,Blida,500
+Blida,Bouira,1200
+Blida,Tamanrasset,1500
+Blida,Tébessa,1600
+Blida,Tlemcen,2100
+Blida,Tiaret,2400
+Blida,Tizi Ouzou,1900
+Blida,Alger,2200
+Blida,Djelfa,2000
+Blida,Jijel,1000
+Blida,Sétif,2300
+Blida,Saïda,2400
+Blida,Skikda,2300
+Blida,Sidi Bel Abbès,2300
+Blida,Annaba,1500
+Blida,Guelma,1300
+Blida,Constantine,2400
+Blida,Médéa,1200
+Blida,Mostaganem,1500
+Blida,M'Sila,1900
+Blida,Mascara,1000
+Blida,Ouargla,1400
+Blida,Oran,2400
+Blida,El Bayadh,1600
+Blida,Illizi,1500
+Blida,Bordj Bou Arreridj,2000
+Blida,Boumerdès,1000
+Blida,El Tarf,2000
+Blida,Tindouf,1800
+Blida,Tissemsilt,1500
+Blida,El Oued,2400
+Blida,Khenchela,2300
+Blida,Souk Ahras,2400
+Blida,Tipaza,2200
+Blida,Mila,1300
+Blida,Aïn Defla,1600
+Blida,Naâma,2100
+Blida,Aïn Témouchent,1100
+Blida,Ghardaïa,2000
+Blida,Relizane,1400
+Bouira,Adrar,1200
+Bouira,Chlef,2200
+Bouira,Laghouat,1100
+Bouira,Oum El Bouaghi,2200
+Bouira,Batna,1400
+Bouira,Béjaïa,1100
+Bouira,Biskra,1000
+Bouira,Béchar,1500
+Bouira,Blida,2100
+Bouira,Bouira,500
+Bouira,Tamanrasset,2300
+Bouira,Tébessa,1100
+Bouira,Tlemcen,1800
+Bouira,Tiaret,2100
+Bouira,Tizi Ouzou,2100
+Bouira,Alger,1500
+Bouira,Djelfa,1600
+Bouira,Jijel,1100
+Bouira,Sétif,1900
+Bouira,Saïda,1700
+Bouira,Skikda,2300
+Bouira,Sidi Bel Abbès,1700
+Bouira,Annaba,1900
+Bouira,Guelma,2000
+Bouira,Constantine,1100
+Bouira,Médéa,1400
+Bouira,Mostaganem,2100
+Bouira,M'Sila,1800
+Bouira,Mascara,2400
+Bouira,Ouargla,2000
+Bouira,Oran,1900
+Bouira,El Bayadh,2400
+Bouira,Illizi,1500
+Bouira,Bordj Bou Arreridj,2200
+Bouira,Boumerdès,2400
+Bouira,El Tarf,1100
+Bouira,Tindouf,2300
+Bouira,Tissemsilt,1700
+Bouira,El Oued,2000
+Bouira,Khenchela,1100
+Bouira,Souk Ahras,1200
+Bouira,Tipaza,1100
+Bouira,Mila,1600
+Bouira,Aïn Defla,2100
+Bouira,Naâma,1000
+Bouira,Aïn Témouchent,2300
+Bouira,Ghardaïa,1000
+Bouira,Relizane,2300
+Tamanrasset,Adrar,2000
+Tamanrasset,Chlef,1100
+Tamanrasset,Laghouat,1800
+Tamanrasset,Oum El Bouaghi,1500
+Tamanrasset,Batna,1300
+Tamanrasset,Béjaïa,2100
+Tamanrasset,Biskra,1800
+Tamanrasset,Béchar,1500
+Tamanrasset,Blida,1600
+Tamanrasset,Bouira,1000
+Tamanrasset,Tamanrasset,500
+Tamanrasset,Tébessa,2000
+Tamanrasset,Tlemcen,2300
+Tamanrasset,Tiaret,1000
+Tamanrasset,Tizi Ouzou,2200
+Tamanrasset,Alger,1500
+Tamanrasset,Djelfa,2300
+Tamanrasset,Jijel,1300
+Tamanrasset,Sétif,2200
+Tamanrasset,Saïda,1700
+Tamanrasset,Skikda,1900
+Tamanrasset,Sidi Bel Abbès,1400
+Tamanrasset,Annaba,2100
+Tamanrasset,Guelma,1200
+Tamanrasset,Constantine,1100
+Tamanrasset,Médéa,2300
+Tamanrasset,Mostaganem,1000
+Tamanrasset,M'Sila,2000
+Tamanrasset,Mascara,2400
+Tamanrasset,Ouargla,1100
+Tamanrasset,Oran,2100
+Tamanrasset,El Bayadh,2200
+Tamanrasset,Illizi,1900
+Tamanrasset,Bordj Bou Arreridj,1900
+Tamanrasset,Boumerdès,1500
+Tamanrasset,El Tarf,1000
+Tamanrasset,Tindouf,1100
+Tamanrasset,Tissemsilt,2000
+Tamanrasset,El Oued,1200
+Tamanrasset,Khenchela,2200
+Tamanrasset,Souk Ahras,1000
+Tamanrasset,Tipaza,2100
+Tamanrasset,Mila,1500
+Tamanrasset,Aïn Defla,1900
+Tamanrasset,Naâma,2200
+Tamanrasset,Aïn Témouchent,1700
+Tamanrasset,Ghardaïa,1000
+Tamanrasset,Relizane,1400
+Tébessa,Adrar,2000
+Tébessa,Chlef,1000
+Tébessa,Laghouat,1300
+Tébessa,Oum El Bouaghi,1300
+Tébessa,Batna,1400
+Tébessa,Béjaïa,1900
+Tébessa,Biskra,1300
+Tébessa,Béchar,1800
+Tébessa,Blida,2000
+Tébessa,Bouira,2200
+Tébessa,Tamanrasset,1700
+Tébessa,Tébessa,500
+Tébessa,Tlemcen,1400
+Tébessa,Tiaret,2100
+Tébessa,Tizi Ouzou,2100
+Tébessa,Alger,1500
+Tébessa,Djelfa,2400
+Tébessa,Jijel,1900
+Tébessa,Sétif,1400
+Tébessa,Saïda,1700
+Tébessa,Skikda,1100
+Tébessa,Sidi Bel Abbès,1200
+Tébessa,Annaba,2200
+Tébessa,Guelma,2100
+Tébessa,Constantine,1400
+Tébessa,Médéa,1900
+Tébessa,Mostaganem,2000
+Tébessa,M'Sila,2100
+Tébessa,Mascara,1300
+Tébessa,Ouargla,2100
+Tébessa,Oran,2100
+Tébessa,El Bayadh,1300
+Tébessa,Illizi,1500
+Tébessa,Bordj Bou Arreridj,1200
+Tébessa,Boumerdès,1800
+Tébessa,El Tarf,1100
+Tébessa,Tindouf,2000
+Tébessa,Tissemsilt,1600
+Tébessa,El Oued,1800
+Tébessa,Khenchela,1500
+Tébessa,Souk Ahras,1000
+Tébessa,Tipaza,1700
+Tébessa,Mila,2200
+Tébessa,Aïn Defla,2200
+Tébessa,Naâma,1900
+Tébessa,Aïn Témouchent,1000
+Tébessa,Ghardaïa,1500
+Tébessa,Relizane,1800
+Tlemcen,Adrar,2200
+Tlemcen,Chlef,1600
+Tlemcen,Laghouat,1100
+Tlemcen,Oum El Bouaghi,1900
+Tlemcen,Batna,1400
+Tlemcen,Béjaïa,1500
+Tlemcen,Biskra,2000
+Tlemcen,Béchar,2300
+Tlemcen,Blida,1700
+Tlemcen,Bouira,2100
+Tlemcen,Tamanrasset,1600
+Tlemcen,Tébessa,1000
+Tlemcen,Tlemcen,500
+Tlemcen,Tiaret,1700
+Tlemcen,Tizi Ouzou,1100
+Tlemcen,Alger,2100
+Tlemcen,Djelfa,1400
+Tlemcen,Jijel,1100
+Tlemcen,Sétif,1700
+Tlemcen,Saïda,1500
+Tlemcen,Skikda,2000
+Tlemcen,Sidi Bel Abbès,2400
+Tlemcen,Annaba,2400
+Tlemcen,Guelma,1500
+Tlemcen,Constantine,1400
+Tlemcen,Médéa,1000
+Tlemcen,Mostaganem,1800
+Tlemcen,M'Sila,1300
+Tlemcen,Mascara,1200
+Tlemcen,Ouargla,1900
+Tlemcen,Oran,1900
+Tlemcen,El Bayadh,1800
+Tlemcen,Illizi,2100
+Tlemcen,Bordj Bou Arreridj,1200
+Tlemcen,Boumerdès,1100
+Tlemcen,El Tarf,2100
+Tlemcen,Tindouf,2300
+Tlemcen,Tissemsilt,1100
+Tlemcen,El Oued,1700
+Tlemcen,Khenchela,2100
+Tlemcen,Souk Ahras,1600
+Tlemcen,Tipaza,1300
+Tlemcen,Mila,1800
+Tlemcen,Aïn Defla,1100
+Tlemcen,Naâma,1000
+Tlemcen,Aïn Témouchent,1600
+Tlemcen,Ghardaïa,2300
+Tlemcen,Relizane,1000
+Tiaret,Adrar,1000
+Tiaret,Chlef,1300
+Tiaret,Laghouat,1500
+Tiaret,Oum El Bouaghi,1900
+Tiaret,Batna,1100
+Tiaret,Béjaïa,2200
+Tiaret,Biskra,2200
+Tiaret,Béchar,1700
+Tiaret,Blida,1900
+Tiaret,Bouira,1400
+Tiaret,Tamanrasset,1300
+Tiaret,Tébessa,1200
+Tiaret,Tlemcen,1300
+Tiaret,Tiaret,500
+Tiaret,Tizi Ouzou,1600
+Tiaret,Alger,1100
+Tiaret,Djelfa,1700
+Tiaret,Jijel,1300
+Tiaret,Sétif,1500
+Tiaret,Saïda,1400
+Tiaret,Skikda,1900
+Tiaret,Sidi Bel Abbès,1200
+Tiaret,Annaba,1100
+Tiaret,Guelma,2000
+Tiaret,Constantine,1000
+Tiaret,Médéa,2400
+Tiaret,Mostaganem,2300
+Tiaret,M'Sila,1600
+Tiaret,Mascara,2400
+Tiaret,Ouargla,1400
+Tiaret,Oran,1000
+Tiaret,El Bayadh,1400
+Tiaret,Illizi,1000
+Tiaret,Bordj Bou Arreridj,1800
+Tiaret,Boumerdès,1200
+Tiaret,El Tarf,2300
+Tiaret,Tindouf,1100
+Tiaret,Tissemsilt,1500
+Tiaret,El Oued,1000
+Tiaret,Khenchela,1200
+Tiaret,Souk Ahras,1000
+Tiaret,Tipaza,1900
+Tiaret,Mila,1000
+Tiaret,Aïn Defla,2200
+Tiaret,Naâma,2400
+Tiaret,Aïn Témouchent,1900
+Tiaret,Ghardaïa,2300
+Tiaret,Relizane,1500
+Tizi Ouzou,Adrar,2000
+Tizi Ouzou,Chlef,2400
+Tizi Ouzou,Laghouat,1800
+Tizi Ouzou,Oum El Bouaghi,2000
+Tizi Ouzou,Batna,2200
+Tizi Ouzou,Béjaïa,1100
+Tizi Ouzou,Biskra,2000
+Tizi Ouzou,Béchar,2100
+Tizi Ouzou,Blida,2200
+Tizi Ouzou,Bouira,2200
+Tizi Ouzou,Tamanrasset,2300
+Tizi Ouzou,Tébessa,1300
+Tizi Ouzou,Tlemcen,1500
+Tizi Ouzou,Tiaret,1100
+Tizi Ouzou,Tizi Ouzou,500
+Tizi Ouzou,Alger,2100
+Tizi Ouzou,Djelfa,1700
+Tizi Ouzou,Jijel,2000
+Tizi Ouzou,Sétif,1400
+Tizi Ouzou,Saïda,1300
+Tizi Ouzou,Skikda,1600
+Tizi Ouzou,Sidi Bel Abbès,2200
+Tizi Ouzou,Annaba,1300
+Tizi Ouzou,Guelma,1600
+Tizi Ouzou,Constantine,1600
+Tizi Ouzou,Médéa,1300
+Tizi Ouzou,Mostaganem,1800
+Tizi Ouzou,M'Sila,2300
+Tizi Ouzou,Mascara,1500
+Tizi Ouzou,Ouargla,2400
+Tizi Ouzou,Oran,2000
+Tizi Ouzou,El Bayadh,1800
+Tizi Ouzou,Illizi,1100
+Tizi Ouzou,Bordj Bou Arreridj,1600
+Tizi Ouzou,Boumerdès,2100
+Tizi Ouzou,El Tarf,1000
+Tizi Ouzou,Tindouf,2300
+Tizi Ouzou,Tissemsilt,2000
+Tizi Ouzou,El Oued,2300
+Tizi Ouzou,Khenchela,1600
+Tizi Ouzou,Souk Ahras,2100
+Tizi Ouzou,Tipaza,2400
+Tizi Ouzou,Mila,1000
+Tizi Ouzou,Aïn Defla,2300
+Tizi Ouzou,Naâma,2100
+Tizi Ouzou,Aïn Témouchent,1400
+Tizi Ouzou,Ghardaïa,2100
+Tizi Ouzou,Relizane,1800
+Alger,Adrar,2300
+Alger,Chlef,1600
+Alger,Laghouat,2300
+Alger,Oum El Bouaghi,1300
+Alger,Batna,1300
+Alger,Béjaïa,2100
+Alger,Biskra,2300
+Alger,Béchar,1000
+Alger,Blida,1600
+Alger,Bouira,2400
+Alger,Tamanrasset,1800
+Alger,Tébessa,2400
+Alger,Tlemcen,1200
+Alger,Tiaret,1300
+Alger,Tizi Ouzou,2100
+Alger,Alger,500
+Alger,Djelfa,2000
+Alger,Jijel,1500
+Alger,Sétif,2400
+Alger,Saïda,1800
+Alger,Skikda,1500
+Alger,Sidi Bel Abbès,2200
+Alger,Annaba,1100
+Alger,Guelma,2000
+Alger,Constantine,1900
+Alger,Médéa,1300
+Alger,Mostaganem,2400
+Alger,M'Sila,2300
+Alger,Mascara,1700
+Alger,Ouargla,2100
+Alger,Oran,2400
+Alger,El Bayadh,1000
+Alger,Illizi,1400
+Alger,Bordj Bou Arreridj,1900
+Alger,Boumerdès,2400
+Alger,El Tarf,1600
+Alger,Tindouf,2100
+Alger,Tissemsilt,2400
+Alger,El Oued,2400
+Alger,Khenchela,2400
+Alger,Souk Ahras,1500
+Alger,Tipaza,1000
+Alger,Mila,2100
+Alger,Aïn Defla,2000
+Alger,Naâma,1400
+Alger,Aïn Témouchent,1900
+Alger,Ghardaïa,2300
+Alger,Relizane,1100
+Djelfa,Adrar,2100
+Djelfa,Chlef,1900
+Djelfa,Laghouat,1800
+Djelfa,Oum El Bouaghi,1400
+Djelfa,Batna,1900
+Djelfa,Béjaïa,1000
+Djelfa,Biskra,1100
+Djelfa,Béchar,2300
+Djelfa,Blida,1800
+Djelfa,Bouira,1900
+Djelfa,Tamanrasset,1900
+Djelfa,Tébessa,1400
+Djelfa,Tlemcen,1500
+Djelfa,Tiaret,1400
+Djelfa,Tizi Ouzou,1700
+Djelfa,Alger,2100
+Djelfa,Djelfa,500
+Djelfa,Jijel,2300
+Djelfa,Sétif,1400
+Djelfa,Saïda,1400
+Djelfa,Skikda,1300
+Djelfa,Sidi Bel Abbès,2400
+Djelfa,Annaba,1000
+Djelfa,Guelma,1400
+Djelfa,Constantine,2400
+Djelfa,Médéa,1900
+Djelfa,Mostaganem,2200
+Djelfa,M'Sila,2100
+Djelfa,Mascara,1300
+Djelfa,Ouargla,1000
+Djelfa,Oran,2000
+Djelfa,El Bayadh,1500
+Djelfa,Illizi,2000
+Djelfa,Bordj Bou Arreridj,2400
+Djelfa,Boumerdès,2300
+Djelfa,El Tarf,2200
+Djelfa,Tindouf,1800
+Djelfa,Tissemsilt,2300
+Djelfa,El Oued,2300
+Djelfa,Khenchela,2000
+Djelfa,Souk Ahras,1800
+Djelfa,Tipaza,1000
+Djelfa,Mila,1400
+Djelfa,Aïn Defla,1100
+Djelfa,Naâma,1700
+Djelfa,Aïn Témouchent,1600
+Djelfa,Ghardaïa,2300
+Djelfa,Relizane,1300
+Jijel,Adrar,1200
+Jijel,Chlef,1100
+Jijel,Laghouat,1700
+Jijel,Oum El Bouaghi,1400
+Jijel,Batna,2000
+Jijel,Béjaïa,1600
+Jijel,Biskra,1300
+Jijel,Béchar,2200
+Jijel,Blida,1200
+Jijel,Bouira,2200
+Jijel,Tamanrasset,2000
+Jijel,Tébessa,1400
+Jijel,Tlemcen,1000
+Jijel,Tiaret,1600
+Jijel,Tizi Ouzou,1500
+Jijel,Alger,2000
+Jijel,Djelfa,2400
+Jijel,Jijel,500
+Jijel,Sétif,1500
+Jijel,Saïda,1600
+Jijel,Skikda,1300
+Jijel,Sidi Bel Abbès,2100
+Jijel,Annaba,1600
+Jijel,Guelma,2200
+Jijel,Constantine,1100
+Jijel,Médéa,1600
+Jijel,Mostaganem,1700
+Jijel,M'Sila,1200
+Jijel,Mascara,2000
+Jijel,Ouargla,1700
+Jijel,Oran,1700
+Jijel,El Bayadh,1100
+Jijel,Illizi,1800
+Jijel,Bordj Bou Arreridj,1100
+Jijel,Boumerdès,1000
+Jijel,El Tarf,2200
+Jijel,Tindouf,1600
+Jijel,Tissemsilt,2400
+Jijel,El Oued,2200
+Jijel,Khenchela,1800
+Jijel,Souk Ahras,2400
+Jijel,Tipaza,2100
+Jijel,Mila,1600
+Jijel,Aïn Defla,1300
+Jijel,Naâma,1200
+Jijel,Aïn Témouchent,1400
+Jijel,Ghardaïa,1000
+Jijel,Relizane,2100
+Sétif,Adrar,1400
+Sétif,Chlef,1900
+Sétif,Laghouat,2000
+Sétif,Oum El Bouaghi,1500
+Sétif,Batna,1200
+Sétif,Béjaïa,1500
+Sétif,Biskra,1500
+Sétif,Béchar,1500
+Sétif,Blida,1500
+Sétif,Bouira,1100
+Sétif,Tamanrasset,1800
+Sétif,Tébessa,1000
+Sétif,Tlemcen,1700
+Sétif,Tiaret,2200
+Sétif,Tizi Ouzou,1900
+Sétif,Alger,1800
+Sétif,Djelfa,1600
+Sétif,Jijel,2200
+Sétif,Sétif,500
+Sétif,Saïda,1400
+Sétif,Skikda,1900
+Sétif,Sidi Bel Abbès,1400
+Sétif,Annaba,1900
+Sétif,Guelma,2100
+Sétif,Constantine,2100
+Sétif,Médéa,2300
+Sétif,Mostaganem,1900
+Sétif,M'Sila,1300
+Sétif,Mascara,1900
+Sétif,Ouargla,2200
+Sétif,Oran,1300
+Sétif,El Bayadh,1800
+Sétif,Illizi,1000
+Sétif,Bordj Bou Arreridj,1300
+Sétif,Boumerdès,1900
+Sétif,El Tarf,1500
+Sétif,Tindouf,2300
+Sétif,Tissemsilt,1800
+Sétif,El Oued,1700
+Sétif,Khenchela,1100
+Sétif,Souk Ahras,1200
+Sétif,Tipaza,2000
+Sétif,Mila,1100
+Sétif,Aïn Defla,2300
+Sétif,Naâma,1400
+Sétif,Aïn Témouchent,2400
+Sétif,Ghardaïa,2000
+Sétif,Relizane,1100
+Saïda,Adrar,1900
+Saïda,Chlef,2100
+Saïda,Laghouat,2200
+Saïda,Oum El Bouaghi,1000
+Saïda,Batna,1200
+Saïda,Béjaïa,2400
+Saïda,Biskra,2100
+Saïda,Béchar,1700
+Saïda,Blida,1600
+Saïda,Bouira,2300
+Saïda,Tamanrasset,1200
+Saïda,Tébessa,2400
+Saïda,Tlemcen,1400
+Saïda,Tiaret,1200
+Saïda,Tizi Ouzou,2300
+Saïda,Alger,1000
+Saïda,Djelfa,1700
+Saïda,Jijel,1000
+Saïda,Sétif,2100
+Saïda,Saïda,500
+Saïda,Skikda,1200
+Saïda,Sidi Bel Abbès,1600
+Saïda,Annaba,2400
+Saïda,Guelma,2300
+Saïda,Constantine,1000
+Saïda,Médéa,1800
+Saïda,Mostaganem,1300
+Saïda,M'Sila,2000
+Saïda,Mascara,1300
+Saïda,Ouargla,1500
+Saïda,Oran,2200
+Saïda,El Bayadh,2400
+Saïda,Illizi,1200
+Saïda,Bordj Bou Arreridj,2100
+Saïda,Boumerdès,1900
+Saïda,El Tarf,2200
+Saïda,Tindouf,2400
+Saïda,Tissemsilt,1000
+Saïda,El Oued,1300
+Saïda,Khenchela,2300
+Saïda,Souk Ahras,1600
+Saïda,Tipaza,1900
+Saïda,Mila,1500
+Saïda,Aïn Defla,1000
+Saïda,Naâma,2300
+Saïda,Aïn Témouchent,1000
+Saïda,Ghardaïa,1100
+Saïda,Relizane,1100
+Skikda,Adrar,1900
+Skikda,Chlef,1900
+Skikda,Laghouat,1000
+Skikda,Oum El Bouaghi,1700
+Skikda,Batna,1400
+Skikda,Béjaïa,1800
+Skikda,Biskra,1400
+Skikda,Béchar,1000
+Skikda,Blida,1300
+Skikda,Bouira,1500
+Skikda,Tamanrasset,1700
+Skikda,Tébessa,1100
+Skikda,Tlemcen,1900
+Skikda,Tiaret,1000
+Skikda,Tizi Ouzou,1900
+Skikda,Alger,1100
+Skikda,Djelfa,2400
+Skikda,Jijel,1700
+Skikda,Sétif,2300
+Skikda,Saïda,1300
+Skikda,Skikda,500
+Skikda,Sidi Bel Abbès,1700
+Skikda,Annaba,2200
+Skikda,Guelma,1800
+Skikda,Constantine,1900
+Skikda,Médéa,1300
+Skikda,Mostaganem,1400
+Skikda,M'Sila,2200
+Skikda,Mascara,1200
+Skikda,Ouargla,2300
+Skikda,Oran,1600
+Skikda,El Bayadh,2400
+Skikda,Illizi,1800
+Skikda,Bordj Bou Arreridj,1100
+Skikda,Boumerdès,1800
+Skikda,El Tarf,2100
+Skikda,Tindouf,1100
+Skikda,Tissemsilt,1600
+Skikda,El Oued,1600
+Skikda,Khenchela,1000
+Skikda,Souk Ahras,1200
+Skikda,Tipaza,1300
+Skikda,Mila,1400
+Skikda,Aïn Defla,2300
+Skikda,Naâma,2300
+Skikda,Aïn Témouchent,2400
+Skikda,Ghardaïa,1400
+Skikda,Relizane,1900
+Sidi Bel Abbès,Adrar,2100
+Sidi Bel Abbès,Chlef,1100
+Sidi Bel Abbès,Laghouat,1100
+Sidi Bel Abbès,Oum El Bouaghi,1400
+Sidi Bel Abbès,Batna,2100
+Sidi Bel Abbès,Béjaïa,1900
+Sidi Bel Abbès,Biskra,1700
+Sidi Bel Abbès,Béchar,2100
+Sidi Bel Abbès,Blida,2300
+Sidi Bel Abbès,Bouira,2300
+Sidi Bel Abbès,Tamanrasset,1500
+Sidi Bel Abbès,Tébessa,1400
+Sidi Bel Abbès,Tlemcen,1000
+Sidi Bel Abbès,Tiaret,2200
+Sidi Bel Abbès,Tizi Ouzou,1900
+Sidi Bel Abbès,Alger,1200
+Sidi Bel Abbès,Djelfa,1700
+Sidi Bel Abbès,Jijel,1500
+Sidi Bel Abbès,Sétif,2300
+Sidi Bel Abbès,Saïda,2400
+Sidi Bel Abbès,Skikda,1500
+Sidi Bel Abbès,Sidi Bel Abbès,500
+Sidi Bel Abbès,Annaba,2300
+Sidi Bel Abbès,Guelma,1400
+Sidi Bel Abbès,Constantine,2200
+Sidi Bel Abbès,Médéa,1900
+Sidi Bel Abbès,Mostaganem,1900
+Sidi Bel Abbès,M'Sila,1900
+Sidi Bel Abbès,Mascara,2000
+Sidi Bel Abbès,Ouargla,1400
+Sidi Bel Abbès,Oran,1400
+Sidi Bel Abbès,El Bayadh,1200
+Sidi Bel Abbès,Illizi,1300
+Sidi Bel Abbès,Bordj Bou Arreridj,1400
+Sidi Bel Abbès,Boumerdès,2200
+Sidi Bel Abbès,El Tarf,2300
+Sidi Bel Abbès,Tindouf,1900
+Sidi Bel Abbès,Tissemsilt,1600
+Sidi Bel Abbès,El Oued,2100
+Sidi Bel Abbès,Khenchela,2300
+Sidi Bel Abbès,Souk Ahras,1900
+Sidi Bel Abbès,Tipaza,1800
+Sidi Bel Abbès,Mila,2400
+Sidi Bel Abbès,Aïn Defla,1200
+Sidi Bel Abbès,Naâma,2100
+Sidi Bel Abbès,Aïn Témouchent,1400
+Sidi Bel Abbès,Ghardaïa,1300
+Sidi Bel Abbès,Relizane,1400
+Annaba,Adrar,2300
+Annaba,Chlef,1000
+Annaba,Laghouat,1500
+Annaba,Oum El Bouaghi,1300
+Annaba,Batna,1200
+Annaba,Béjaïa,1500
+Annaba,Biskra,2400
+Annaba,Béchar,1500
+Annaba,Blida,1300
+Annaba,Bouira,2100
+Annaba,Tamanrasset,2300
+Annaba,Tébessa,1900
+Annaba,Tlemcen,1600
+Annaba,Tiaret,1900
+Annaba,Tizi Ouzou,1900
+Annaba,Alger,1900
+Annaba,Djelfa,2000
+Annaba,Jijel,1100
+Annaba,Sétif,2100
+Annaba,Saïda,1200
+Annaba,Skikda,2200
+Annaba,Sidi Bel Abbès,2000
+Annaba,Annaba,500
+Annaba,Guelma,2400
+Annaba,Constantine,1200
+Annaba,Médéa,1800
+Annaba,Mostaganem,1900
+Annaba,M'Sila,1400
+Annaba,Mascara,2100
+Annaba,Ouargla,1700
+Annaba,Oran,1100
+Annaba,El Bayadh,1400
+Annaba,Illizi,1000
+Annaba,Bordj Bou Arreridj,2000
+Annaba,Boumerdès,2000
+Annaba,El Tarf,2100
+Annaba,Tindouf,1200
+Annaba,Tissemsilt,2000
+Annaba,El Oued,1800
+Annaba,Khenchela,1800
+Annaba,Souk Ahras,1800
+Annaba,Tipaza,2200
+Annaba,Mila,1100
+Annaba,Aïn Defla,1500
+Annaba,Naâma,1600
+Annaba,Aïn Témouchent,2200
+Annaba,Ghardaïa,1000
+Annaba,Relizane,1000
+Guelma,Adrar,1300
+Guelma,Chlef,1900
+Guelma,Laghouat,1700
+Guelma,Oum El Bouaghi,2300
+Guelma,Batna,1300
+Guelma,Béjaïa,1800
+Guelma,Biskra,2200
+Guelma,Béchar,2000
+Guelma,Blida,1100
+Guelma,Bouira,2000
+Guelma,Tamanrasset,1700
+Guelma,Tébessa,1400
+Guelma,Tlemcen,1600
+Guelma,Tiaret,1900
+Guelma,Tizi Ouzou,2300
+Guelma,Alger,2400
+Guelma,Djelfa,1100
+Guelma,Jijel,2100
+Guelma,Sétif,1700
+Guelma,Saïda,1600
+Guelma,Skikda,1700
+Guelma,Sidi Bel Abbès,1700
+Guelma,Annaba,2300
+Guelma,Guelma,500
+Guelma,Constantine,2000
+Guelma,Médéa,1900
+Guelma,Mostaganem,1000
+Guelma,M'Sila,1900
+Guelma,Mascara,1100
+Guelma,Ouargla,1300
+Guelma,Oran,1800
+Guelma,El Bayadh,1500
+Guelma,Illizi,2000
+Guelma,Bordj Bou Arreridj,1300
+Guelma,Boumerdès,1800
+Guelma,El Tarf,2400
+Guelma,Tindouf,1200
+Guelma,Tissemsilt,1000
+Guelma,El Oued,1600
+Guelma,Khenchela,1300
+Guelma,Souk Ahras,1200
+Guelma,Tipaza,1300
+Guelma,Mila,1300
+Guelma,Aïn Defla,2100
+Guelma,Naâma,1100
+Guelma,Aïn Témouchent,2200
+Guelma,Ghardaïa,1200
+Guelma,Relizane,1600
+Constantine,Adrar,2000
+Constantine,Chlef,1900
+Constantine,Laghouat,1700
+Constantine,Oum El Bouaghi,1100
+Constantine,Batna,1300
+Constantine,Béjaïa,1800
+Constantine,Biskra,1600
+Constantine,Béchar,2200
+Constantine,Blida,2200
+Constantine,Bouira,1400
+Constantine,Tamanrasset,2300
+Constantine,Tébessa,2400
+Constantine,Tlemcen,1700
+Constantine,Tiaret,1500
+Constantine,Tizi Ouzou,2400
+Constantine,Alger,2400
+Constantine,Djelfa,1700
+Constantine,Jijel,1300
+Constantine,Sétif,1100
+Constantine,Saïda,2200
+Constantine,Skikda,1200
+Constantine,Sidi Bel Abbès,1400
+Constantine,Annaba,1000
+Constantine,Guelma,2300
+Constantine,Constantine,500
+Constantine,Médéa,1600
+Constantine,Mostaganem,2300
+Constantine,M'Sila,1800
+Constantine,Mascara,1900
+Constantine,Ouargla,1000
+Constantine,Oran,1400
+Constantine,El Bayadh,2200
+Constantine,Illizi,2300
+Constantine,Bordj Bou Arreridj,2300
+Constantine,Boumerdès,2300
+Constantine,El Tarf,2000
+Constantine,Tindouf,2100
+Constantine,Tissemsilt,1900
+Constantine,El Oued,2400
+Constantine,Khenchela,1700
+Constantine,Souk Ahras,1900
+Constantine,Tipaza,2100
+Constantine,Mila,2300
+Constantine,Aïn Defla,2400
+Constantine,Naâma,1700
+Constantine,Aïn Témouchent,1200
+Constantine,Ghardaïa,2100
+Constantine,Relizane,1700
+Médéa,Adrar,1500
+Médéa,Chlef,2300
+Médéa,Laghouat,1900
+Médéa,Oum El Bouaghi,1800
+Médéa,Batna,2400
+Médéa,Béjaïa,1100
+Médéa,Biskra,1200
+Médéa,Béchar,1800
+Médéa,Blida,1900
+Médéa,Bouira,1600
+Médéa,Tamanrasset,1700
+Médéa,Tébessa,1600
+Médéa,Tlemcen,1800
+Médéa,Tiaret,1100
+Médéa,Tizi Ouzou,1500
+Médéa,Alger,1400
+Médéa,Djelfa,2000
+Médéa,Jijel,1800
+Médéa,Sétif,1900
+Médéa,Saïda,1700
+Médéa,Skikda,1800
+Médéa,Sidi Bel Abbès,1500
+Médéa,Annaba,1800
+Médéa,Guelma,1300
+Médéa,Constantine,1100
+Médéa,Médéa,500
+Médéa,Mostaganem,2400
+Médéa,M'Sila,2100
+Médéa,Mascara,1100
+Médéa,Ouargla,1000
+Médéa,Oran,1700
+Médéa,El Bayadh,1100
+Médéa,Illizi,2300
+Médéa,Bordj Bou Arreridj,1000
+Médéa,Boumerdès,1100
+Médéa,El Tarf,1800
+Médéa,Tindouf,1800
+Médéa,Tissemsilt,1600
+Médéa,El Oued,1300
+Médéa,Khenchela,1400
+Médéa,Souk Ahras,2200
+Médéa,Tipaza,1300
+Médéa,Mila,2400
+Médéa,Aïn Defla,1600
+Médéa,Naâma,1200
+Médéa,Aïn Témouchent,1100
+Médéa,Ghardaïa,1000
+Médéa,Relizane,2100
+Mostaganem,Adrar,1100
+Mostaganem,Chlef,2300
+Mostaganem,Laghouat,2300
+Mostaganem,Oum El Bouaghi,1400
+Mostaganem,Batna,1500
+Mostaganem,Béjaïa,1000
+Mostaganem,Biskra,1600
+Mostaganem,Béchar,1700
+Mostaganem,Blida,1200
+Mostaganem,Bouira,2200
+Mostaganem,Tamanrasset,1700
+Mostaganem,Tébessa,1900
+Mostaganem,Tlemcen,2100
+Mostaganem,Tiaret,1200
+Mostaganem,Tizi Ouzou,1300
+Mostaganem,Alger,1600
+Mostaganem,Djelfa,2300
+Mostaganem,Jijel,2100
+Mostaganem,Sétif,2100
+Mostaganem,Saïda,1800
+Mostaganem,Skikda,1700
+Mostaganem,Sidi Bel Abbès,1500
+Mostaganem,Annaba,2100
+Mostaganem,Guelma,1600
+Mostaganem,Constantine,1400
+Mostaganem,Médéa,2000
+Mostaganem,Mostaganem,500
+Mostaganem,M'Sila,1000
+Mostaganem,Mascara,1200
+Mostaganem,Ouargla,2400
+Mostaganem,Oran,1300
+Mostaganem,El Bayadh,1600
+Mostaganem,Illizi,2100
+Mostaganem,Bordj Bou Arreridj,2100
+Mostaganem,Boumerdès,1800
+Mostaganem,El Tarf,1500
+Mostaganem,Tindouf,2100
+Mostaganem,Tissemsilt,1300
+Mostaganem,El Oued,2000
+Mostaganem,Khenchela,2200
+Mostaganem,Souk Ahras,2000
+Mostaganem,Tipaza,2300
+Mostaganem,Mila,2400
+Mostaganem,Aïn Defla,2400
+Mostaganem,Naâma,2300
+Mostaganem,Aïn Témouchent,1600
+Mostaganem,Ghardaïa,2400
+Mostaganem,Relizane,1900
+M'Sila,Adrar,1200
+M'Sila,Chlef,1100
+M'Sila,Laghouat,2300
+M'Sila,Oum El Bouaghi,1000
+M'Sila,Batna,2400
+M'Sila,Béjaïa,2300
+M'Sila,Biskra,2000
+M'Sila,Béchar,1500
+M'Sila,Blida,1700
+M'Sila,Bouira,1300
+M'Sila,Tamanrasset,1400
+M'Sila,Tébessa,2200
+M'Sila,Tlemcen,1200
+M'Sila,Tiaret,1300
+M'Sila,Tizi Ouzou,1200
+M'Sila,Alger,1700
+M'Sila,Djelfa,1000
+M'Sila,Jijel,2300
+M'Sila,Sétif,1200
+M'Sila,Saïda,1900
+M'Sila,Skikda,1900
+M'Sila,Sidi Bel Abbès,1400
+M'Sila,Annaba,1200
+M'Sila,Guelma,2100
+M'Sila,Constantine,2200
+M'Sila,Médéa,1000
+M'Sila,Mostaganem,1600
+M'Sila,M'Sila,500
+M'Sila,Mascara,1800
+M'Sila,Ouargla,1800
+M'Sila,Oran,2200
+M'Sila,El Bayadh,2400
+M'Sila,Illizi,1700
+M'Sila,Bordj Bou Arreridj,1500
+M'Sila,Boumerdès,1400
+M'Sila,El Tarf,1600
+M'Sila,Tindouf,1200
+M'Sila,Tissemsilt,1800
+M'Sila,El Oued,1300
+M'Sila,Khenchela,1700
+M'Sila,Souk Ahras,2000
+M'Sila,Tipaza,2200
+M'Sila,Mila,2400
+M'Sila,Aïn Defla,2100
+M'Sila,Naâma,1200
+M'Sila,Aïn Témouchent,1700
+M'Sila,Ghardaïa,1100
+M'Sila,Relizane,1900
+Mascara,Adrar,1200
+Mascara,Chlef,1500
+Mascara,Laghouat,1800
+Mascara,Oum El Bouaghi,1500
+Mascara,Batna,2200
+Mascara,Béjaïa,1000
+Mascara,Biskra,1700
+Mascara,Béchar,1100
+Mascara,Blida,1100
+Mascara,Bouira,1000
+Mascara,Tamanrasset,2400
+Mascara,Tébessa,2300
+Mascara,Tlemcen,1900
+Mascara,Tiaret,1500
+Mascara,Tizi Ouzou,2100
+Mascara,Alger,1100
+Mascara,Djelfa,2000
+Mascara,Jijel,1900
+Mascara,Sétif,1000
+Mascara,Saïda,1200
+Mascara,Skikda,2200
+Mascara,Sidi Bel Abbès,1800
+Mascara,Annaba,1100
+Mascara,Guelma,1000
+Mascara,Constantine,1300
+Mascara,Médéa,2300
+Mascara,Mostaganem,1800
+Mascara,M'Sila,1700
+Mascara,Mascara,500
+Mascara,Ouargla,2400
+Mascara,Oran,1300
+Mascara,El Bayadh,2100
+Mascara,Illizi,1300
+Mascara,Bordj Bou Arreridj,1900
+Mascara,Boumerdès,1600
+Mascara,El Tarf,2400
+Mascara,Tindouf,1800
+Mascara,Tissemsilt,1300
+Mascara,El Oued,2400
+Mascara,Khenchela,1100
+Mascara,Souk Ahras,1500
+Mascara,Tipaza,1300
+Mascara,Mila,2200
+Mascara,Aïn Defla,2200
+Mascara,Naâma,2100
+Mascara,Aïn Témouchent,1800
+Mascara,Ghardaïa,2400
+Mascara,Relizane,1700
+Ouargla,Adrar,1800
+Ouargla,Chlef,1100
+Ouargla,Laghouat,2300
+Ouargla,Oum El Bouaghi,1400
+Ouargla,Batna,1800
+Ouargla,Béjaïa,1200
+Ouargla,Biskra,1100
+Ouargla,Béchar,2200
+Ouargla,Blida,2300
+Ouargla,Bouira,1600
+Ouargla,Tamanrasset,1600
+Ouargla,Tébessa,2400
+Ouargla,Tlemcen,1700
+Ouargla,Tiaret,1800
+Ouargla,Tizi Ouzou,1100
+Ouargla,Alger,1900
+Ouargla,Djelfa,2400
+Ouargla,Jijel,2100
+Ouargla,Sétif,1700
+Ouargla,Saïda,1000
+Ouargla,Skikda,2300
+Ouargla,Sidi Bel Abbès,1200
+Ouargla,Annaba,1100
+Ouargla,Guelma,1900
+Ouargla,Constantine,2300
+Ouargla,Médéa,2100
+Ouargla,Mostaganem,2100
+Ouargla,M'Sila,1300
+Ouargla,Mascara,1200
+Ouargla,Ouargla,500
+Ouargla,Oran,2300
+Ouargla,El Bayadh,2200
+Ouargla,Illizi,2400
+Ouargla,Bordj Bou Arreridj,1700
+Ouargla,Boumerdès,1500
+Ouargla,El Tarf,1800
+Ouargla,Tindouf,1000
+Ouargla,Tissemsilt,1100
+Ouargla,El Oued,1400
+Ouargla,Khenchela,2400
+Ouargla,Souk Ahras,1100
+Ouargla,Tipaza,1000
+Ouargla,Mila,1700
+Ouargla,Aïn Defla,1400
+Ouargla,Naâma,1100
+Ouargla,Aïn Témouchent,1100
+Ouargla,Ghardaïa,1300
+Ouargla,Relizane,2100
+Oran,Adrar,1700
+Oran,Chlef,1900
+Oran,Laghouat,1900
+Oran,Oum El Bouaghi,1600
+Oran,Batna,1900
+Oran,Béjaïa,1000
+Oran,Biskra,1900
+Oran,Béchar,1300
+Oran,Blida,2200
+Oran,Bouira,2100
+Oran,Tamanrasset,1400
+Oran,Tébessa,2000
+Oran,Tlemcen,1000
+Oran,Tiaret,1500
+Oran,Tizi Ouzou,1400
+Oran,Alger,2100
+Oran,Djelfa,1600
+Oran,Jijel,1200
+Oran,Sétif,2100
+Oran,Saïda,2300
+Oran,Skikda,1100
+Oran,Sidi Bel Abbès,1800
+Oran,Annaba,1400
+Oran,Guelma,1300
+Oran,Constantine,1500
+Oran,Médéa,1000
+Oran,Mostaganem,1200
+Oran,M'Sila,1200
+Oran,Mascara,1900
+Oran,Ouargla,1600
+Oran,Oran,500
+Oran,El Bayadh,1000
+Oran,Illizi,2200
+Oran,Bordj Bou Arreridj,2100
+Oran,Boumerdès,1700
+Oran,El Tarf,1300
+Oran,Tindouf,2400
+Oran,Tissemsilt,2000
+Oran,El Oued,2400
+Oran,Khenchela,1700
+Oran,Souk Ahras,1800
+Oran,Tipaza,1000
+Oran,Mila,1500
+Oran,Aïn Defla,1600
+Oran,Naâma,1000
+Oran,Aïn Témouchent,1900
+Oran,Ghardaïa,1900
+Oran,Relizane,1500
+El Bayadh,Adrar,1700
+El Bayadh,Chlef,1800
+El Bayadh,Laghouat,1000
+El Bayadh,Oum El Bouaghi,1000
+El Bayadh,Batna,1000
+El Bayadh,Béjaïa,1200
+El Bayadh,Biskra,2300
+El Bayadh,Béchar,1900
+El Bayadh,Blida,1400
+El Bayadh,Bouira,1300
+El Bayadh,Tamanrasset,1700
+El Bayadh,Tébessa,1800
+El Bayadh,Tlemcen,2000
+El Bayadh,Tiaret,2000
+El Bayadh,Tizi Ouzou,2200
+El Bayadh,Alger,1700
+El Bayadh,Djelfa,2300
+El Bayadh,Jijel,1400
+El Bayadh,Sétif,1800
+El Bayadh,Saïda,1500
+El Bayadh,Skikda,2300
+El Bayadh,Sidi Bel Abbès,1600
+El Bayadh,Annaba,1400
+El Bayadh,Guelma,1600
+El Bayadh,Constantine,2100
+El Bayadh,Médéa,1500
+El Bayadh,Mostaganem,1200
+El Bayadh,M'Sila,2100
+El Bayadh,Mascara,1000
+El Bayadh,Ouargla,1600
+El Bayadh,Oran,2100
+El Bayadh,El Bayadh,500
+El Bayadh,Illizi,1200
+El Bayadh,Bordj Bou Arreridj,1700
+El Bayadh,Boumerdès,1300
+El Bayadh,El Tarf,1900
+El Bayadh,Tindouf,1500
+El Bayadh,Tissemsilt,1500
+El Bayadh,El Oued,1400
+El Bayadh,Khenchela,2100
+El Bayadh,Souk Ahras,2000
+El Bayadh,Tipaza,2000
+El Bayadh,Mila,1100
+El Bayadh,Aïn Defla,1600
+El Bayadh,Naâma,1800
+El Bayadh,Aïn Témouchent,1700
+El Bayadh,Ghardaïa,1200
+El Bayadh,Relizane,1300
+Illizi,Adrar,1900
+Illizi,Chlef,1000
+Illizi,Laghouat,2200
+Illizi,Oum El Bouaghi,1900
+Illizi,Batna,2400
+Illizi,Béjaïa,2400
+Illizi,Biskra,1000
+Illizi,Béchar,2000
+Illizi,Blida,2400
+Illizi,Bouira,1000
+Illizi,Tamanrasset,1100
+Illizi,Tébessa,1200
+Illizi,Tlemcen,1800
+Illizi,Tiaret,1400
+Illizi,Tizi Ouzou,1600
+Illizi,Alger,1400
+Illizi,Djelfa,2100
+Illizi,Jijel,1700
+Illizi,Sétif,1000
+Illizi,Saïda,2200
+Illizi,Skikda,1500
+Illizi,Sidi Bel Abbès,2400
+Illizi,Annaba,1200
+Illizi,Guelma,1500
+Illizi,Constantine,1900
+Illizi,Médéa,2300
+Illizi,Mostaganem,1500
+Illizi,M'Sila,1200
+Illizi,Mascara,2400
+Illizi,Ouargla,1300
+Illizi,Oran,1800
+Illizi,El Bayadh,2100
+Illizi,Illizi,500
+Illizi,Bordj Bou Arreridj,1500
+Illizi,Boumerdès,1800
+Illizi,El Tarf,1200
+Illizi,Tindouf,2300
+Illizi,Tissemsilt,1500
+Illizi,El Oued,1200
+Illizi,Khenchela,1600
+Illizi,Souk Ahras,1700
+Illizi,Tipaza,2100
+Illizi,Mila,1400
+Illizi,Aïn Defla,1700
+Illizi,Naâma,1400
+Illizi,Aïn Témouchent,1000
+Illizi,Ghardaïa,1300
+Illizi,Relizane,1400
+Bordj Bou Arreridj,Adrar,1600
+Bordj Bou Arreridj,Chlef,1400
+Bordj Bou Arreridj,Laghouat,1900
+Bordj Bou Arreridj,Oum El Bouaghi,1900
+Bordj Bou Arreridj,Batna,1400
+Bordj Bou Arreridj,Béjaïa,2300
+Bordj Bou Arreridj,Biskra,1500
+Bordj Bou Arreridj,Béchar,2400
+Bordj Bou Arreridj,Blida,1300
+Bordj Bou Arreridj,Bouira,1500
+Bordj Bou Arreridj,Tamanrasset,2100
+Bordj Bou Arreridj,Tébessa,2200
+Bordj Bou Arreridj,Tlemcen,1700
+Bordj Bou Arreridj,Tiaret,1000
+Bordj Bou Arreridj,Tizi Ouzou,1600
+Bordj Bou Arreridj,Alger,2000
+Bordj Bou Arreridj,Djelfa,1500
+Bordj Bou Arreridj,Jijel,1700
+Bordj Bou Arreridj,Sétif,1400
+Bordj Bou Arreridj,Saïda,1000
+Bordj Bou Arreridj,Skikda,1800
+Bordj Bou Arreridj,Sidi Bel Abbès,1400
+Bordj Bou Arreridj,Annaba,1500
+Bordj Bou Arreridj,Guelma,1100
+Bordj Bou Arreridj,Constantine,1300
+Bordj Bou Arreridj,Médéa,1100
+Bordj Bou Arreridj,Mostaganem,2100
+Bordj Bou Arreridj,M'Sila,2100
+Bordj Bou Arreridj,Mascara,1900
+Bordj Bou Arreridj,Ouargla,1900
+Bordj Bou Arreridj,Oran,1600
+Bordj Bou Arreridj,El Bayadh,1000
+Bordj Bou Arreridj,Illizi,2100
+Bordj Bou Arreridj,Bordj Bou Arreridj,500
+Bordj Bou Arreridj,Boumerdès,2400
+Bordj Bou Arreridj,El Tarf,1400
+Bordj Bou Arreridj,Tindouf,1700
+Bordj Bou Arreridj,Tissemsilt,2200
+Bordj Bou Arreridj,El Oued,1700
+Bordj Bou Arreridj,Khenchela,2200
+Bordj Bou Arreridj,Souk Ahras,1000
+Bordj Bou Arreridj,Tipaza,1300
+Bordj Bou Arreridj,Mila,1100
+Bordj Bou Arreridj,Aïn Defla,1500
+Bordj Bou Arreridj,Naâma,1400
+Bordj Bou Arreridj,Aïn Témouchent,2200
+Bordj Bou Arreridj,Ghardaïa,1700
+Bordj Bou Arreridj,Relizane,1600
+Boumerdès,Adrar,1700
+Boumerdès,Chlef,1100
+Boumerdès,Laghouat,2100
+Boumerdès,Oum El Bouaghi,1200
+Boumerdès,Batna,2400
+Boumerdès,Béjaïa,2200
+Boumerdès,Biskra,2400
+Boumerdès,Béchar,1500
+Boumerdès,Blida,2200
+Boumerdès,Bouira,1000
+Boumerdès,Tamanrasset,2400
+Boumerdès,Tébessa,1800
+Boumerdès,Tlemcen,2300
+Boumerdès,Tiaret,1400
+Boumerdès,Tizi Ouzou,1800
+Boumerdès,Alger,1900
+Boumerdès,Djelfa,2100
+Boumerdès,Jijel,2200
+Boumerdès,Sétif,1200
+Boumerdès,Saïda,1400
+Boumerdès,Skikda,1300
+Boumerdès,Sidi Bel Abbès,1100
+Boumerdès,Annaba,1100
+Boumerdès,Guelma,2100
+Boumerdès,Constantine,2000
+Boumerdès,Médéa,1300
+Boumerdès,Mostaganem,1400
+Boumerdès,M'Sila,1800
+Boumerdès,Mascara,2400
+Boumerdès,Ouargla,1300
+Boumerdès,Oran,2100
+Boumerdès,El Bayadh,2300
+Boumerdès,Illizi,2400
+Boumerdès,Bordj Bou Arreridj,1000
+Boumerdès,Boumerdès,500
+Boumerdès,El Tarf,2100
+Boumerdès,Tindouf,2100
+Boumerdès,Tissemsilt,1900
+Boumerdès,El Oued,1500
+Boumerdès,Khenchela,2200
+Boumerdès,Souk Ahras,2400
+Boumerdès,Tipaza,2100
+Boumerdès,Mila,1900
+Boumerdès,Aïn Defla,1800
+Boumerdès,Naâma,2300
+Boumerdès,Aïn Témouchent,1500
+Boumerdès,Ghardaïa,2200
+Boumerdès,Relizane,2200
+El Tarf,Adrar,1500
+El Tarf,Chlef,1000
+El Tarf,Laghouat,2000
+El Tarf,Oum El Bouaghi,1800
+El Tarf,Batna,1600
+El Tarf,Béjaïa,2200
+El Tarf,Biskra,1500
+El Tarf,Béchar,2000
+El Tarf,Blida,1000
+El Tarf,Bouira,2100
+El Tarf,Tamanrasset,2000
+El Tarf,Tébessa,1000
+El Tarf,Tlemcen,1800
+El Tarf,Tiaret,2400
+El Tarf,Tizi Ouzou,1100
+El Tarf,Alger,2200
+El Tarf,Djelfa,1800
+El Tarf,Jijel,2400
+El Tarf,Sétif,1100
+El Tarf,Saïda,1200
+El Tarf,Skikda,1100
+El Tarf,Sidi Bel Abbès,2200
+El Tarf,Annaba,1000
+El Tarf,Guelma,1900
+El Tarf,Constantine,1600
+El Tarf,Médéa,2400
+El Tarf,Mostaganem,1400
+El Tarf,M'Sila,1600
+El Tarf,Mascara,2000
+El Tarf,Ouargla,1000
+El Tarf,Oran,1500
+El Tarf,El Bayadh,1800
+El Tarf,Illizi,2000
+El Tarf,Bordj Bou Arreridj,2000
+El Tarf,Boumerdès,1500
+El Tarf,El Tarf,500
+El Tarf,Tindouf,1200
+El Tarf,Tissemsilt,1300
+El Tarf,El Oued,1300
+El Tarf,Khenchela,1900
+El Tarf,Souk Ahras,2400
+El Tarf,Tipaza,2300
+El Tarf,Mila,2200
+El Tarf,Aïn Defla,1900
+El Tarf,Naâma,1400
+El Tarf,Aïn Témouchent,1400
+El Tarf,Ghardaïa,2200
+El Tarf,Relizane,1000
+Tindouf,Adrar,2000
+Tindouf,Chlef,2300
+Tindouf,Laghouat,1900
+Tindouf,Oum El Bouaghi,1300
+Tindouf,Batna,2100
+Tindouf,Béjaïa,1000
+Tindouf,Biskra,1800
+Tindouf,Béchar,1700
+Tindouf,Blida,1700
+Tindouf,Bouira,2200
+Tindouf,Tamanrasset,1600
+Tindouf,Tébessa,2300
+Tindouf,Tlemcen,2100
+Tindouf,Tiaret,1600
+Tindouf,Tizi Ouzou,2400
+Tindouf,Alger,1800
+Tindouf,Djelfa,2000
+Tindouf,Jijel,1100
+Tindouf,Sétif,2000
+Tindouf,Saïda,2000
+Tindouf,Skikda,1000
+Tindouf,Sidi Bel Abbès,1100
+Tindouf,Annaba,2200
+Tindouf,Guelma,1800
+Tindouf,Constantine,1700
+Tindouf,Médéa,1600
+Tindouf,Mostaganem,1800
+Tindouf,M'Sila,1600
+Tindouf,Mascara,1700
+Tindouf,Ouargla,1500
+Tindouf,Oran,2400
+Tindouf,El Bayadh,1700
+Tindouf,Illizi,1400
+Tindouf,Bordj Bou Arreridj,1500
+Tindouf,Boumerdès,2100
+Tindouf,El Tarf,1400
+Tindouf,Tindouf,500
+Tindouf,Tissemsilt,1200
+Tindouf,El Oued,2300
+Tindouf,Khenchela,1900
+Tindouf,Souk Ahras,1300
+Tindouf,Tipaza,1500
+Tindouf,Mila,1600
+Tindouf,Aïn Defla,2200
+Tindouf,Naâma,1200
+Tindouf,Aïn Témouchent,1100
+Tindouf,Ghardaïa,1100
+Tindouf,Relizane,1500
+Tissemsilt,Adrar,1200
+Tissemsilt,Chlef,2200
+Tissemsilt,Laghouat,1900
+Tissemsilt,Oum El Bouaghi,1600
+Tissemsilt,Batna,1000
+Tissemsilt,Béjaïa,2200
+Tissemsilt,Biskra,1000
+Tissemsilt,Béchar,1300
+Tissemsilt,Blida,1600
+Tissemsilt,Bouira,1500
+Tissemsilt,Tamanrasset,1100
+Tissemsilt,Tébessa,1000
+Tissemsilt,Tlemcen,1700
+Tissemsilt,Tiaret,1500
+Tissemsilt,Tizi Ouzou,1900
+Tissemsilt,Alger,1900
+Tissemsilt,Djelfa,1400
+Tissemsilt,Jijel,1400
+Tissemsilt,Sétif,2300
+Tissemsilt,Saïda,1600
+Tissemsilt,Skikda,1000
+Tissemsilt,Sidi Bel Abbès,1200
+Tissemsilt,Annaba,1700
+Tissemsilt,Guelma,1900
+Tissemsilt,Constantine,2200
+Tissemsilt,Médéa,1300
+Tissemsilt,Mostaganem,1200
+Tissemsilt,M'Sila,1300
+Tissemsilt,Mascara,1900
+Tissemsilt,Ouargla,1200
+Tissemsilt,Oran,2400
+Tissemsilt,El Bayadh,1100
+Tissemsilt,Illizi,1600
+Tissemsilt,Bordj Bou Arreridj,2000
+Tissemsilt,Boumerdès,1800
+Tissemsilt,El Tarf,2400
+Tissemsilt,Tindouf,1200
+Tissemsilt,Tissemsilt,500
+Tissemsilt,El Oued,1700
+Tissemsilt,Khenchela,1500
+Tissemsilt,Souk Ahras,1000
+Tissemsilt,Tipaza,1200
+Tissemsilt,Mila,2100
+Tissemsilt,Aïn Defla,2300
+Tissemsilt,Naâma,1800
+Tissemsilt,Aïn Témouchent,1000
+Tissemsilt,Ghardaïa,1400
+Tissemsilt,Relizane,2100
+El Oued,Adrar,1300
+El Oued,Chlef,1500
+El Oued,Laghouat,2200
+El Oued,Oum El Bouaghi,1300
+El Oued,Batna,1900
+El Oued,Béjaïa,1300
+El Oued,Biskra,1000
+El Oued,Béchar,1800
+El Oued,Blida,2300
+El Oued,Bouira,2200
+El Oued,Tamanrasset,2000
+El Oued,Tébessa,1800
+El Oued,Tlemcen,1100
+El Oued,Tiaret,2000
+El Oued,Tizi Ouzou,1400
+El Oued,Alger,1800
+El Oued,Djelfa,1100
+El Oued,Jijel,1400
+El Oued,Sétif,2400
+El Oued,Saïda,2100
+El Oued,Skikda,1200
+El Oued,Sidi Bel Abbès,2400
+El Oued,Annaba,1400
+El Oued,Guelma,1400
+El Oued,Constantine,2400
+El Oued,Médéa,2000
+El Oued,Mostaganem,1700
+El Oued,M'Sila,1700
+El Oued,Mascara,1600
+El Oued,Ouargla,2400
+El Oued,Oran,1400
+El Oued,El Bayadh,1000
+El Oued,Illizi,1800
+El Oued,Bordj Bou Arreridj,2400
+El Oued,Boumerdès,1100
+El Oued,El Tarf,1800
+El Oued,Tindouf,2000
+El Oued,Tissemsilt,1900
+El Oued,El Oued,500
+El Oued,Khenchela,2200
+El Oued,Souk Ahras,1100
+El Oued,Tipaza,1200
+El Oued,Mila,2000
+El Oued,Aïn Defla,2200
+El Oued,Naâma,2300
+El Oued,Aïn Témouchent,1300
+El Oued,Ghardaïa,2400
+El Oued,Relizane,1600
+Khenchela,Adrar,1100
+Khenchela,Chlef,2100
+Khenchela,Laghouat,1900
+Khenchela,Oum El Bouaghi,1100
+Khenchela,Batna,1000
+Khenchela,Béjaïa,1100
+Khenchela,Biskra,2400
+Khenchela,Béchar,1800
+Khenchela,Blida,1500
+Khenchela,Bouira,2300
+Khenchela,Tamanrasset,2300
+Khenchela,Tébessa,1300
+Khenchela,Tlemcen,1300
+Khenchela,Tiaret,1400
+Khenchela,Tizi Ouzou,1700
+Khenchela,Alger,1400
+Khenchela,Djelfa,1500
+Khenchela,Jijel,1100
+Khenchela,Sétif,1900
+Khenchela,Saïda,1400
+Khenchela,Skikda,2000
+Khenchela,Sidi Bel Abbès,2000
+Khenchela,Annaba,1300
+Khenchela,Guelma,1800
+Khenchela,Constantine,1800
+Khenchela,Médéa,1300
+Khenchela,Mostaganem,1900
+Khenchela,M'Sila,2400
+Khenchela,Mascara,2000
+Khenchela,Ouargla,2000
+Khenchela,Oran,1300
+Khenchela,El Bayadh,1500
+Khenchela,Illizi,1900
+Khenchela,Bordj Bou Arreridj,1600
+Khenchela,Boumerdès,2100
+Khenchela,El Tarf,2400
+Khenchela,Tindouf,1000
+Khenchela,Tissemsilt,2100
+Khenchela,El Oued,2300
+Khenchela,Khenchela,500
+Khenchela,Souk Ahras,1700
+Khenchela,Tipaza,1000
+Khenchela,Mila,1600
+Khenchela,Aïn Defla,2100
+Khenchela,Naâma,1100
+Khenchela,Aïn Témouchent,2100
+Khenchela,Ghardaïa,2200
+Khenchela,Relizane,1100
+Souk Ahras,Adrar,1800
+Souk Ahras,Chlef,2000
+Souk Ahras,Laghouat,1100
+Souk Ahras,Oum El Bouaghi,1800
+Souk Ahras,Batna,2000
+Souk Ahras,Béjaïa,1900
+Souk Ahras,Biskra,1600
+Souk Ahras,Béchar,1300
+Souk Ahras,Blida,1100
+Souk Ahras,Bouira,1700
+Souk Ahras,Tamanrasset,1000
+Souk Ahras,Tébessa,1900
+Souk Ahras,Tlemcen,1700
+Souk Ahras,Tiaret,1700
+Souk Ahras,Tizi Ouzou,2200
+Souk Ahras,Alger,1100
+Souk Ahras,Djelfa,1800
+Souk Ahras,Jijel,2000
+Souk Ahras,Sétif,1100
+Souk Ahras,Saïda,1800
+Souk Ahras,Skikda,1700
+Souk Ahras,Sidi Bel Abbès,1800
+Souk Ahras,Annaba,1800
+Souk Ahras,Guelma,2000
+Souk Ahras,Constantine,1300
+Souk Ahras,Médéa,1200
+Souk Ahras,Mostaganem,1900
+Souk Ahras,M'Sila,1100
+Souk Ahras,Mascara,1000
+Souk Ahras,Ouargla,1100
+Souk Ahras,Oran,2300
+Souk Ahras,El Bayadh,2000
+Souk Ahras,Illizi,2000
+Souk Ahras,Bordj Bou Arreridj,1700
+Souk Ahras,Boumerdès,1400
+Souk Ahras,El Tarf,2200
+Souk Ahras,Tindouf,2400
+Souk Ahras,Tissemsilt,1300
+Souk Ahras,El Oued,2200
+Souk Ahras,Khenchela,1300
+Souk Ahras,Souk Ahras,500
+Souk Ahras,Tipaza,1900
+Souk Ahras,Mila,2200
+Souk Ahras,Aïn Defla,1700
+Souk Ahras,Naâma,1500
+Souk Ahras,Aïn Témouchent,2200
+Souk Ahras,Ghardaïa,1800
+Souk Ahras,Relizane,2300
+Tipaza,Adrar,1100
+Tipaza,Chlef,1800
+Tipaza,Laghouat,1200
+Tipaza,Oum El Bouaghi,1100
+Tipaza,Batna,1500
+Tipaza,Béjaïa,1100
+Tipaza,Biskra,1500
+Tipaza,Béchar,1800
+Tipaza,Blida,2300
+Tipaza,Bouira,1200
+Tipaza,Tamanrasset,1200
+Tipaza,Tébessa,1800
+Tipaza,Tlemcen,2000
+Tipaza,Tiaret,1600
+Tipaza,Tizi Ouzou,2100
+Tipaza,Alger,1800
+Tipaza,Djelfa,1500
+Tipaza,Jijel,1300
+Tipaza,Sétif,1900
+Tipaza,Saïda,1500
+Tipaza,Skikda,1700
+Tipaza,Sidi Bel Abbès,2300
+Tipaza,Annaba,1000
+Tipaza,Guelma,1000
+Tipaza,Constantine,1800
+Tipaza,Médéa,1900
+Tipaza,Mostaganem,2300
+Tipaza,M'Sila,1000
+Tipaza,Mascara,2200
+Tipaza,Ouargla,1400
+Tipaza,Oran,2400
+Tipaza,El Bayadh,1800
+Tipaza,Illizi,1100
+Tipaza,Bordj Bou Arreridj,1900
+Tipaza,Boumerdès,1700
+Tipaza,El Tarf,2300
+Tipaza,Tindouf,2300
+Tipaza,Tissemsilt,2000
+Tipaza,El Oued,2300
+Tipaza,Khenchela,2100
+Tipaza,Souk Ahras,2000
+Tipaza,Tipaza,500
+Tipaza,Mila,2000
+Tipaza,Aïn Defla,2400
+Tipaza,Naâma,1200
+Tipaza,Aïn Témouchent,1200
+Tipaza,Ghardaïa,2200
+Tipaza,Relizane,1600
+Mila,Adrar,1100
+Mila,Chlef,1800
+Mila,Laghouat,2100
+Mila,Oum El Bouaghi,2000
+Mila,Batna,2300
+Mila,Béjaïa,1200
+Mila,Biskra,2300
+Mila,Béchar,2300
+Mila,Blida,2000
+Mila,Bouira,1000
+Mila,Tamanrasset,2000
+Mila,Tébessa,1900
+Mila,Tlemcen,1200
+Mila,Tiaret,1400
+Mila,Tizi Ouzou,2000
+Mila,Alger,1300
+Mila,Djelfa,1900
+Mila,Jijel,1300
+Mila,Sétif,2300
+Mila,Saïda,1500
+Mila,Skikda,1100
+Mila,Sidi Bel Abbès,2000
+Mila,Annaba,1300
+Mila,Guelma,1400
+Mila,Constantine,1700
+Mila,Médéa,2000
+Mila,Mostaganem,1300
+Mila,M'Sila,1400
+Mila,Mascara,2000
+Mila,Ouargla,1200
+Mila,Oran,1700
+Mila,El Bayadh,1400
+Mila,Illizi,1500
+Mila,Bordj Bou Arreridj,2200
+Mila,Boumerdès,1900
+Mila,El Tarf,1000
+Mila,Tindouf,2300
+Mila,Tissemsilt,1000
+Mila,El Oued,1200
+Mila,Khenchela,1200
+Mila,Souk Ahras,2100
+Mila,Tipaza,1400
+Mila,Mila,500
+Mila,Aïn Defla,1400
+Mila,Naâma,1200
+Mila,Aïn Témouchent,2200
+Mila,Ghardaïa,2300
+Mila,Relizane,2400
+Aïn Defla,Adrar,2400
+Aïn Defla,Chlef,1000
+Aïn Defla,Laghouat,1900
+Aïn Defla,Oum El Bouaghi,2300
+Aïn Defla,Batna,2000
+Aïn Defla,Béjaïa,1500
+Aïn Defla,Biskra,2200
+Aïn Defla,Béchar,2300
+Aïn Defla,Blida,1000
+Aïn Defla,Bouira,2100
+Aïn Defla,Tamanrasset,1000
+Aïn Defla,Tébessa,2000
+Aïn Defla,Tlemcen,1300
+Aïn Defla,Tiaret,1000
+Aïn Defla,Tizi Ouzou,2200
+Aïn Defla,Alger,1100
+Aïn Defla,Djelfa,1600
+Aïn Defla,Jijel,1600
+Aïn Defla,Sétif,1000
+Aïn Defla,Saïda,1900
+Aïn Defla,Skikda,1100
+Aïn Defla,Sidi Bel Abbès,1400
+Aïn Defla,Annaba,1400
+Aïn Defla,Guelma,1700
+Aïn Defla,Constantine,1500
+Aïn Defla,Médéa,1900
+Aïn Defla,Mostaganem,1700
+Aïn Defla,M'Sila,1300
+Aïn Defla,Mascara,2400
+Aïn Defla,Ouargla,1300
+Aïn Defla,Oran,2000
+Aïn Defla,El Bayadh,1000
+Aïn Defla,Illizi,1300
+Aïn Defla,Bordj Bou Arreridj,2300
+Aïn Defla,Boumerdès,1800
+Aïn Defla,El Tarf,1400
+Aïn Defla,Tindouf,2400
+Aïn Defla,Tissemsilt,1600
+Aïn Defla,El Oued,1300
+Aïn Defla,Khenchela,1300
+Aïn Defla,Souk Ahras,2100
+Aïn Defla,Tipaza,1200
+Aïn Defla,Mila,1800
+Aïn Defla,Aïn Defla,500
+Aïn Defla,Naâma,1200
+Aïn Defla,Aïn Témouchent,1800
+Aïn Defla,Ghardaïa,1700
+Aïn Defla,Relizane,1400
+Naâma,Adrar,1400
+Naâma,Chlef,1100
+Naâma,Laghouat,1900
+Naâma,Oum El Bouaghi,1300
+Naâma,Batna,1200
+Naâma,Béjaïa,1800
+Naâma,Biskra,2100
+Naâma,Béchar,2200
+Naâma,Blida,1500
+Naâma,Bouira,1000
+Naâma,Tamanrasset,1900
+Naâma,Tébessa,1100
+Naâma,Tlemcen,1500
+Naâma,Tiaret,1700
+Naâma,Tizi Ouzou,1300
+Naâma,Alger,1000
+Naâma,Djelfa,2000
+Naâma,Jijel,1900
+Naâma,Sétif,1200
+Naâma,Saïda,1200
+Naâma,Skikda,1900
+Naâma,Sidi Bel Abbès,1100
+Naâma,Annaba,1100
+Naâma,Guelma,1800
+Naâma,Constantine,1300
+Naâma,Médéa,2100
+Naâma,Mostaganem,2000
+Naâma,M'Sila,2200
+Naâma,Mascara,1400
+Naâma,Ouargla,2400
+Naâma,Oran,1900
+Naâma,El Bayadh,1000
+Naâma,Illizi,1600
+Naâma,Bordj Bou Arreridj,1800
+Naâma,Boumerdès,2400
+Naâma,El Tarf,1100
+Naâma,Tindouf,1000
+Naâma,Tissemsilt,1800
+Naâma,El Oued,1800
+Naâma,Khenchela,2400
+Naâma,Souk Ahras,2100
+Naâma,Tipaza,1800
+Naâma,Mila,1800
+Naâma,Aïn Defla,2200
+Naâma,Naâma,500
+Naâma,Aïn Témouchent,1900
+Naâma,Ghardaïa,1400
+Naâma,Relizane,1700
+Aïn Témouchent,Adrar,2300
+Aïn Témouchent,Chlef,1800
+Aïn Témouchent,Laghouat,1700
+Aïn Témouchent,Oum El Bouaghi,1700
+Aïn Témouchent,Batna,1000
+Aïn Témouchent,Béjaïa,2400
+Aïn Témouchent,Biskra,2200
+Aïn Témouchent,Béchar,1500
+Aïn Témouchent,Blida,2200
+Aïn Témouchent,Bouira,2400
+Aïn Témouchent,Tamanrasset,1300
+Aïn Témouchent,Tébessa,1900
+Aïn Témouchent,Tlemcen,2000
+Aïn Témouchent,Tiaret,1000
+Aïn Témouchent,Tizi Ouzou,2300
+Aïn Témouchent,Alger,2100
+Aïn Témouchent,Djelfa,1500
+Aïn Témouchent,Jijel,2300
+Aïn Témouchent,Sétif,2100
+Aïn Témouchent,Saïda,1500
+Aïn Témouchent,Skikda,1800
+Aïn Témouchent,Sidi Bel Abbès,1100
+Aïn Témouchent,Annaba,1500
+Aïn Témouchent,Guelma,1100
+Aïn Témouchent,Constantine,1500
+Aïn Témouchent,Médéa,1900
+Aïn Témouchent,Mostaganem,1800
+Aïn Témouchent,M'Sila,1400
+Aïn Témouchent,Mascara,2100
+Aïn Témouchent,Ouargla,1700
+Aïn Témouchent,Oran,1100
+Aïn Témouchent,El Bayadh,2200
+Aïn Témouchent,Illizi,2200
+Aïn Témouchent,Bordj Bou Arreridj,1600
+Aïn Témouchent,Boumerdès,2400
+Aïn Témouchent,El Tarf,1900
+Aïn Témouchent,Tindouf,2000
+Aïn Témouchent,Tissemsilt,1300
+Aïn Témouchent,El Oued,1100
+Aïn Témouchent,Khenchela,1100
+Aïn Témouchent,Souk Ahras,1800
+Aïn Témouchent,Tipaza,2000
+Aïn Témouchent,Mila,1300
+Aïn Témouchent,Aïn Defla,1900
+Aïn Témouchent,Naâma,2300
+Aïn Témouchent,Aïn Témouchent,500
+Aïn Témouchent,Ghardaïa,1900
+Aïn Témouchent,Relizane,1100
+Ghardaïa,Adrar,1700
+Ghardaïa,Chlef,1200
+Ghardaïa,Laghouat,2000
+Ghardaïa,Oum El Bouaghi,2000
+Ghardaïa,Batna,1500
+Ghardaïa,Béjaïa,1300
+Ghardaïa,Biskra,1300
+Ghardaïa,Béchar,1300
+Ghardaïa,Blida,1700
+Ghardaïa,Bouira,2000
+Ghardaïa,Tamanrasset,1700
+Ghardaïa,Tébessa,1600
+Ghardaïa,Tlemcen,1500
+Ghardaïa,Tiaret,1700
+Ghardaïa,Tizi Ouzou,1000
+Ghardaïa,Alger,2000
+Ghardaïa,Djelfa,2100
+Ghardaïa,Jijel,1800
+Ghardaïa,Sétif,2000
+Ghardaïa,Saïda,2300
+Ghardaïa,Skikda,1400
+Ghardaïa,Sidi Bel Abbès,1700
+Ghardaïa,Annaba,1000
+Ghardaïa,Guelma,1900
+Ghardaïa,Constantine,2400
+Ghardaïa,Médéa,1600
+Ghardaïa,Mostaganem,1400
+Ghardaïa,M'Sila,1500
+Ghardaïa,Mascara,1200
+Ghardaïa,Ouargla,1600
+Ghardaïa,Oran,1400
+Ghardaïa,El Bayadh,1900
+Ghardaïa,Illizi,1600
+Ghardaïa,Bordj Bou Arreridj,1700
+Ghardaïa,Boumerdès,2400
+Ghardaïa,El Tarf,1000
+Ghardaïa,Tindouf,1400
+Ghardaïa,Tissemsilt,1300
+Ghardaïa,El Oued,1600
+Ghardaïa,Khenchela,1300
+Ghardaïa,Souk Ahras,1500
+Ghardaïa,Tipaza,1300
+Ghardaïa,Mila,1200
+Ghardaïa,Aïn Defla,1300
+Ghardaïa,Naâma,1100
+Ghardaïa,Aïn Témouchent,1900
+Ghardaïa,Ghardaïa,500
+Ghardaïa,Relizane,2000
+Relizane,Adrar,2400
+Relizane,Chlef,2000
+Relizane,Laghouat,1800
+Relizane,Oum El Bouaghi,2100
+Relizane,Batna,2300
+Relizane,Béjaïa,2400
+Relizane,Biskra,1100
+Relizane,Béchar,1200
+Relizane,Blida,1500
+Relizane,Bouira,1200
+Relizane,Tamanrasset,1400
+Relizane,Tébessa,1600
+Relizane,Tlemcen,1900
+Relizane,Tiaret,1800
+Relizane,Tizi Ouzou,1400
+Relizane,Alger,1400
+Relizane,Djelfa,2400
+Relizane,Jijel,1100
+Relizane,Sétif,1600
+Relizane,Saïda,2200
+Relizane,Skikda,1000
+Relizane,Sidi Bel Abbès,1000
+Relizane,Annaba,1400
+Relizane,Guelma,1200
+Relizane,Constantine,1400
+Relizane,Médéa,1100
+Relizane,Mostaganem,2200
+Relizane,M'Sila,1700
+Relizane,Mascara,1200
+Relizane,Ouargla,2300
+Relizane,Oran,1800
+Relizane,El Bayadh,1400
+Relizane,Illizi,2300
+Relizane,Bordj Bou Arreridj,1500
+Relizane,Boumerdès,1300
+Relizane,El Tarf,1600
+Relizane,Tindouf,1800
+Relizane,Tissemsilt,1200
+Relizane,El Oued,1300
+Relizane,Khenchela,1800
+Relizane,Souk Ahras,1000
+Relizane,Tipaza,1200
+Relizane,Mila,1500
+Relizane,Aïn Defla,2300
+Relizane,Naâma,1300
+Relizane,Aïn Témouchent,2200
+Relizane,Ghardaïa,1600
+Relizane,Relizane,500
