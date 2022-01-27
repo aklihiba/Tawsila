@@ -41,10 +41,14 @@ if(($profil->admin_msg()!==null)&&(($userid == $id)||($_SESSION['connexion']=='a
 if(isset($annonces)){
     if($annonces != null){
         $g->titre(2,"les annonces publiées",'titre2');
-        $g->divclass('annonce_list');
+        $g->divclass('container');
+        $g->divclass('row');
             foreach($annonces as $a){
+                $g->divclass('col-sm');
                 $g->annoncebox($a);
+                $g->divend();
             }
+        $g->divend();
         $g->divend();
     }
 }        

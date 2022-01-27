@@ -31,9 +31,7 @@ require_once('ressource/styles/style.php');
     foreach($header->buttons() as $button){
         
         if($button=="Déconnexion"){
-            echo'<form action="'.PRE.'/accueil" method="post">';
-            $g->submit($button,"deconnexion ",$header->buttonsClass());
-            echo '</form>';
+            $g->button("Déconnexion",$header->buttonsClass(),"Déconnexion()");
         }elseif($button=="Connexion") {
           
        // $g->button($button,$header->buttonsClass(), $button."()");

@@ -78,38 +78,57 @@ padding-right:0.5%;
 -webkit-animation-play-state: paused;
 }
 
-.header>.bigbutton{
-    
-    float: right;
+.header .bigbutton{
+   
+  float: right;
     margin-inline-end: 0.5%;
   
 }
+
 .modal-content, .card {
     background-color: <?= $couleur->bgcolor()?>;
 }
-.modal-content * {
+.modal-content *{
     margin: 1%;
 }
-.bigbutton {
+.bigbutton, .mediumbutton, .smallbutton {
     font-family: <?= $fonts->font1()?>;
-    font-weight: 900;
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid <?= $couleur->bordercolor()?>;;
+   
+    border: 1px solid <?= $couleur->bordercolor()?>;
     color: <?= $couleur->bgcolor()?>;
     background-color: <?= $couleur->secondarycolor()?>;
 }
-.input, .paragraphe, .smalllink, .contenulink {
+.bigbutton {
+    font-weight: 900;
+    margin: 5px;
+    padding: 5px;
+}
+.mediumbutton {
+    font-size: 15;
+    font-weight: 800;
+    margin: 5px;
+    padding: 3px;
+}
+.smallbutton {
+    font-size: 14;
+    font-weight: 700;
+    margin: 5px;
+    padding: 2px;
+}
+.input, .mdpinput, .paragraphe, .smalllink, .contenulink,.dropdown * {
     font-family: <?= $fonts->font2()?>;
     
 }
-.paragraphe{
+.paragraphe, .dropdown *, #photo, label{
+    background-color: <?= $couleur->bgcolor()?>;
     color: <?= $couleur->primarycolor()?>;
 }
 .titre1 , .titre , .titre2 {
     font-family: <?= $fonts->font1()?>;
     font-weight: 700;
     color: <?= $couleur->primarycolor()?>;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 .smalllink, .mediumlink, .biglink, .link {
     color: <?= $couleur->secondarycolor()?>;
@@ -120,7 +139,34 @@ padding-right:0.5%;
 .smalllink:hover, .mediumlink:hover, .biglink:hover, .link:hover {
     color: <?= $couleur->bordercolor()?>;
 }
-.commentfct{
+.commentfctt, .publier, .modifierprofil{
     margin: 2%;
 }
+.admins_list{
+    margin: 3%;
+}
+.container{
+    padding:0.5%;
+}
+main {
+    margin: 3%;
+}
+.adminmsg{
+    border: 1px solid <?= $couleur->bordercolor()?>;
+  
+}
+.adminmsg >*{
+    margin: 2%;
+    color: <?= $couleur->secondarycolor()?>
+}
+.inscription {
+    margin: 2%;
+}
+
+.dropdown-menu{
+    height: 200px;
+    overflow-y: auto;
+    white-space:pre-wrap;
+}
+
 </style>

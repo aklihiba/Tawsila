@@ -5,7 +5,7 @@
         public function __construct(){
             session_start();
             if(!isset($_SESSION['connexion'])){
-                $_SESSION['connexion']='anonyme';
+                $_SESSION['connexion']='admin';
             }
             
             $this->loadModel('UtilisateurManager');

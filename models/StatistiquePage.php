@@ -21,21 +21,21 @@
             for ($i=0; $i < count($this->table); $i++) { 
                
                 switch($this->table[$i]->title()){
-                    case 'Nombre de clients':
+                    case 'clients':
                         $this->table[$i]->setContent($u->nombreclient());
                        
                         break;
-                    case 'Nombre de transporteurs':
+                    case 'transporteurs':
                         $this->table[$i]->setContent($u->nombretransporteur()) ;
                         break;
-                    case "Nombre d'annonces":
+                    case "annonces":
                         $this->table[$i]->setContent( $a->nombreannonce());
                         break;
                     case 'Top annonce':
                         $this->table[$i]->setContent($a->topannonce()) ;
                         break;
                     case 'Top transporteur':
-                        $this->table[$i]->setContent($a->toptransporteur()) ;      
+                     //   $this->table[$i]->setContent($u->toptransporteur()) ;      
                         break;       
                 }
             }

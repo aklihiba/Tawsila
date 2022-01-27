@@ -129,9 +129,24 @@ class UtilisateurManager extends Model{
         
         return 0; 
     }
+
+    public function toptransporteur(){
+    $sql = "SELECT MAX(gain) FROM utilisateur" ; 
+    $max = $this->request($sql);
+    $sql = "SELECT *  FROM utilisateur WHERE gain=".$max['MAX(gain)'] ; 
+    $data = $this->request($sql);
+       
+         if ($data != null) {
+          
+            return new Utilisateur($data);
+         }   
+         return null; 
+        
+      
+     }  
 }
 //$v = new UtilisateurManager();
 //echo $v->nombreclient();
-//echo $v->nombretransporteur();
+//echo $v->toptransporteur()->nom();
 //$v->test();
 ?>

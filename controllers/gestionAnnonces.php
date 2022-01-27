@@ -5,7 +5,7 @@
         public function __construct(){
             session_start();
             if(!isset($_SESSION['connexion'])){
-                $_SESSION['connexion']='anonyme';
+                $_SESSION['connexion']='admin';
             }
             $this->loadModel('AnnonceManager');
             $this->loadModel('UtilisateurManager');
@@ -52,7 +52,7 @@
                 $id = $a->client();
                 $a->setClient($users->rechercheByid($id));
                 $id = $a->transiteur();
-                if($id != '-'){
+                if($id != null){
                      $a->setTransiteur($users->rechercheByid($id));
                 }
                

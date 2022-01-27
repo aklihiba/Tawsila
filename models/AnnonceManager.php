@@ -211,19 +211,7 @@
                 return 0; 
             }
             
-            
-        public function toptransporteur(){
-           // $sql = "SELECT  FROM annonce" ; 
-           // $data = $this->request($sql);
-           /* if ($data != null) {
-                $occurence = array_count_values($data['transiteur']);
-                $maxocc = max($occurence);
-                echo key($maxocc,$data);
-            }   
-            return 0; 
-            */
-            return 2;
-        }  
+        
          
     }
 // $v = new AnnonceMAnager();

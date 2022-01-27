@@ -19,50 +19,88 @@
 </style>
 
 <center>
-    <span class="principale" >
-        <div class='principalimg'>
-            <h4>Gestion des Clients</h4>
-            <a href="<?= PRE ?>/GestionClients"> 
-                <img src="<?= PRE ?>/ressource/images/gestionclients.png" height="150" >
-            </a>
+    <div class="container" >
+        <div class="row">
+        <div class = "col">
+        <div class="card" style="width: 18rem;">
            
+            <a  href="<?= PRE ?>/GestionClients"> 
+                <img class="card-img-top" src="<?= PRE ?>/ressource/images/gestionclients.png">
+            </a>
+            <div class="card-body">
+            <h5 class="card-title">Gestion des Clients</h5>
+            </div>
+        </div>
         </div>
 
-        <div class='principalimg'>
-        <h4>Gestion des Transporteurs</h4>
-            <a href="<?= PRE ?>/GestionTransporteurs">
-                <img src="<?= PRE ?>/ressource/images/gestiontransporteurs.jpg" height="150" >
-            </a>
-        </div>
-
-        <div class='principalimg'>
-        <h4>Gestion des Annonces</h4>
-            <a href="<?= PRE ?>/GestionAnnonces">
-                <img src="<?= PRE ?>/ressource/images/gestionannonces.jpg" height="150" >
-            </a>
-        </div>
-    </span>
-    <span class="principale">
-        <div class='principalimg'>
-            <h4>Gestion des signalements</h4>
-            <a href="<?= PRE ?>/GestionSignalements"> 
-                <img src="<?= PRE ?>/ressource/images/gestionsignalements.png" height="150">
-            </a>
+        <div class = "col">
+        <div class="card" style="width: 18rem;">
            
+            <a  href="<?= PRE ?>/GestionTransporteurs"> 
+                <img class="card-img-top" src="<?= PRE ?>/ressource/images/gestiontransporteurs.jpg">
+            </a>
+            <div class="card-body">
+            <h5 class="card-title">Gestion des Transporteurs</h5>
+            </div>
+        </div>
         </div>
 
-        <div class='principalimg'>
-        <h4>Gestion du Contenu</h4>
-            <a href="<?= PRE ?>/GestionContenu">
-                <img src="<?= PRE ?>/ressource/images/gestioncontenu.jpg" height="150">
+        <div class = "col">
+        <div class="card" style="width: 18rem;">
+           
+            <a href="<?= PRE ?>/GestionAnnonces"> 
+                <img class="card-img-top" src="<?= PRE ?>/ressource/images/gestionannonces.jpg">
             </a>
+            <div class="card-body">
+            <h5 class="card-title">Gestion des Annonces</h5>
+            </div>
+        </div>
         </div>
 
-        <div class='principalimg'>
-        <h4>Gestion des News</h4>
-            <a href="<?= PRE ?>/GestionNews">
-                <img src="<?= PRE ?>/ressource/images/gestionnews.jpg" height="150" >
+    
+    </div>
+</div>
+
+<div class="container" >
+        <div class="row">
+        <div class = "col">
+        <div class="card" style="width: 18rem;">
+           
+            <a  href="<?= PRE ?>/GestionSignalements"> 
+                <img class="card-img-top" src="<?= PRE ?>/ressource/images/gestionsignalements.png">
             </a>
+            <div class="card-body">
+            <h5 class="card-title">Gestion des signalements</h5>
+            </div>
         </div>
-    </span>
+        </div>
+
+        <div class = "col">
+        <div class="card" style="width: 18rem;">
+           
+            <a  href="<?= PRE ?>/GestionContenu"> 
+                <img class="card-img-top" src="<?= PRE ?>/ressource/images/gestioncontenu.jpg">
+            </a>
+            <div class="card-body">
+            <h5 class="card-title">Gestion du Contenu</h5>
+            </div>
+        </div>
+        </div>
+
+        <div class = "col">
+        <div class="card" style="width: 18rem;">
+           
+            <a href="<?= PRE ?>/GestionNews"> 
+                <img class="card-img-top" src="<?= PRE ?>/ressource/images/gestionnews.jpg">
+            </a>
+            <div class="card-body">
+            <h5 class="card-title">Gestion des News</h5>
+            </div>
+        </div>
+        </div>
+
+    
+    </div>
+</div>
+  
 </center>

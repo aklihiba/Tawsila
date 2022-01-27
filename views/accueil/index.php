@@ -1,6 +1,12 @@
 
 <form action="<?= PRE ?>/accueil" method="post">
 <?php
+    $g->divclass('container');
+    $g->divclass('row');
+    $g->divclass('col');
+    $g->divend();
+    $g->divclass('col-10');
+    $g->divclass('float-right');
     for ($i=0; $i <count($all) ; $i++) { 
        if(! is_null($all[$i])){ 
         if($all[$i]->type()=='input'){
@@ -12,10 +18,13 @@
         }
     }
     }
-    
-   
+    $g->divend();
+    $g->divend();
+    $g->divend();
+   $g->divend();
 ?>
 </form>
+
     <hr>
 <?php 
 //$g->span();
@@ -40,7 +49,8 @@ if($annonces != null){
    echo '<hr>';
    $g->center();
    $g->divclass('commentfct');
-    $g->link("Présentation", $all[$i-1]->class(), $all[$i-1]->content());
+    $g->link( $all[$i-1]->name(), $all[$i-1]->class(), $all[$i-1]->content());
     $g->divend();
     $g->centerend();
+ 
 ?>

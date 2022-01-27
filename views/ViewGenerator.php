@@ -222,12 +222,18 @@
         public function dropdowncheckbox(array $values, $name, $content, $class){
             //checkbox for multiselection
             $this->divclass($class);
-            $this->button($content,$class."btn","");
-            $this->divclass($class."-content");
+            echo '<button class="'.$class.' btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           '.$content.'
+          </button>';
+          
+            echo ' <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">';
+
             for ($i=0; $i <count($values) ; $i++) { 
+
+                $this->divclass('dropdown-item');
                 echo '<input type="checkbox" id="'.$name.'" name="'.$name.'[]" value="'.$values[$i].'">';
                 echo'<label for="'.$name.'"> '.$values[$i].'</label><br>';
-
+                $this->divend();
             }
             $this->divend();
             $this->divend();
@@ -237,14 +243,17 @@
         public function dropdownradio(array $values, $name, $content, $class){
             //radio for one element selection
             $this->divclass($class);
-            
-            $this->button($content,$class."btn","");
-            $this->divclass($class."-content");
-         
+              echo '<button class="'.$class.' btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+           '.$content.'
+          </button>';
+          
+            echo ' <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">';
+           
             for ($i=0; $i <count($values) ; $i++) { 
+                $this->divclass('dropdown-item');
                 echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'">';
-                echo'<label for="'.$name.$i.'"> '.$values[$i].'</label><br>';
-
+                echo'<label for="'.$name.$i.'">  '.$values[$i].'</label><br>';
+                $this->divend();
             }
            
             $this->divend();
@@ -253,17 +262,19 @@
         }
         public function fourchette(array $values, $name, $content, $class){
             $this->divclass($class);
-            
-            $this->button($content,$class."btn","");
-            $this->divclass($class."-content");
-           
+            echo '<button class="'.$class.' btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           '.$content.'
+          </button>';
+          
+            echo ' <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">';
+
             for ($i=0; $i <count($values)-1 ; $i++) { 
+                $this->divclass('dropdown-item');
                 echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'-'.$values[$i+1].'">';
                 echo'<label for="'.$name.$i.'"> entre '.$values[$i].' et '.$values[$i+1].'</label><br>';
+                $this->divend();
             }
-          //  echo '<input type="radio" id="'.$name.$i.'" name="'.$name.'" value="'.$values[$i].'-'.'1000'.'">';
-          //  echo'<label for="'.$name.$i.'"> '.$values[$i].' ou plus.'.'</label><br>';
-            
+        
             $this->divend();
             $this->divend();
         }
@@ -276,30 +287,30 @@
         }
         
         public function userbox($user, $action){
-            $this->spanclass('userbox');
-                $this->div();
-                    $this->imageh($user->photo(),80);
-                    $this->titre(5,$user->statut(),"titre");
-                $this->divend();    
-                $this->div();
-                    $this->titre(4, $user->nom().' '.$user->prenom(), "titre");
-                    $this->paragraphe('wilayas depart: '.$user->depart(), "paragraphe");
-                    $this->paragraphe('wilayas arrivé: '.$user->arrive(), "paragraphe");
-                    $this->paragraphe('note: '.$user->note().'/5',"paragraphe");
-            $this->divend();
-            $this->div();
+
+            echo '<div class="card" style="width: 15rem;">';
+            echo ' <img class="card-img-top" src="'.PRE.'/ressource/images/'.$user->photo().'" >';
+            echo '
+            <div class="card-body">
+            <h5 class="card-title titre">'.$user->nom().' '.$user->prenom().'</h5>
+            <p class="card-text paragraphe">statut: '.$user->statut().'</p>';
+            $this->paragraphe('wilayas depart: '.$user->depart(), "card-text paragraphe");
+            $this->paragraphe('wilayas arrivé: '.$user->arrive(), "card-text paragraphe");
+            $this->paragraphe('note: '.$user->note().'/5',"card-text paragraphe");
             if($action != ''){
                 if($action=='signaler'){
-                    $this->signalementbox();
-                }else
-                $this->submit($action, $action.$user->id(), 'smallbutton');
+                        $this->signalementbox();
+                    }else
+                    $this->submit($action, $action.$user->id(), 'smallbutton');
 
             }
             if($_SESSION['connexion']!='anonyme'){
-                $this->link('profil/index/'.$user->id(),'smalllink','profil');
+                $this->link('profil/index/'.$user->id(),'card-link smalllink','profil');
             }
-            $this->divend();    
-           $this->spanend();
+           
+            echo '</div>
+             </div>';    
+           
         }
 
         public function select($name , $content , $class){
@@ -311,32 +322,34 @@
 
         public function signalementbox(){
             $this->input('signalementdesc','signalementdesc', 'votre probleme', 'input');
-            $this->button('signaler', 'mediumbutton', 'signaler()');
+            $this->button('signaler', 'smallbutton', 'signaler()');
         }
 
         public function adminbox($a){
-            $this->divclass('adminbox');
-            $this->div();
-                $this->imageh($a->photo(),150);
-            $this->divend();
-            $this->div();
-                $this->titre(1,$a->nom().' '.$a->prenom(),'titre1');
-                $this->titre(2,$a->age().' ans','titre2');
-            $this->divend();    
-            $this->divend();
+            
+            echo '<div class="card" style="width: 16rem;">';
+            echo ' <img class="card-img-top" src="'.PRE.'/ressource/images/'.$a->photo().'" >';
+            echo '
+            <div class="card-body">
+            <h3 class="card-title titre">'.$a->nom().' '.$a->prenom().'</h3>
+            <p class="card-text paragraphe">'.$a->age().' ans'.'</p>';
+            echo '</div>
+             </div>';    
+         
         }
 
         public function newsbox($n){
-            $this->divclass('newsbox');
-                $this->div();
-                    $this->imageh($n->photo(),'200');
-                $this->divend();
-                $this->div();
-                    $this->titre(2,$n->titre(),'titre2');
-                    $this->paragraphe($n->description(),'paragraphe');
-                    $this->link('News/view/'.$n->id(),'smalllink','lire la suite');
-                $this->divend();
-            $this->divend();
+
+            echo '<div class="card" style="width: 16rem;">';
+            echo ' <img class="card-img-top" src="'.PRE.'/ressource/images/'.$n->photo().'" >';
+            echo '
+            <div class="card-body">
+            <h4 class="card-title titre">'.$n->titre().'</h4>
+            <p class="card-text paragraphe">'.$n->description().'</p>';
+            $this->link('News/view/'.$n->id(),'card-link smalllink','lire la suite');
+            echo '</div>
+             </div>';    
+           
         }
         
         /***************admin */
@@ -359,8 +372,13 @@
                     <td>".$c->adresse()."</td>
                     <td>".$c->mail()."</td>
                     <td>".$c->telephone()."</td>
-                    <td>".$c->statut()."</td>
-                    <td>".$c->depart()."</td>
+                    <td>".$c->statut()."</td>";
+                    if($c->demande_certification()){
+                        echo "<td>oui</td>";
+                    }   else{
+                        echo "<td>non</td>";
+                    }     
+                 echo " <td>".$c->depart()."</td>
                     <td>".$c->arrive()."</td>
                     <td>".$c->gain()."</td>
                     <td>".$c->note()."/5</td>

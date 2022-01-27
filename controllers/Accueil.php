@@ -69,6 +69,7 @@
                
                session_unset();
                $_SESSION['connexion']='anonyme';
+               header('Location:'.PRE);
             } 
             //publier
             if(isset($_POST['publier'])){

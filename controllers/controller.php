@@ -3,6 +3,8 @@
     require_once(ROOT.'models/Footer.php');
     require_once(ROOT.'models/Diaporama.php');
     require_once(ROOT.'models/Couleur.php');
+    require_once(ROOT.'models/fonts.php');
+    require_once(ROOT.'models/Utilisateur.php');
     
 abstract class Controller {
    
@@ -31,7 +33,7 @@ abstract class Controller {
        
         $footer = new footer();
         $couleur = new Couleurs();
-        
+        $fonts = new Fonts();
         //diapo for the accueil page
         if($this instanceof Accueil && $file=="index"){
             $diapo = new Diaporama();

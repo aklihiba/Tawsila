@@ -40,6 +40,7 @@ data-toggle="table"
       <th data-sortable="true">Email</th>
       <th data-sortable="true">Telephone</th>
       <th data-sortable="true">Etat</th>
+      <th data-sortable="true">demande de certification</th>
       <th data-sortable="true">Wilaya depart</th>
       <th data-sortable="true">Wilaya d'arrive</th>
       <th data-sortable="true">gain</th>
