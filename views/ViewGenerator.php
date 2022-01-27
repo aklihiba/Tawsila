@@ -47,25 +47,42 @@
         }
         
         public function menu(array $contenu, $class){
+            echo '<nav class="navbar">';
            $this->divclass($class);
             foreach($contenu as $element){
                 if($element=='Profil'){
-                    echo '<a href="'.PRE.'/'.$element.'/index/'.$_SESSION['user']->id().'">'.$element.'</a>';
+                    echo '<a class="navbar-brand" href="'.PRE.'/'.$element.'/index/'.$_SESSION['user']->id().'">'.$element.'</a>';
                 }else
-                echo '<a href="'.PRE.'/'.$element.'">'.$element.'</a>';
+                echo '<a class="navbar-brand" href="'.PRE.'/'.$element.'">'.$element.'</a>';
                 // Accueil Presentation News...
             }
             $this->divend();
+            echo ' </nav>';
+        }
+        public function footermenu(array $contenu, $class){
+          
+           $this->divclass($class);
+            foreach($contenu as $element){
+                if($element=='Profil'){
+                    echo '<a class="smalllink" href="'.PRE.'/'.$element.'/index/'.$_SESSION['user']->id().'">'.$element.'</a>';
+                }else
+                echo '<a class="smalllink" href="'.PRE.'/'.$element.'">'.$element.'</a>';
+                // Accueil Presentation News...
+            }
+            $this->divend();
+          
         }
 
         public function adminmenu(array $contenu, $class){
+            echo '<nav class="navbar">';
             $this->divclass($class);
              foreach($contenu as $element){
                  
-                 echo '<a href="'.PRE.'/Gestion'.$element.'">'.$element.'</a>';
+                 echo '<a class="navbar-brand"  href="'.PRE.'/Gestion'.$element.'">'.$element.'</a>';
                  // Accueil Presentation News...
              }
              $this->divend();
+            echo ' </nav>';
          }
 
     //footer
@@ -73,15 +90,16 @@
             $this->center();
                 $this->divclass($class);
                     $this->image($logo);
-                    $this->span();
-                        $this->menu($menu,$class);
-                    $this->spanend();
-                $this->divend();
+                    $this->divend();
+                  $this->div();
+                        $this->footermenu($menu,$class);
+                    $this->divend();
+               
             $this->centerend();
         }  
         
     //accueil
-        public function login($header){
+       /* public function login($header){
             echo "<div id='login'>";
             $this->center();
            
@@ -103,14 +121,56 @@
             $this->centerend();
             $this->divend();
         }
+        */
+        public function login($header, $couleur){
+           
+            echo '<button type="button" class="bigbutton" data-toggle="modal" data-target="#exampleModalCenter">
+                    Connexion
+             </button>';
+           echo '<form action="'.PRE.'/accueil" method="post">';
+            echo '  
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+               <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLongTitle">Connexion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">';
+                $this->center();
+                $this->image($header->logo(),150);
+                $this->div();    
+                $this->input("mail", "mail","email","input");
+                $this->divend();$this->div();   
+                $this->password("pwd", "pwd","mot de passe","mdpinput");
+                $this->divend();$this->div();   
+                $this->link("Inscription", "smalllink","vous n'avez pas de compte inscriver-vous");
+                $this->divend();
+                $this->centerend();
+                echo '</div>
+                <div class="modal-footer">
+                <button type="button" class="bigbutton" data-dismiss="modal">fermer</button>';
+                
+                $this->submit("Connexion","login", $header->buttonsClass());  
+                echo '</div>
+                </div>
+            </div>
+            </div>
+            ';
+            echo "</form>";   
+        }
 
         public function diapo(array $diapo){
             $this->divclass("diaporama");
+            $this->divclass("images");
             foreach($diapo as $img){
                echo' <a href="'.$img->link().'">';
                $this->imageh($img->image(),150);
                echo'</a>';             
             }
+            $this->divend();
             $this->divend();
         }
         
@@ -147,15 +207,16 @@
         }        
 
         public function annoncebox($a){
-           $this->spanclass('annoncebox');
-                $this->imageh($a->photo(),80);
-               $this->div();
-                    echo '<h3>'.$a->titre().'</h3>';
-                    echo '<h4>wilaya: '.$a->wilaya_depart().'->'.$a->wilaya_arrive().'</h4>';
-                    $this->link("Accueil/annonce/".$a->id(),"smalllink","lire la suite");
-                  
-                $this->divend();
-           $this->spanend();
+           echo '<div class="card" style="width: 15rem;">';
+           echo ' <img class="card-img-top" src="'.PRE.'/ressource/images/'.$a->photo().'" >';
+           echo '
+           <div class="card-body">
+           <h5 class="card-title titre">'.$a->titre().'</h5>
+           <p class="card-text paragraphe">wilaya: '.$a->wilaya_depart().'->'.$a->wilaya_arrive().'</p>';
+           $this->link("Accueil/annonce/".$a->id(),"smalllink","lire la suite");
+           echo '</div>
+            </div>';    
+              
         }
 
         public function dropdowncheckbox(array $values, $name, $content, $class){
@@ -346,9 +407,29 @@
             <td> <a href='".PRE."/GestionSignalements/signalement/".$s->annonce()->id()."-".$s->emetteur()->id()."-".$s->mis_en_cause()->id()."'>description</a></td>
            
            
-        </tr>
-    ";
+            </tr>
+              ";
+        }
+
+        public function presentationrow($e, $couleur){
+            echo' <tr id="'.$e->id().'">
+            <td> <input  type="checkbox"  name="selected[]" value='.$e->id().'> </td>
+            <td>
+            <input type="text" class="form-control"  name="type'.$e->id().'"  style="width:2cm; background-color:'.$couleur.' ;" value="' . $e->type() . '" >
+            </td>
+            <td>
+            <input type="text" class="form-control"  name="content'.$e->id().'"  style="width:max-width; background-color: '.$couleur.' ;" value="' . $e->content() . '" >
+            </td>
+          
+            
+            </tr>';
+        }
+        public function diaporow($e, $couleur){
+            echo' <tr id="'.$e->id().'">
+            <td> <input  type="checkbox"  name="selected[]" value='.$e->id().'> </td>
+            <td>'. $e->image() . '</td>
+            <td>'. $e->link() . '</td>
+            </tr>';
         }
     }
 ?>
-

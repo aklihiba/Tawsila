@@ -1,5 +1,6 @@
 <?php
 class Image{
+    private $_id;
     private $_image;
     private $_link;
 
@@ -22,7 +23,9 @@ class Image{
         }
     }
 
-
+    public function setId($id){
+        $this->_id = $id;
+    }
     public function setImage($image)
     {
         if (is_string($image))
@@ -41,7 +44,7 @@ class Image{
         }
     }
 
-
+    public function id(){return $this->_id;}
     public function image(){return $this->_image;}
     public function link(){return $this->_link;}
 }

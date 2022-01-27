@@ -20,12 +20,12 @@
 <header>
 <?php 
     require_once(ROOT.'ressource/JS/scripts.php');
-
+    require_once('ressource/styles/style.php');
     $g->cadre($couleur->bgcolor(),$couleur->bordercolor()); 
     //logo
     $g->imageh($header->logo(),50);
     //buttons
-    $g->span();
+    $g->spanclass('header');
     $g->button("Déconnexion",$header->buttonsClass(),"Déconnexion()");
     $g->spanend();
     $g->adminmenu($header->menu(),$header->menuClass());

@@ -9,7 +9,7 @@ class Diaporama extends Model
     {
        
         $this->getConnection();
-        $sql = "SELECT * FROM diaporama" ;
+        $sql = "SELECT * FROM diaporama ORDER BY id" ;
         $query = $this->_connexion->prepare($sql);
         try{
             $query->execute();
@@ -23,6 +23,27 @@ class Diaporama extends Model
     }
     public function getImages(){
         return $this->table ;
+    }
+
+    public function add($image, $link){
+        try {
+            $this->getConnection();
+
+            $sql = "INSERT INTO diaporama (image, link)
+            VALUES ('".$image."', '".$link."')" ;
+      
+            $this->_connexion->exec($sql);
+          //  echo "New record created successfully";
+          } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+          }
+    }
+    public function delete($id){
+
+        $this->getConnection();
+        $sql=" DELETE FROM diaporama WHERE id=".$id;
+        $this->query($sql);
+
     }
 }
 ?>

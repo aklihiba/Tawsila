@@ -20,19 +20,27 @@
 <?php 
 //$g->span();
 if($annonces != null){
-    $g->span();
+    $g->divclass('container');
+    $g->divclass('row');
     for ($j=0; $j <count($annonces) ; $j++) { 
       if($j==4){
-        $g->spanend();
+        $g->divend();
         echo'<hr>';  
-        $g->span();
+        $g->divclass('row');
     }
+        $g->divclass('col-sm');
         $g->annoncebox($annonces[$j]);
+        $g->divend();
    }
-   $g->spanend();
+   $g->divend();
+   $g->divend();
 }
    
  //  $g->spanend();
    echo '<hr>';
+   $g->center();
+   $g->divclass('commentfct');
     $g->link("Présentation", $all[$i-1]->class(), $all[$i-1]->content());
+    $g->divend();
+    $g->centerend();
 ?>

@@ -1,5 +1,11 @@
 <script>
-        
+           $(document).ready(function(){
+               $('.navbar').css('background','<?= $couleur->primarycolor() ?>');
+               $('.menu a').css('color','<?= $couleur->bgcolor() ?>');
+              
+           });
+
+
         function fireClickEvent(element) {
         var evt = new window.MouseEvent('click', {
             view: window,
@@ -28,11 +34,7 @@
           
             fireClickEvent(a);
         }
-        $(document).ready(function(){ 
-        $('.footer').css('background','<?= $couleur->primarycolor() ?>');
-        $('.footer>*').css('margin','1%')
-        $('.footer').css('padding','1%')
-        });
+       
 /*********Profil page **********/
         function modifier(id){
             var a = document.createElement('a');

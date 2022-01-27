@@ -61,6 +61,7 @@ class PageElements {
         public function content(){return $this->_content;}
         public function type(){return $this->_type;}
         public function class(){return $this->_class;}
+
 }
 
 ?>

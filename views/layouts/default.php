@@ -7,59 +7,46 @@
     <title>Tawsila</title>
     <script type="text/javascript" src="<?= PRE ?>/ressource/JS/jquery.js"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </head>
-<?php $g->cadre($couleur->bgcolor(),$couleur->bordercolor()); ?>
-    <header>
-    <style>
-        #login{
-            background-color: <?= $couleur->bgcolor()?>;
-            display: none;
-            position:static;
-            height: 200;
-            width: 300;
-            z-index: 4;
-        }
-        .close-icon
-{
-  display:block;
-  box-sizing:border-box;
-  width:20px;
-  height:20px;
-  border-width:2px;
-  border-style: solid;
-  border-color:<?= $couleur->bordercolor()?>;
-  border-radius:100%;
-  background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
-  background-color:<?= $couleur->secondarycolor()?>;
-  transition: all 0.3s ease;
-}
-    </style>
+<?php 
+$g->cadre($couleur->bgcolor(),$couleur->bordercolor());
+require_once('ressource/styles/style.php');
+?>
+<header>
     
 <?php
    
 
+    
+    //buttons
+    $g->spanclass('header');
     //logo
     $g->imageh($header->logo(),50);
-    //buttons
-    $g->span();
+    
     foreach($header->buttons() as $button){
         
         if($button=="Déconnexion"){
             echo'<form action="'.PRE.'/accueil" method="post">';
-            $g->submit($button,"deconnexion",$header->buttonsClass());
+            $g->submit($button,"deconnexion ",$header->buttonsClass());
             echo '</form>';
         }elseif($button=="Connexion") {
           
-        $g->button($button,$header->buttonsClass(), $button."()");
-        //login popup
-            $g->login($header);
-        
+       // $g->button($button,$header->buttonsClass(), $button."()");
+     
+     $g->login($header, $couleur);
+      
         }else{
             $g->button($button,$header->buttonsClass(), $button."()");
         }
     }
+ 
     $g->spanend();
-    
+   
     //diapo
     if(isset($diapo)){
         $g->diapo($diapo->getImages());

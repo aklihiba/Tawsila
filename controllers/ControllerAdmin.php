@@ -3,6 +3,7 @@
     require_once(ROOT.'models/Footer.php');
     require_once(ROOT.'models/Diaporama.php');
     require_once(ROOT.'models/Couleur.php');
+    require_once(ROOT.'models/fonts.php');
     
 abstract class ControllerAdmin {
    
@@ -26,6 +27,7 @@ abstract class ControllerAdmin {
         $header = new Header('admin');
         
         $couleur = new Couleurs();
+        $fonts = new Fonts();
         
         require_once(ROOT.'views/ViewGenerator.php');
         $g = new ViewGenerator(); 

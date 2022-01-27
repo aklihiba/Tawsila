@@ -23,6 +23,27 @@
         public function all(){
             return $this->table;
         }
+
+        public  function update($id, $type, $content ){
+          
+            $this->getConnection();
+            $sql = " UPDATE contact_page SET type='".$type."', content='".$content."' WHERE id=".$id;
+            $this->query($sql);
+        }
+
+        public function ajouter($type, $content, $class){
+            try {
+                $this->getConnection();
+
+                $sql = "INSERT INTO contact_page (type, content, class)
+                VALUES ('".$type."', '".$content."', '".$class."')" ;
+          
+                $this->_connexion->exec($sql);
+              //  echo "New record created successfully";
+              } catch(PDOException $e) {
+                echo $sql . "<br>" . $e->getMessage();
+              }
+        }  
     }
 
 ?>

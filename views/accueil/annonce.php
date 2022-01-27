@@ -21,7 +21,7 @@ $g->divclass('annonce_restrict_info');
     if($_SESSION['connexion'] != 'anonyme'){
         $g->divclass('annonce_extra_info');
             $g->titre(1, $annonce->prix().' DA','titre1');
-            $g->paragraphe($annonce->etat(),'biglink');
+            $g->paragraphe($annonce->etat(),'paragraphe');
             foreach($actions as $a){
                 if($a=='noter'){
                     $g->input('note','note', 'note', 'input');

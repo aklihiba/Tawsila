@@ -12,7 +12,7 @@
                 break;
             case 'a':
                 $g->center();
-               echo '<a href="mailto:contact@tawsila.dz" class='.$e->class().'>'.$e->content().'</a>';
+               echo '<a href="'.$e->content().'" class='.$e->class().'>envoyer un email</a>';
                $g->centerend(); 
                break;
             
