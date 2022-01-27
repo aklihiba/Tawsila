@@ -87,7 +87,9 @@ padding-right:0.5%;
 
 .modal-content, .card {
     background-color: <?= $couleur->bgcolor()?>;
+    
 }
+
 .modal-content *{
     margin: 1%;
 }
@@ -115,7 +117,7 @@ padding-right:0.5%;
     margin: 5px;
     padding: 2px;
 }
-.input, .mdpinput, .paragraphe, .smalllink, .contenulink,.dropdown * {
+.input, .mdpinput, .paragraphe, .smalllink, .contenulink,.dropdown *, .card-text {
     font-family: <?= $fonts->font2()?>;
     
 }
@@ -123,7 +125,7 @@ padding-right:0.5%;
     background-color: <?= $couleur->bgcolor()?>;
     color: <?= $couleur->primarycolor()?>;
 }
-.titre1 , .titre , .titre2 {
+.titre1 , .titre , .titre2, .card-title, .card-header, .card-footer {
     font-family: <?= $fonts->font1()?>;
     font-weight: 700;
     color: <?= $couleur->primarycolor()?>;
