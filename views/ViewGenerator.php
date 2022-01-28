@@ -506,5 +506,15 @@
                 </td>
             </tr>';
         }
+        public function newsrow($e){
+            echo "
+            <tr id='".$e->id()."'>
+            <td> <input  type='checkbox'  name='selected[]' value=".$e->id()."> </td>
+            <td> <a href='".PRE."/News/view/".$e->id()."'>".$e->titre()."</a></td>
+            <td>". $e->date()."</td>
+            <td>".$e->vues()."</td>
+
+            </tr>";
+        }
     }
 ?>

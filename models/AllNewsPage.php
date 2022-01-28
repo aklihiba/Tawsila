@@ -35,6 +35,12 @@
                 echo '<h1>'.$row->titre().'</h1>';
             }
         }
+        public function delete($id){
+            $sql = "DELETE FROM news WHERE id=".$id;
+            $this->query($sql);
+            $sql = "DELETE FROM news_component WHERE new_id=".$id;
+            $this->query($sql);
+        }
     }
 
     //$v = new AllNewsPage();

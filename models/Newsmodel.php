@@ -4,6 +4,7 @@
         private $_titre;
         private $_photo ; 
         private $_description ; 
+        private $_date;
         private $_vues;
         public function __construct(array $data)
         {
@@ -56,6 +57,9 @@
                 $this->_description = $description;
             }
         }
+        public function setDate($d){
+            $this->_date = $d;
+        }
         public function setVues($vues)
         {
             if(!is_null($vues))
@@ -78,8 +82,17 @@
         public function photo(){return $this->_photo;}
         public function titre(){return $this->_titre;}
         public function description(){return $this->_description;}
+        public function date(){return $this->_date;}
         public function vues(){
             return $this->_vues;
+        }
+
+        public function save(){
+            $this->getConnection();
+            $sql = "INSERT INTO news (titre, photo, description, date, vues) VALUES (
+                    '".$this->titre()."', '".$this->photo()."', '".$this->description()."', '".$this->date()."', ".$this->vues().")" ;
+        
+             return $this->insert_getlastid($sql);        
         }
     }
 ?>
