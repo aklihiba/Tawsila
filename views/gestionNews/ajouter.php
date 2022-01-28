@@ -1,6 +1,6 @@
-<form action="<?= PRE ?>/GestionNews/ajouter" method="POST">
+<form action="<?= PRE ?>/GestionNews/modifier" method="POST">
 <div id="toolbar">
- <?php $g->submit('valider', 'valider','mediumbutton');
+ <?php $g->submit('appliquer changement', 'valider','mediumbutton');
       
  ?>
  <input type="button" id="ajouter" name="ajouter" value="ajouter" class='mediumbutton'>
@@ -33,19 +33,7 @@
  data-toggle="table"
   class="table table-bordered table-hover"
  
-  data-toolbar="#toolbar"
-  data-search="true"
-  data-show-refresh="true"
-  data-show-toggle="true"
-
-  data-show-columns="true"
-  data-show-columns-toggle-all="true"
-
-  data-show-export="true"
-  data-click-to-select="true"
-  data-detail-formatter="detailFormatter"
-  data-minimum-count-columns="2"
-
+  
   id='newstable'
   >
   <thead>
@@ -62,7 +50,7 @@
      </tr>
      <tr>
          <td>photo</td>
-         <td><?php   $g->fileselectvalue('photo','photo', '','input fileinput'); ?></td>
+         <td><?php   $g->fileselect('photo','photo','input fileinput'); ?></td>
      </tr>
      <tr>
          <td>description</td>
