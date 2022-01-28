@@ -117,13 +117,24 @@ padding-right:0.5%;
     margin: 5px;
     padding: 2px;
 }
-.input, .mdpinput, .paragraphe, .smalllink, .contenulink,.dropdown *, .card-text {
+.input, .mdpinput, .paragraphe, .smalllink, .contenulink, .dropdown *, .card-text {
     font-family: <?= $fonts->font2()?>;
     
 }
 .paragraphe, .dropdown *, #photo, label{
     background-color: <?= $couleur->bgcolor()?>;
     color: <?= $couleur->primarycolor()?>;
+}
+
+.contenulink a{
+       color: <?= $couleur->primarycolor() ?>;
+       font-family: <?= $fonts->font2()?>;
+       font-weight: 700;
+       margin: 2%;
+       
+}
+.contenulink{
+        margin-top: 1%;
 }
 .titre1 , .titre , .titre2, .card-title, .card-header, .card-footer {
     font-family: <?= $fonts->font1()?>;

@@ -21,6 +21,8 @@ $g->divclass('col');
         if($annonce->note()!= 0 ){
             $g->paragraphe('la note: '.$annonce->note(),'paragraphe');            
         }
+        $g->paragraphe('publier le: '.$annonce->date(),'paragraphe');
+
 
 $g->divend();
     if($_SESSION['connexion'] != 'anonyme'){

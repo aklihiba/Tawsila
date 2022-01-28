@@ -41,6 +41,9 @@
         public function imageh($link, $heigt){
             echo '<img src="'.PRE.'/ressource/images/'.$link.'" height="'.$heigt.'">';
         }
+        public function imagew($link, $width){
+            echo '<img src="'.PRE.'/ressource/images/'.$link.'" width="'.$width.'">';
+        }
 
         public function button($name, $class, $onclick){
           echo '<button type="button" class="'.$class.'" onclick="'.$onclick.'">'.$name.'</button>' ;
@@ -140,7 +143,7 @@
                 </div>
                 <div class="modal-body">';
                 $this->center();
-                $this->image($header->logo(),150);
+                $this->imagew($header->logo(),400);
                 $this->div();    
                 $this->input("mail", "mail","email","input");
                 $this->divend();$this->div();   
@@ -447,6 +450,60 @@
             <td> <input  type="checkbox"  name="selected[]" value='.$e->id().'> </td>
             <td>'. $e->image() . '</td>
             <td>'. $e->link() . '</td>
+            </tr>';
+        }
+
+        public function critererow($e){
+            echo' <tr id="'.$e['id'].'">
+            <td> <input  type="checkbox"  name="selected[]" value='.$e['id'].'> </td>
+            <td>'. $e['colonne'] . '</td>
+            <td>'. $e['valeur'] . '</td>
+            <td>'. $e['operation'] . '</td>';
+            if($e['used']){
+                echo '<td> oui </td>';
+            }else{
+                echo '<td> non </td>';
+            }
+            echo ' </tr>';
+        }
+
+        public function prixrow($e, $couleur){
+            echo' <tr id="'.$e['wilaya1'].'-'.$e['wilaya2'].'">
+            <td> <input  type="checkbox"  name="selected[]" value='.$e['wilaya1'].'-'.$e['wilaya2'].'> </td>
+            <td>'. $e['wilaya1'] . '</td>
+            <td>'. $e['wilaya2'] . '</td>
+            <td>
+            <input type="text" class="form-control"  name="prix'.$e['wilaya1'].'-'.$e['wilaya2'].'"  style="width:max-width; background-color: '.$couleur.' ;" value="' . $e['prix'] . '" >
+            </td>';
+            echo ' </tr>';
+        }
+
+        public function volumerow($e, $couleur){
+            echo' <tr>
+            <td>
+            <input type="text" class="form-control"  name="volume[]"  style="width:max-width; background-color: '.$couleur.' ;" value="' . $e . '" >
+                </td>
+            </tr>';
+        }
+        public function poidsrow($e, $couleur){
+            echo' <tr>
+            <td>
+            <input type="text" class="form-control"  name="poids[]"  style="width:max-width; background-color: '.$couleur.' ;" value="' . $e . '" >
+                </td>
+            </tr>';
+        }
+        public function transportrow($e, $couleur){
+            echo' <tr>
+            <td>
+            <input type="text" class="form-control"  name="transport[]"  style="width:max-width; background-color: '.$couleur.' ;" value="' . $e . '" >
+                </td>
+            </tr>';
+        }
+        public function typerow($e, $couleur){
+            echo' <tr>
+            <td>
+            <input type="text" class="form-control"  name="type[]"  style="width:max-width; background-color: '.$couleur.' ;" value="' . $e . '" >
+                </td>
             </tr>';
         }
     }

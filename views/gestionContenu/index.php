@@ -1,13 +1,4 @@
-<style>
-    .contenulink a{
-       color: <?= $couleur->secondarycolor() ?>;
-       margin: 2%;
-       
-    }
-    .contenulink{
-        margin-top: 1%;
-    }
-</style>
+
 
 <div class="contenulink">
     <a href="<?= PRE?>/GestionContenu/PresentationPage">

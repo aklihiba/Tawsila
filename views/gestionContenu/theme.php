@@ -1,4 +1,4 @@
-<form action="<?= PRE ?>/GestionContenu/theme" method="post"></form>
+<form action="<?= PRE ?>/GestionContenu/theme" method="post">
 <div class='container'>
     <div class='row'>
         <div class='col'>
@@ -86,3 +86,70 @@
         </div>
     </div>
 </div>
+<div class='container'>
+    <div class='row'>
+        <div class='col'>
+        <div class="card mb-3" style="max-width: 18rem;">
+            <div class="card-header">police des titres</div>
+            <div class="card-body ">
+            
+                <select class="custom-select" id="font1" name="font1select" style=" background-color:<?= $couleur->bgcolor() ?> ;" >
+                <option value="fantasy" selected style="font-family: fantasy;">fantasy</option>
+                  <option value="Marker Felt" style="font-family: Marker Felt;">Marker Felt</option>
+                  <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
+                  <option value="cursive" style="font-family: cursive;">cursive</option>
+                  <option value="Bradley Hand" style="font-family: Bradley Hand;">Bradley Hand</option>
+                  <option value="Brush Script MT" style="font-family: Brush Script MT;">Brush Script MT</option>
+                  <option value="Apple Chancery" style="font-family: Apple Chancery;">Apple Chancery</option>
+                  <option value="Comic Sans" style="font-family:Comic Sans;">Comic Sans</option>
+                  <option value="Courier New" style="font-family: Courier New;">Courier New</option>
+                  <option value="monospace" style="font-family:  monospace;">monospace</option>
+                  <option value="American Typewriter" style="font-family: American Typewriter;">American Typewriter</option>
+                  <option value="Arial" style="font-family: Arial;">Arial</option>
+                  <option value="Helvetica" style="font-family:Helvetica;">Helvetica</option>
+                  <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+                
+                
+                </select>
+
+            </div>
+            <div class="card-footer ">
+            <input type="submit" class='mediumbutton' name="font1" value='appliquer'>
+            </div>
+            </div> 
+        </div>
+        <div class='col'>
+        <div class="card mb-3" style="max-width: 18rem;">
+            <div class="card-header">police des paragraphes</div>
+            <div class="card-body ">
+            
+                <select class="custom-select" id="font2" name="font2select" style=" background-color:<?= $couleur->bgcolor() ?> ;" >
+                  <option value="fantasy" selected style="font-family: fantasy;">fantasy</option>
+                  <option value="Marker Felt" style="font-family: Marker Felt;">Marker Felt</option>
+                  <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
+                  <option value="cursive" style="font-family: cursive;">cursive</option>
+                  <option value="Bradley Hand" style="font-family: Bradley Hand;">Bradley Hand</option>
+                  <option value="Brush Script MT" style="font-family: Brush Script MT;">Brush Script MT</option>
+                  <option value="Apple Chancery" style="font-family: Apple Chancery;">Apple Chancery</option>
+                  <option value="Comic Sans" style="font-family:Comic Sans;">Comic Sans</option>
+                  <option value="Courier New" style="font-family: Courier New;">Courier New</option>
+                  <option value="monospace" style="font-family:  monospace;">monospace</option>
+                  <option value="American Typewriter" style="font-family: American Typewriter;">American Typewriter</option>
+                  <option value="Arial" style="font-family: Arial;">Arial</option>
+                  <option value="Helvetica" style="font-family:Helvetica;">Helvetica</option>
+                  <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+                  
+                
+                </select>
+
+            </div>
+            <div class="card-footer ">
+            <input type="submit" class='mediumbutton' name="font2" value='appliquer'>
+            </div>
+            </div> 
+        </div>
+    </div>
+</div>
+</form>
+
+

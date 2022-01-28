@@ -27,21 +27,25 @@ require_once('ressource/styles/style.php');
     $g->spanclass('header');
     //logo
     $g->imageh($header->logo(),50);
-    
-    foreach($header->buttons() as $button){
+    if($_SESSION['connexion']=='admin'){
+        $g->button("Déconnexion",$header->buttonsClass(),"Déconnexion()");
+    }else{
+        foreach($header->buttons() as $button){
         
         if($button=="Déconnexion"){
             $g->button("Déconnexion",$header->buttonsClass(),"Déconnexion()");
         }elseif($button=="Connexion") {
-          
-       // $g->button($button,$header->buttonsClass(), $button."()");
-     
-     $g->login($header, $couleur);
-      
-        }else{
-            $g->button($button,$header->buttonsClass(), $button."()");
+            
+        // $g->button($button,$header->buttonsClass(), $button."()");
+        
+        $g->login($header, $couleur);
+        
+            }else{
+                $g->button($button,$header->buttonsClass(), $button."()");
+            }
         }
     }
+    
  
     $g->spanend();
    

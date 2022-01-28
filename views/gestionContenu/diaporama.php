@@ -11,7 +11,7 @@
 <script>
      $(document).ready(function(){
         $("#add").click(function(){
-         id =  $('#diapotable tr:last').attr('id') + 1;
+         id = parseInt($('#diapotable tr:last').attr('id')) + 1;
         $('#diapotable>tbody').append(
             ` <tr id="`+ id + `">
                 <td> <input  type="checkbox"  name="selected[]" value=`+ id +`> </td>

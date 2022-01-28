@@ -25,6 +25,16 @@ class Fonts extends Model {
     public function font2(){
         return $this->table['2'] ;
     }
+    public function change1($f){
+        $this->getConnection();
+        $sql="UPDATE fonts SET name='".$f."' WHERE id=1";
+        $this->query($sql);
+    }
+    public function change2($f){
+        $this->getConnection();
+        $sql="UPDATE fonts SET name='".$f."' WHERE id=2";
+        $this->query($sql);
+    }
 
 }
 

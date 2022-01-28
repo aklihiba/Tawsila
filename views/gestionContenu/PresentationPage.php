@@ -9,7 +9,7 @@
 <script>
      $(document).ready(function(){
         $("#ajouter").click(function(){
-         id =  $('#presentationtable tr:last').attr('id') + 1;
+         id = parseInt($('#presentationtable tr:last').attr('id')) + 1;
         $('#presentationtable>tbody').append(
             ` <tr id="`+ id + `">
                 <td> <input  type="checkbox"  name="selected[]" value=`+ id +`> </td>
