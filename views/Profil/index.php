@@ -33,7 +33,7 @@ $g->divclass('profil_info');
     $g->divend();
 $g->divend();
 
-if(($profil->admin_msg()!==null)&&(($userid == $id)||($_SESSION['connexion']=='admin'))){
+if(($profil->admin_msg()!==null && $profil->admin_msg()!="")&&(($userid == $id)||($_SESSION['connexion']=='admin'))){
     $g->divclass('adminmsg');
         $g->paragraphe($profil->admin_msg(),'paragraphe');
     $g->divend();

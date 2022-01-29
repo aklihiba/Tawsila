@@ -242,9 +242,9 @@
                 echo $sql . "<br>" . $e->getMessage();
               }
         }
-        public function updateClient(){
+        public function updateClient($changedpwd){
             $this->getConnection();
-
+            if($changedpwd){
             $sql = " UPDATE utilisateur SET 
             nom='".$this->nom()."',
             photo='".$this->photo()."',
@@ -253,13 +253,24 @@
             adresse='".$this->adresse()."',
             pwd='".md5($this->pwd())."'           
             WHERE id=".$this->id();
+            }else{
+                $sql = " UPDATE utilisateur SET 
+            nom='".$this->nom()."',
+            photo='".$this->photo()."',
+            prenom='".$this->prenom()."',
+            telephone='".$this->telephone()."',
+            adresse='".$this->adresse()."',
+            pwd='".$this->pwd()."'           
+            WHERE id=".$this->id();
+            }
 
             $this->query($sql);
         }
-        public function updateTransporteur(){
-            $this->getConnection();
 
-            $sql = " UPDATE utilisateur SET 
+        public function updateTransporteur($changedpwd){
+            $this->getConnection();
+            if($changedpwd){
+                $sql = " UPDATE utilisateur SET 
             nom='".$this->nom()."',
             photo='".$this->photo()."',
             wilayas_depart='".$this->depart()."',
@@ -270,6 +281,20 @@
             pwd='".md5($this->pwd())."'           
             WHERE id=".$this->id();
 
+            }else{
+                $sql = " UPDATE utilisateur SET 
+            nom='".$this->nom()."',
+            photo='".$this->photo()."',
+            wilayas_depart='".$this->depart()."',
+            wilayas_arrive='".$this->arrive()."',
+            prenom='".$this->prenom()."',
+            telephone='".$this->telephone()."',
+            adresse='".$this->adresse()."',
+            pwd='".$this->pwd()."'           
+            WHERE id=".$this->id();
+
+            }
+            
             $this->query($sql);
         }
         public function existedeja(){

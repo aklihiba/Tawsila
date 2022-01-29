@@ -9,6 +9,8 @@ $g->divclass('row');
 $g->divclass('col');
 
     $g->imageh($annonce->photo(),200);
+    $g->titre('5','proprietaire: '.$prop->nom().' '.$prop->prenom(),'titre');
+    $g->paragraphe('publier le: '.$annonce->date(),'paragraphe');
     $g->divend();
     $g->divclass('col-5');
         $g->titre(1, $annonce->titre(),'titre1');
@@ -21,7 +23,7 @@ $g->divclass('col');
         if($annonce->note()!= 0 ){
             $g->paragraphe('la note: '.$annonce->note(),'paragraphe');            
         }
-        $g->paragraphe('publier le: '.$annonce->date(),'paragraphe');
+        
 
 
 $g->divend();

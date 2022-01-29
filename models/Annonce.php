@@ -159,6 +159,7 @@
         }
         public function transiter($transiteur){
             $this->setTransiteur($transiteur);
+            $this->setEtat('transitée');
             $this->getConnection();
             $sql = " UPDATE annonce SET transiteur=".$transiteur.", etat='transitée' WHERE id=".$this->id();
             $this->query($sql);

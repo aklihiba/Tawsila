@@ -117,7 +117,7 @@ padding-right:0.5%;
     margin: 5px;
     padding: 2px;
 }
-.input, .mdpinput, .paragraphe, .smalllink, .contenulink, .dropdown *, .card-text {
+.input, .mdpinput, .paragraphe, biglink, .smalllink, .contenulink, .dropdown *, .card-text {
     font-family: <?= $fonts->font2()?>;
     
 }

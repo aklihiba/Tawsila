@@ -304,9 +304,11 @@
                         $postulations = $s->all();
                         $post_act = 'accepter';
                     }
-                    $actions = array('modifier', 'supprimer');
+                    $actions = array('supprimer');
                     if($annonce->transiteur()!== null){
                         $actions[] = 'noter' ; 
+                    }else{
+                        $actions[] = 'modifier';
                     }
                 }else{
                     switch($_SESSION['user_type']){
@@ -366,7 +368,7 @@
                            
                             break;
                         case 'client':
-                            //nothing to do    
+                            $actions = array();
                             break;
                         case 'admin':
                             if($annonce->demandes()>0){
@@ -399,9 +401,10 @@
                 $restrict = true;
                 $annonce->restrict();
             }
-            
+             $prop = new UtilisateurManager($annonce->client());
+             $prop = $prop->getuser();
              $annonce->incVues();
-            $this->render('annonce',compact('annonce','suggestions','transiteur','demandes','postulations','actions','restrict','sugg_act','dem_act','post_act','trans_act'));
+            $this->render('annonce',compact('annonce','suggestions','transiteur','demandes','postulations','actions','restrict','sugg_act','dem_act','post_act','trans_act', 'prop'));
         }else{
         echo 'wrong id';
         }

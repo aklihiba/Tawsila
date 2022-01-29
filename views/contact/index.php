@@ -12,7 +12,7 @@
                 break;
             case 'a':
                 $g->center();
-               echo '<a href="'.$e->content().'" class='.$e->class().'>envoyer un email</a>';
+               echo '<a href="mailto: '.$e->content().'" class='.$e->class().'>envoyer un email</a>';
                $g->centerend(); 
                break;
             

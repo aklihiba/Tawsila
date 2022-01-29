@@ -75,6 +75,7 @@ class Profil extends Controller{
 
     public function modifier($id){
         $erreur="";
+        $pwd = false;
         $user =$_SESSION['user'];
         if($_SERVER['REQUEST_METHOD']=="POST"){
             if(! empty($_POST['nom'])){
@@ -101,6 +102,7 @@ class Profil extends Controller{
                 $erreur = $erreur.'vous devez avoir une adresse<br>';
             }
             if((! empty($_POST['mdp']))&& (! empty($_POST['mdp']))){
+                $pwd = true;
                 if($_POST['mdp']==$_POST['mdp2']){
                     $user->setPwd($_POST['mdp']);
                 }else{
@@ -118,11 +120,11 @@ class Profil extends Controller{
                     $user->setWilayas_arrive($_POST['arrive']);
                 }   
 
-                $user->updateTransporteur();
-                header('Location:'.PRE."/Profil/".$user->id());
+                $user->updateTransporteur($pwd);
+                header('Location:'.PRE."/Profil/index/".$user->id());
             }else{
-                $user->updateClient();
-                header('Location:'.PRE."/Profil/".$user->id());
+                $user->updateClient($pwd);
+                header('Location:'.PRE."/Profil/index/".$user->id());
 
             }
             
